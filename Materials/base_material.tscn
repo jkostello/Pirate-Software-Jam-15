@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://djeytu43sbild"]
+[gd_scene load_steps=4 format=3 uid="uid://djeytu43sbild"]
 
 [ext_resource type="Script" path="res://Materials/material.gd" id="1_6toqi"]
+[ext_resource type="Texture2D" uid="uid://bvuwp5a4cr71v" path="res://icon.svg" id="2_t77is"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hpbo5"]
 
 [node name="BaseMaterial" type="Node2D"]
 script = ExtResource("1_6toqi")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.431373)
+texture = ExtResource("2_t77is")
 
 [node name="Area2D" type="Area2D" parent="."]
 unique_name_in_owner = true
@@ -14,3 +19,31 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_hpbo5")
+
+[node name="ClickableArea" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -63.0
+offset_top = -63.0
+offset_right = 63.0
+offset_bottom = 63.0
+metadata/_edit_group_ = true
+
+[node name="DevVisual" type="ColorRect" parent="ClickableArea"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 1, 1, 0.282353)
+
+[node name="ClickTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.25
+one_shot = true
+
+[connection signal="mouse_entered" from="ClickableArea" to="." method="_on_clickable_area_mouse_entered"]
+[connection signal="mouse_exited" from="ClickableArea" to="." method="_on_clickable_area_mouse_exited"]
+[connection signal="timeout" from="ClickTimer" to="." method="_on_click_timer_timeout"]
