@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5pnl2hsow6jr"]
+
+[ext_resource type="Script" path="res://Circles/circle.gd" id="1_38hk6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_04oel"]
+radius = 50.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_42lvu"]
+radius = 20.0
+
+[node name="BaseCircle" type="Node2D"]
+script = ExtResource("1_38hk6")
+
+[node name="Dust" type="Area2D" parent="."]
+collision_layer = 8
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dust"]
+shape = SubResource("CircleShape2D_04oel")
+debug_color = Color(0.847059, 0.376471, 0, 0.329412)
+
+[node name="MaterialPoint1" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaterialPoint1"]
+shape = SubResource("CircleShape2D_42lvu")

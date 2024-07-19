@@ -14,6 +14,15 @@ config/name="Alchemy Game"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[display]
+
+window/stretch/mode="canvas_items"
+
+[layer_names]
+
+2d_physics/layer_3="Material"
+2d_physics/layer_4="Dust"
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
