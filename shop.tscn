@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://b4aiw4jts5hgq"]
 
 [ext_resource type="Texture2D" uid="uid://b6nwcwukicljd" path="res://alchemy2.png" id="1_wkj8h"]
-[ext_resource type="PackedScene" uid="uid://b5pnl2hsow6jr" path="res://Circles/base_circle.tscn" id="2_ss73g"]
 [ext_resource type="PackedScene" uid="uid://djeytu43sbild" path="res://Materials/base_material.tscn" id="3_ceipf"]
+[ext_resource type="PackedScene" uid="uid://cwlpt18csu1s0" path="res://Circles/pentagram.tscn" id="4_6r5n8"]
 
 [node name="Shop" type="Node2D"]
 
@@ -13,8 +13,8 @@ scale = Vector2(0.383667, 0.3235)
 texture = ExtResource("1_wkj8h")
 centered = false
 
-[node name="BaseCircle" parent="." instance=ExtResource("2_ss73g")]
-position = Vector2(576, 604)
-
 [node name="BaseMaterial" parent="." instance=ExtResource("3_ceipf")]
 position = Vector2(88, 72)
+
+[node name="Pentagram" parent="." instance=ExtResource("4_6r5n8")]
+position = Vector2(575, 512)

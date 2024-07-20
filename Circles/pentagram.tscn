@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwlpt18csu1s0"]
+
+[ext_resource type="PackedScene" uid="uid://b5pnl2hsow6jr" path="res://Circles/base_circle.tscn" id="1_j5sgu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_42lvu"]
+radius = 30.0
+
+[node name="Pentagram" instance=ExtResource("1_j5sgu")]
+
+[node name="MaterialPoint1" parent="." index="2"]
+position = Vector2(0, 99)
+
+[node name="MaterialPoint2" type="Area2D" parent="." index="3"]
+position = Vector2(-89, 47)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaterialPoint2" index="0"]
+shape = SubResource("CircleShape2D_42lvu")
+
+[node name="MaterialPoint3" type="Area2D" parent="." index="4"]
+position = Vector2(-70, -69)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaterialPoint3" index="0"]
+shape = SubResource("CircleShape2D_42lvu")
+
+[node name="MaterialPoint4" type="Area2D" parent="." index="5"]
+position = Vector2(73, -68)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaterialPoint4" index="0"]
+shape = SubResource("CircleShape2D_42lvu")
+
+[node name="MaterialPoint5" type="Area2D" parent="." index="6"]
+position = Vector2(87, 49)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaterialPoint5" index="0"]
+shape = SubResource("CircleShape2D_42lvu")
