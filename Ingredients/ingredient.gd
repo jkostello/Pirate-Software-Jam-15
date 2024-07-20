@@ -1,9 +1,9 @@
 extends Node2D
-# Name up for debate (material/ingredient/etc)
+class_name Ingredient
 
 @export var is_dust := false
 
-var source := true # Used if we have the material itself on the shelf
+var source := true # Used if we have the ingredient itself on the shelf
 var hovered := false
 var following_mouse := false
 var click_pos := Vector2.ZERO
@@ -41,10 +41,10 @@ func pick_up():
 	click_pos = Vector2.ZERO
 	
 	if source:
-		var new_material : Node2D = duplicate()
-		get_tree().current_scene.add_child(new_material)
-		new_material.following_mouse = true
-		new_material.source = false
+		var new_ingredient : Node2D = duplicate()
+		get_tree().current_scene.add_child(new_ingredient)
+		new_ingredient.following_mouse = true
+		new_ingredient.source = false
 	else:
 		following_mouse = true
 
