@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://jimye6u0mwkn"]
+
+[ext_resource type="PackedScene" uid="uid://b5pnl2hsow6jr" path="res://Circles/base_circle.tscn" id="1_tohim"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_42lvu"]
+radius = 30.0
+
+[node name="Bigram" instance=ExtResource("1_tohim")]
+identifier = "Bigram"
+
+[node name="IngredientPoint2" type="Area2D" parent="IngredientPoints" index="1"]
+position = Vector2(-95, 0)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint2" index="0"]
+shape = SubResource("CircleShape2D_42lvu")
+
+[node name="IngredientPoint3" type="Area2D" parent="IngredientPoints" index="2"]
+position = Vector2(98, 1)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint3" index="0"]
+shape = SubResource("CircleShape2D_42lvu")

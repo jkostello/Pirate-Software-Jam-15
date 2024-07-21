@@ -13,8 +13,41 @@ scale = Vector2(0.383667, 0.3235)
 texture = ExtResource("1_wkj8h")
 centered = false
 
-[node name="BaseMaterial" parent="." instance=ExtResource("3_ceipf")]
+[node name="IngredientShelf" type="Node2D" parent="."]
 position = Vector2(88, 72)
 
-[node name="Pentagram" parent="." instance=ExtResource("4_6r5n8")]
-position = Vector2(575, 512)
+[node name="BaseMaterial" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+is_chalk = true
+identifier = "C1"
+
+[node name="BaseMaterial2" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+position = Vector2(159, 2)
+is_chalk = true
+identifier = "C2"
+
+[node name="BaseMaterial3" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+position = Vector2(307, -1)
+identifier = "A4"
+
+[node name="BaseMaterial4" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+position = Vector2(466, -1)
+identifier = "A1"
+
+[node name="BaseMaterial5" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+position = Vector2(615, -3)
+identifier = "A2"
+
+[node name="BaseMaterial6" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+position = Vector2(781, 2)
+is_dust = true
+identifier = "D1"
+
+[node name="BaseMaterial7" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+position = Vector2(957, 2)
+is_dust = true
+identifier = "D2"
+
+[node name="CirclePos" type="Node2D" parent="."]
+position = Vector2(578, 517)
+
+[node name="Pentagram" parent="CirclePos" instance=ExtResource("4_6r5n8")]

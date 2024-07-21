@@ -6,35 +6,44 @@
 radius = 30.0
 
 [node name="Pentagram" instance=ExtResource("1_j5sgu")]
+identifier = "Pentagram"
 
-[node name="IngredientPoint2" type="Area2D" parent="." index="3"]
+[node name="IngredientPoint2" type="Area2D" parent="IngredientPoints" index="1"]
 position = Vector2(-89, 47)
 collision_layer = 4
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoint2" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint2" index="0"]
 shape = SubResource("CircleShape2D_42lvu")
 
-[node name="IngredientPoint3" type="Area2D" parent="." index="4"]
+[node name="IngredientPoint3" type="Area2D" parent="IngredientPoints" index="2"]
 position = Vector2(-70, -69)
 collision_layer = 4
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoint3" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint3" index="0"]
 shape = SubResource("CircleShape2D_42lvu")
 
-[node name="IngredientPoint4" type="Area2D" parent="." index="5"]
+[node name="IngredientPoint4" type="Area2D" parent="IngredientPoints" index="3"]
 position = Vector2(73, -68)
 collision_layer = 4
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoint4" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint4" index="0"]
 shape = SubResource("CircleShape2D_42lvu")
 
-[node name="IngredientPoint5" type="Area2D" parent="." index="6"]
+[node name="IngredientPoint5" type="Area2D" parent="IngredientPoints" index="4"]
 position = Vector2(87, 49)
 collision_layer = 4
 collision_mask = 0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoint5" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint5" index="0"]
+shape = SubResource("CircleShape2D_42lvu")
+
+[node name="IngredientPoint6" type="Area2D" parent="IngredientPoints" index="5"]
+position = Vector2(-1, 100)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint6" index="0"]
 shape = SubResource("CircleShape2D_42lvu")
