@@ -4,8 +4,8 @@ class_name Ingredient
 @export var is_dust := false
 @export var is_chalk := false
 @export var identifier := ""
+@export var source := false # Used if we have the ingredient itself on the shelf
 
-var source := true # Used if we have the ingredient itself on the shelf
 var hovered := false
 var following_mouse := false : 
 	set(v):
@@ -13,11 +13,18 @@ var following_mouse := false :
 			global_position = get_global_mouse_position()
 		following_mouse = v
 var click_pos := Vector2.ZERO
-var current_point : Area2D
+var current_point : Area2D :
+	set(v):
+		if v == null:
+			current_point.get_parent().get_parent().ingredients.erase(current_point)
+		else:
+			global_position = v.global_position
+			v.get_parent().get_parent().ingredients[v] = self
+		current_point = v
 
 
 func _ready():
-	$Area2D.set_collision_mask_value(3, not is_dust)
+	$Area2D.set_collision_mask_value(3, not is_dust and not is_chalk)
 	$Area2D.set_collision_mask_value(4, is_dust or is_chalk)
 	
 	if not OS.is_debug_build():
@@ -62,7 +69,6 @@ func pick_up():
 		following_mouse = true
 		
 		if current_point:
-			current_point.get_parent().get_parent().ingredients.erase(current_point)
 			current_point = null
 
 
@@ -74,7 +80,11 @@ func drop():
 		var area : Area2D = $Area2D.get_overlapping_areas()[0]
 		
 		if is_chalk:
+			print(area.get_parent())
 			area.get_parent().clear_circle()
+			area.get_parent().queue_free()
+			Autoload.use_chalk.emit(identifier)
+			queue_free()
 		elif is_dust:
 			area.get_parent().complete_ritual(identifier)
 			queue_free()
@@ -83,11 +93,10 @@ func drop():
 				fail_placement()
 			else:
 				current_point = area
-				global_position = area.global_position
-				area.get_parent().get_parent().ingredients[area] = self
 
 
 func fail_placement():
+	#await get_tree().create_timer(0.1).timeout
 	queue_free()
 	# TODO: Add a vanishing effect or something
 

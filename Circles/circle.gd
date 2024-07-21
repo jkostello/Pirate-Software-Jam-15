@@ -24,12 +24,13 @@ func complete_ritual(dust_id : String):
 	
 	clear_circle()
 	
-	var output := base_ingredient.instantiate()
+	var output := base_ingredient.instantiate() # Only for testing, needs to be customized
 	
 	get_parent().add_child(output)
+	output.current_point = $IngredientPoints/IngredientPoint1
 
 
 func clear_circle():
 	for i in ingredients:
-		ingredients[i].queue_free()
-		ingredients.clear()
+		ingredients[i].fail_placement()
+	ingredients.clear()
