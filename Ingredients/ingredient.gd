@@ -3,8 +3,8 @@ class_name Ingredient
 
 @export var is_dust := false
 @export var is_chalk := false
-@export var identifier := ""
-@export var source := false # Used if we have the ingredient itself on the shelf
+@export var identifier := "" ## A unique name per ingredient
+@export var source := false ## Used if we have the ingredient itself on the shelf
 
 var hovered := false
 var following_mouse := false : 
@@ -12,8 +12,8 @@ var following_mouse := false :
 		if v:
 			global_position = get_global_mouse_position()
 		following_mouse = v
-var click_pos := Vector2.ZERO
-var current_point : Area2D :
+var click_pos := Vector2.ZERO # Used to check if mouse is quickly moved
+var current_point : Area2D : # Corresponds to the circle's placement hitbox that the ingredient is on
 	set(v):
 		if v == null:
 			current_point.get_parent().get_parent().ingredients.erase(current_point)
@@ -28,6 +28,7 @@ func _ready():
 	$Area2D.set_collision_mask_value(4, is_dust or is_chalk)
 	
 	if not OS.is_debug_build():
+		$ClickableArea/DevVisual.visible = false
 		$ClickableArea/DevVisual.queue_free()
 	else:
 		$ClickableArea/DevVisual/Label.text = identifier
@@ -60,12 +61,12 @@ func pick_up():
 	%ClickTimer.stop()
 	click_pos = Vector2.ZERO
 	
-	if source:
+	if source: # Clones ingrendient and removes source tag
 		var new_ingredient : Node2D = duplicate()
 		get_tree().current_scene.add_child(new_ingredient)
 		new_ingredient.following_mouse = true
 		new_ingredient.source = false
-	else:
+	else: # Moves existing ingredient
 		following_mouse = true
 		
 		if current_point:
@@ -80,7 +81,7 @@ func drop():
 		var area : Area2D = $Area2D.get_overlapping_areas()[0]
 		
 		if is_chalk:
-			print(area.get_parent())
+			#print(area.get_parent())
 			area.get_parent().clear_circle()
 			area.get_parent().queue_free()
 			Autoload.use_chalk.emit(identifier)
@@ -96,6 +97,11 @@ func drop():
 
 
 func fail_placement():
+	vanish()
+	# Vanish is separate in case we want misplaced items to go back to where they were
+
+
+func vanish():
 	#await get_tree().create_timer(0.1).timeout
 	queue_free()
 	# TODO: Add a vanishing effect or something

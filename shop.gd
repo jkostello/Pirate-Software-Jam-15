@@ -9,6 +9,7 @@ func _ready():
 	Autoload.use_chalk.connect(use_chalk)
 
 
+# Gets the ID of the chalk used and creates the appropriate circle
 func use_chalk(type):
 	var to_draw : Node2D
 	

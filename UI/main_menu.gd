@@ -5,6 +5,7 @@ extends Control
 var shop : PackedScene = load("res://shop.tscn")
 var main_menu : PackedScene = load("res://UI/main_menu.tscn")
 
+
 func _ready():
 	%MainButtons.visible = true
 	%HowToPlay.visible = false
@@ -22,6 +23,7 @@ func _ready():
 func _input(event):
 	if not title_screen:
 		if event is InputEventKey:
+			# Toggles menu with ESC
 			if event.keycode == KEY_ESCAPE and event.pressed and not event.echo:
 				visible = not visible
 				get_tree().paused = not get_tree().paused

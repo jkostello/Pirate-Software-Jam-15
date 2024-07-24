@@ -6,8 +6,8 @@ class_name RitualCircle
 var base_ingredient : PackedScene = preload("res://Ingredients/base_ingredient.tscn")
 var ingredients := {}
 
-# Trigger this when dust is sprinkled
-# This should lock the ingredients, play an animation, clear everything, then make the item
+# Triggers when dust is sprinkled
+# TODO: This should lock the ingredients, play an animation, clear everything, then make the item
 func complete_ritual(dust_id : String):
 	var points := $IngredientPoints.get_children()
 	
@@ -30,6 +30,7 @@ func complete_ritual(dust_id : String):
 	output.current_point = $IngredientPoints/IngredientPoint1
 
 
+# Empties all components but does not reset the circle
 func clear_circle():
 	for i in ingredients:
 		ingredients[i].fail_placement()
