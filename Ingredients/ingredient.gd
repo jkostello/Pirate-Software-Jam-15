@@ -81,9 +81,6 @@ func drop():
 		var area : Area2D = $Area2D.get_overlapping_areas()[0]
 		
 		if is_chalk:
-			#print(area.get_parent())
-			area.get_parent().clear_circle()
-			area.get_parent().queue_free()
 			Autoload.use_chalk.emit(identifier)
 			queue_free()
 		elif is_dust:

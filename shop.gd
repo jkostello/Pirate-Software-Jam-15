@@ -11,6 +11,8 @@ func _ready():
 
 # Gets the ID of the chalk used and creates the appropriate circle
 func use_chalk(type):
+	$CirclePos.get_child(0).clear_circle()
+	$CirclePos.get_child(0).queue_free()
 	var to_draw : Node2D
 	
 	match type:
@@ -28,6 +30,4 @@ func use_chalk(type):
 
 
 func _on_reset_pressed():
-	$CirclePos.get_child(0).clear_circle()
-	$CirclePos.get_child(0).queue_free()
 	use_chalk("Empty")
