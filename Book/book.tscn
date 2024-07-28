@@ -1,0 +1,1383 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxkcysmocimog"]
+
+[ext_resource type="Script" path="res://Book/book.gd" id="1_nvlfn"]
+
+[sub_resource type="Animation" id="Animation_yx0es"]
+resource_name = "Go In"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-337, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_w7grt"]
+resource_name = "Go Out"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-337, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_16fch"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-337, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_05250"]
+_data = {
+"Go In": SubResource("Animation_yx0es"),
+"Go Out": SubResource("Animation_w7grt"),
+"RESET": SubResource("Animation_16fch")
+}
+
+[node name="Book" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 391.0
+offset_bottom = 542.0
+script = ExtResource("1_nvlfn")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../MarginContainer")
+libraries = {
+"": SubResource("AnimationLibrary_05250")
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -337.0
+offset_right = -337.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Replace with texture_sprite" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.377919, 0.377919, 0.377919, 1)
+
+[node name="Control" type="Control" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Pages" type="Control" parent="MarginContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PageDemon1" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageDemon1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Identifying"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageDemon1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "How to spot Pride:
+fdasjkl
+fadsl;jk
+
+How to spot Greed:
+fdsaljk
+fa;ldkj
+
+How to spot Greed:
+fdsaljk
+fa;ldkj
+
+How to spot Greed:
+fdsaljk
+fa;ldkj"
+
+[node name="PageDemon2" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageDemon2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = 37.828
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Identifying"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageDemon2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "How to spot Greed:
+fdsaljk
+fa;ldkj
+
+How to spot Greed:
+fdsaljk
+fa;ldkj
+
+How to spot Greed:
+fdsaljk
+fa;ldkj
+"
+
+[node name="PagePride1" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PagePride1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PagePride1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Pride-afflicted people who are experiencing the following symptoms:
+
+Irritable
+Lustful
+Heavy Breathing
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PagePride2" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PagePride2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PagePride2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Pride-afflicted people who are experiencing the following symptoms:
+
+Pain in arms
+Sweaty
+Dry mouth
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PagePride3" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PagePride3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PagePride3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Pride-afflicted people who are experiencing the following symptoms:
+
+Poor vision
+Paranoia
+Antsy
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageGreed1" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageGreed1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageGreed1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Greed-afflicted people who are experiencing the following symptoms:
+
+Sweaty
+Paranoia
+Pain in arms
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageGreed2" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageGreed2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageGreed2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Greed-afflicted people who are experiencing the following symptoms:
+
+Hungry
+Dry mouth
+Dulled Touch
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageGreed3" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageGreed3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageGreed3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Greed-afflicted people who are experiencing the following symptoms:
+
+Dulled taste
+Paranoia
+Lust
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageWrath1" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageWrath1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageWrath1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Wrath-afflicted people who are experiencing the following symptoms:
+
+Irritable
+Antsy
+Hungry
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageWrath2" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageWrath2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageWrath2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Wrath-afflicted people who are experiencing the following symptoms:
+
+Hungry
+Dry mouth
+Dulled touch
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageWrath3" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageWrath3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageWrath3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Wrath-afflicted people who are experiencing the following symptoms:
+
+Dulled taste
+Paranoia
+Lust
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageEnvy1" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageEnvy1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageEnvy1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Envy-afflicted people who are experiencing the following symptoms:
+
+Poor vision
+Paranoia
+Headache
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageEnvy2" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageEnvy2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageEnvy2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Envy-afflicted people who are experiencing the following symptoms:
+
+Pain in arms
+Heavy breathing
+Dulled Touch
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageEnvy3" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageEnvy3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageEnvy3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Envy-afflicted people who are experiencing the following symptoms:
+
+Poor vision
+Pain in legs
+Paranoia
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageLust1" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageLust1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageLust1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Lust-afflicted people who are experiencing the following symptoms:
+
+Sweaty
+Dry mouth
+Smell smoke
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageLust2" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageLust2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageLust2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Lust-afflicted people who are experiencing the following symptoms:
+
+Heavy breathing
+Irritable
+Dulled taste
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageLust3" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageLust3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageLust3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Lust-afflicted people who are experiencing the following symptoms:
+
+Irritable
+Headache
+Lustful
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageGluttony1" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageGluttony1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageGluttony1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Gluttony-afflicted people who are experiencing the following symptoms:
+
+Hungry
+Heavy breathing
+Dulled taste
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageGluttony2" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageGluttony2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageGluttony2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Gluttony-afflicted people who are experiencing the following symptoms:
+
+Smell smoke
+Tired
+Sweaty
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageGluttony3" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageGluttony3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageGluttony3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Gluttony-afflicted people who are experiencing the following symptoms:
+
+Insomnia
+Dry mouth
+Antsy
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageSloth1" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageSloth1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageSloth1"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Sloth-afflicted people who are experiencing the following symptoms:
+
+Narcolepsy
+Pain in legs
+Poor vision
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageSloth2" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageSloth2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageSloth2"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Sloth-afflicted people who are experiencing the following symptoms:
+
+Poor vision
+Headache
+Heavy Breathing
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="PageSloth3" type="Control" parent="MarginContainer/Control/Pages"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageSloth3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.098
+offset_bottom = -0.196003
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 35
+text = "Cosmic Cube"
+horizontal_alignment = 1
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageSloth3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.006
+anchor_top = 0.102
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -0.106
+offset_top = -0.204002
+offset_right = -1.0
+text = "For use on Sloth-afflicted people who are experiencing the following symptoms:
+
+Narcolepsy
+Dulled touch
+Hungry
+
+Ritual Process:
+
+put rock north
+s south
+west
+eath
+center
+etc
+etc
+Top with baby powder lmao"
+
+[node name="Tabs" type="Control" parent="MarginContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TabDemon" type="Button" parent="MarginContainer/Control/Tabs"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 351.0
+offset_top = 7.0
+offset_right = 423.0
+offset_bottom = 63.0
+focus_mode = 0
+text = "Identify"
+
+[node name="TabPride" type="Button" parent="MarginContainer/Control/Tabs"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 351.0
+offset_top = 63.0
+offset_right = 423.0
+offset_bottom = 119.0
+focus_mode = 0
+text = "Pride"
+
+[node name="TabGreed" type="Button" parent="MarginContainer/Control/Tabs"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 351.0
+offset_top = 119.0
+offset_right = 423.0
+offset_bottom = 175.0
+focus_mode = 0
+text = "Greed"
+
+[node name="TabWrath" type="Button" parent="MarginContainer/Control/Tabs"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 351.0
+offset_top = 175.0
+offset_right = 423.0
+offset_bottom = 231.0
+focus_mode = 0
+text = "Wrath"
+
+[node name="TabEnvy" type="Button" parent="MarginContainer/Control/Tabs"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 351.0
+offset_top = 231.0
+offset_right = 423.0
+offset_bottom = 287.0
+focus_mode = 0
+text = "Envy"
+
+[node name="TabLust" type="Button" parent="MarginContainer/Control/Tabs"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 351.0
+offset_top = 287.0
+offset_right = 423.0
+offset_bottom = 343.0
+focus_mode = 0
+text = "Lust"
+
+[node name="TabGluttony" type="Button" parent="MarginContainer/Control/Tabs"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 351.0
+offset_top = 343.0
+offset_right = 423.0
+offset_bottom = 399.0
+focus_mode = 0
+text = "Gluttony"
+
+[node name="TabSloth" type="Button" parent="MarginContainer/Control/Tabs"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 351.0
+offset_top = 399.0
+offset_right = 423.0
+offset_bottom = 455.0
+focus_mode = 0
+text = "Sloth"
+
+[node name="PageLeft" type="Button" parent="MarginContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 200.0
+offset_top = 464.0
+offset_right = 274.0
+offset_bottom = 502.0
+
+[node name="Temp Arrow" type="ColorRect" parent="MarginContainer/Control/PageLeft"]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 16.0
+offset_right = 57.0
+offset_bottom = 21.0
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="MarginContainer/Control/PageLeft/Temp Arrow"]
+clip_contents = true
+anchors_preset = 0
+offset_left = -40.0
+offset_top = -14.0
+offset_bottom = 26.0
+mouse_filter = 2
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer/Control/PageLeft/Temp Arrow/Control"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 17.0
+offset_right = 43.0
+offset_bottom = 27.0
+rotation = -0.785397
+mouse_filter = 2
+
+[node name="PageRight" type="Button" parent="MarginContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 277.0
+offset_top = 464.0
+offset_right = 351.0
+offset_bottom = 502.0
+
+[node name="Temp Arrow" type="ColorRect" parent="MarginContainer/Control/PageRight"]
+offset_left = 52.0
+offset_top = 20.0
+offset_right = 88.0
+offset_bottom = 25.0
+rotation = 3.14159
+mouse_filter = 2
+
+[node name="Control" type="Control" parent="MarginContainer/Control/PageRight/Temp Arrow"]
+clip_contents = true
+anchors_preset = 0
+offset_left = -40.0
+offset_top = -14.0
+offset_bottom = 26.0
+mouse_filter = 2
+
+[node name="ColorRect2" type="ColorRect" parent="MarginContainer/Control/PageRight/Temp Arrow/Control"]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 17.0
+offset_right = 43.0
+offset_bottom = 27.0
+rotation = -0.785397
+mouse_filter = 2
+
+[node name="PageNumber" type="Label" parent="MarginContainer/Control"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 20.0
+offset_top = 472.0
+offset_right = 69.0
+offset_bottom = 502.0
+text = "1"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_right = 113.0
+offset_bottom = 543.0
+focus_mode = 0
+flat = true
+
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabDemon" to="." method="switch_to_page" binds= [0]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabPride" to="." method="switch_to_page" binds= [2]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabGreed" to="." method="switch_to_page" binds= [5]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabWrath" to="." method="switch_to_page" binds= [8]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabEnvy" to="." method="switch_to_page" binds= [11]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabLust" to="." method="switch_to_page" binds= [14]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabGluttony" to="." method="switch_to_page" binds= [17]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabSloth" to="." method="switch_to_page" binds= [20]]
+[connection signal="pressed" from="MarginContainer/Control/PageLeft" to="." method="_on_page_left_pressed"]
+[connection signal="pressed" from="MarginContainer/Control/PageRight" to="." method="_on_page_right_pressed"]
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
