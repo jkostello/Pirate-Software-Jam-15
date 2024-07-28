@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dtcs2rs1ixl7a"]
 
-[ext_resource type="Script" path="res://UI/main_menu.gd" id="1_wv7xw"]
-[ext_resource type="Script" path="res://UI/options.gd" id="2_mtekv"]
+[ext_resource type="Script" path="res://UI/Menus/main_menu.gd" id="1_ia7k8"]
+[ext_resource type="Script" path="res://UI/Menus/options.gd" id="2_bxshy"]
 
 [node name="MainMenu" type="Control"]
 process_mode = 3
@@ -12,7 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
-script = ExtResource("1_wv7xw")
+script = ExtResource("1_ia7k8")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 layout_mode = 1
@@ -104,7 +104,7 @@ theme_override_constants/margin_bottom = 75
 [node name="Options" type="TabContainer" parent="SubMenus/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-script = ExtResource("2_mtekv")
+script = ExtResource("2_bxshy")
 
 [node name="Video" type="Control" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2

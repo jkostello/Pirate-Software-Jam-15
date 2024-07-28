@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://qant7a85kyyy"]
+
+[ext_resource type="Texture2D" uid="uid://g023b3w5v68" path="res://UI/main_bkgd.png" id="1_136t5"]
+[ext_resource type="Script" path="res://main_screen.gd" id="1_gnj56"]
+[ext_resource type="Texture2D" uid="uid://ndwstghoaq0w" path="res://UI/ritual_desk.png" id="2_27kta"]
+[ext_resource type="PackedScene" uid="uid://c7qu73noo5jn7" path="res://UI/question_box.tscn" id="3_0sbiu"]
+
+[node name="SceneManager" type="Node"]
+script = ExtResource("1_gnj56")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("1_136t5")
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+texture = ExtResource("2_27kta")
+
+[node name="QuestionBox" parent="." instance=ExtResource("3_0sbiu")]
+offset_left = 1224.0
+offset_top = 765.0
+offset_right = -398.0
+offset_bottom = -213.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 897.0
+offset_top = 539.0
+offset_right = 1028.0
+offset_bottom = 570.0
+text = "Make Customer"
+
+[connection signal="pressed" from="Button" to="." method="generate_customer"]
