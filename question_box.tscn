@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://c7qu73noo5jn7"]
+
+[node name="QuestionBox" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1653.0
+offset_bottom = -978.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BehaviorQuestion" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Ask about changes in their behavior."
+
+[node name="PainQuestion" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Ask if they are experiencing any pain."
+
+[node name="SensesQuestion" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Ask if their senses are any different."
