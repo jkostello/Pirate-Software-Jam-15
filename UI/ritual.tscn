@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://b4aiw4jts5hgq"]
 
-[ext_resource type="Script" path="res://shop.gd" id="1_a7a2e"]
+[ext_resource type="Script" path="res://UI/ritual.gd" id="1_a7a2e"]
 [ext_resource type="PackedScene" uid="uid://b5pnl2hsow6jr" path="res://Circles/base_circle.tscn" id="2_ss73g"]
 [ext_resource type="PackedScene" uid="uid://djeytu43sbild" path="res://Ingredients/base_ingredient.tscn" id="3_ceipf"]
 
