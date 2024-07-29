@@ -42,11 +42,9 @@ func _ready():
 	print("Cure: ", cure)
 	intro()
 	
-	match body_symptom:
-		'Sweaty':
-			$Customer/Sweat.visible = true
-		'Bouncy':
-			$AnimationPlayer.speed_scale = 2.0
+	if body_symptom == 'Bouncy':
+		$AnimationPlayer.speed_scale = 2.0
+	
 	
 	$AnimationPlayer.play("Enter")
 
@@ -61,3 +59,9 @@ func intro():
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "Enter":
 		$AnimationPlayer.play("Idle")
+		
+		match body_symptom:
+			'Sweaty':
+				$Customer/Sweat.visible = true
+			'Heavy Breathing':
+				$Customer/Breath.visible = true
