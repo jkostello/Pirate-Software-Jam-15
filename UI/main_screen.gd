@@ -13,9 +13,8 @@ func generate_customer():
 	# Generate new customer
 	var customer_scene = load('res://Customers/customer.tscn')
 	var customer = customer_scene.instantiate()
-	add_child(customer)
+	%Shop.add_child(customer)
 	customer.add_to_group('customers')
-
 
 func _on_switch_pressed():
 	if $AnimationPlayer.is_playing():
@@ -26,3 +25,8 @@ func _on_switch_pressed():
 	else:
 		$AnimationPlayer.play("ToShop")
 	viewing_shop = not viewing_shop
+
+
+
+func _on_temp_generator_pressed():
+	generate_customer()
