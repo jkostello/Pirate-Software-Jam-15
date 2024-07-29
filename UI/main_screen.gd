@@ -27,10 +27,8 @@ func _on_switch_pressed():
 	viewing_shop = not viewing_shop
 
 
-
 func _on_temp_generator_pressed():
 	generate_customer()
-
 
 func _on_customer_timer_timeout():
 	generate_customer()

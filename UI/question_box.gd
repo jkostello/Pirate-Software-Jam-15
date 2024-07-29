@@ -14,19 +14,10 @@ func get_customer_info(behavior, pain, sense):
 	sense_symptom = sense
 
 func _on_behavior_question_pressed():
-	if behavior_symptom:
-		print(behavior_symptom)
-	else:
-		print("No behavior symptom")
-	
+	Autoload.display_symptom.emit(behavior_symptom)
+
 func _on_pain_question_pressed():
-	if pain_symptom:
-		print(pain_symptom)
-	else:
-		print("No pain symptom")
+	Autoload.display_symptom.emit(pain_symptom)
 	
 func _on_senses_question_pressed():
-	if sense_symptom:
-		print(sense_symptom)
-	else:
-		print("No sense symptom")
+	Autoload.display_symptom.emit(sense_symptom)

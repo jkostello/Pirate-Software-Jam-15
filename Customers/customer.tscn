@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cxuh21ps5372b"]
+[gd_scene load_steps=9 format=3 uid="uid://cxuh21ps5372b"]
 
 [ext_resource type="Script" path="res://Customers/customer.gd" id="1_c24f8"]
 [ext_resource type="Texture2D" uid="uid://cuml1f0riucg2" path="res://Customers/temp_sinner.jpg" id="2_758aq"]
@@ -7,9 +7,22 @@
 [ext_resource type="Script" path="res://Customers/magnifying_glass.gd" id="4_wumt6"]
 [ext_resource type="Texture2D" uid="uid://ghqr12tghyir" path="res://Customers/temp_symbol.png" id="5_sufu3"]
 [ext_resource type="Texture2D" uid="uid://bupjkxxugwai5" path="res://Customers/temp_particles.png" id="7_pw0q1"]
+[ext_resource type="PackedScene" uid="uid://dxnasp3ckgooe" path="res://UI/textbox.tscn" id="8_tqw30"]
 
 [node name="Customer" type="Node2D"]
 script = ExtResource("1_c24f8")
+
+[node name="Textbox" parent="." instance=ExtResource("8_tqw30")]
+z_index = 2
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -3.0
+offset_top = 691.0
+offset_right = 1918.0
+offset_bottom = 844.0
+grow_horizontal = 1
+grow_vertical = 1
 
 [node name="Customer" type="Sprite2D" parent="."]
 z_index = 1
@@ -17,41 +30,36 @@ position = Vector2(950, 800)
 scale = Vector2(2.03709, 2.03709)
 texture = ExtResource("2_758aq")
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 913.0
-offset_top = 305.0
-offset_right = 1015.0
-offset_bottom = 408.0
-
 [node name="MagnifyingGlass" type="Sprite2D" parent="."]
-z_index = 2
-position = Vector2(1600, 939)
-scale = Vector2(0.130164, 0.130164)
+z_index = 3
+position = Vector2(1581, 930)
+scale = Vector2(0.367891, 0.367891)
 texture = ExtResource("3_0ioue")
+region_rect = Rect2(200, 121.4, 100, 200)
 script = ExtResource("4_wumt6")
 
 [node name="Area2D" type="Area2D" parent="MagnifyingGlass"]
+z_index = 16
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="MagnifyingGlass/Area2D"]
-polygon = PackedVector2Array(760.579, 891.183, 806.675, 845.088, 822.04, 775.944, 822.04, 722.166, 783.627, 653.022, 307.305, 153.652, 307.305, 115.239, 230.479, 7.68262, 291.939, -145.97, 284.257, -199.748, 307.305, -345.718, 299.622, -499.37, 199.748, -699.118, 30.7305, -860.453, -161.335, -929.596, -314.987, -929.596, -453.274, -898.866, -606.927, -822.04, -729.849, -683.753, -791.31, -553.148, -829.723, -368.766, -806.675, -207.431, -737.531, -61.4609, -645.34, 46.0957, -522.418, 130.604, -414.861, 176.7, -299.622, 199.748, -153.652, 199.748, -99.874, 207.431, 7.68262, 192.065, 92.1914, 291.939, 138.287, 299.622, 361.083, 629.974, 560.831, 906.549, 645.34, 929.596, 714.483, 921.914)
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="MagnifyingGlass/Area2D"]
+position = Vector2(282.693, 592.567)
+polygon = PackedVector2Array(-54.3643, -361.52, -27.1821, -396.857, -10.873, -470.248, -21.7456, -540.921, -48.9277, -589.849, -97.855, -633.34, -108.728, -641.494, -92.4189, -657.804, -86.9824, -676.831, -92.4189, -695.858, -100.573, -698.577, -127.755, -684.986, -225.61, -687.704, -290.847, -720.322, -326.184, -714.886, -309.875, -668.677, -429.475, -619.749, -459.375, -519.176, -451.221, -418.602, -432.193, -380.548, -353.366, -334.338, -356.084, -307.156, -391.42, -299.002, -388.702, -285.411, -337.057, -263.665, -293.565, -282.692, -277.256, -309.875, -190.274, -282.692, -95.1372, -309.875)
 
 [node name="Mask" type="Sprite2D" parent="MagnifyingGlass"]
 clip_children = 1
-position = Vector2(-257.368, -364.924)
-scale = Vector2(2.22796, 2.22796)
+position = Vector2(86.9827, 114.164)
+scale = Vector2(0.66324, 0.66324)
 texture = ExtResource("4_rmftt")
 
 [node name="Symbol" type="Sprite2D" parent="MagnifyingGlass/Mask"]
 unique_name_in_owner = true
-position = Vector2(-1994.83, -2067.24)
+position = Vector2(-2577.87, -2745.9)
 scale = Vector2(0.322339, 0.42482)
 texture = ExtResource("5_sufu3")
 
 [node name="Particle" type="Sprite2D" parent="MagnifyingGlass/Mask"]
 unique_name_in_owner = true
-position = Vector2(-1253.45, -1146.55)
+position = Vector2(-2598.36, -1709.02)
 texture = ExtResource("7_pw0q1")
 
 [connection signal="mouse_entered" from="MagnifyingGlass/Area2D" to="MagnifyingGlass" method="_on_mouse_entered"]

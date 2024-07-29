@@ -261,10 +261,10 @@ position = Vector2(960, 540)
 texture = ExtResource("3_bea5q")
 
 [node name="QuestionBox" parent="Shop" instance=ExtResource("4_gypuy")]
-offset_left = 1224.0
-offset_top = 765.0
-offset_right = 1224.0
-offset_bottom = 765.0
+offset_left = 1198.0
+offset_top = 121.0
+offset_right = 1198.0
+offset_bottom = 121.0
 
 [node name="TempGenerator" type="Button" parent="Shop"]
 offset_left = 67.0
