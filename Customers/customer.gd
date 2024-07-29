@@ -38,6 +38,12 @@ func _ready():
 	
 	Autoload.customer_info.emit(behavior_symptom, pain_symptom, sense_symptom)
 	print("Sin: ", sin)
-	print("Intro symptom: ", intro_symptom)
 	print("Body symptom: ", body_symptom)
 	print("Cure: ", cure)
+	intro()
+	
+func intro():
+	if intro_symptom:
+		Autoload.display_symptom.emit(intro_symptom)
+	else:
+		$Textbox.add_text('Hi, I was told you can help me?')

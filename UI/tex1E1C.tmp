@@ -49,3 +49,5 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 32
 text = "Placeholder text! The quick brown fox jumped over the lazy dog. This textbox holds 3 lines of text."
+visible_characters = 0
+visible_ratio = 0.0
