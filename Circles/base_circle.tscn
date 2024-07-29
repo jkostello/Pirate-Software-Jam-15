@@ -3,10 +3,10 @@
 [ext_resource type="Script" path="res://Circles/circle.gd" id="1_38hk6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_04oel"]
-radius = 100.0
+radius = 334.037
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_42lvu"]
-radius = 30.0
+radius = 102.591
 
 [node name="BaseCircle" type="Node2D"]
 script = ExtResource("1_38hk6")

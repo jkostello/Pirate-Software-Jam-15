@@ -2,8 +2,8 @@ extends Control
 
 @export var title_screen := true
 
-var shop : PackedScene = load("res://shop.tscn")
-var main_menu : PackedScene = load("res://UI/main_menu.tscn")
+var shop : PackedScene = load("res://UI/main_screen.tscn")
+var main_menu : PackedScene = load("res://UI/title_screen.tscn")
 
 
 func _ready():
