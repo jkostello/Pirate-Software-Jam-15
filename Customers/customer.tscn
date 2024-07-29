@@ -1,13 +1,85 @@
-[gd_scene load_steps=9 format=3 uid="uid://cxuh21ps5372b"]
+[gd_scene load_steps=16 format=3 uid="uid://cxuh21ps5372b"]
 
 [ext_resource type="Script" path="res://Customers/customer.gd" id="1_c24f8"]
-[ext_resource type="Texture2D" uid="uid://cuml1f0riucg2" path="res://Customers/temp_sinner.jpg" id="2_758aq"]
 [ext_resource type="Texture2D" uid="uid://ccnu2at4v32r1" path="res://Customers/magnifying_glass.png" id="3_0ioue"]
+[ext_resource type="Texture2D" uid="uid://cnriyu1i7383u" path="res://Customers/temp_sinner.png" id="3_11p8t"]
 [ext_resource type="Texture2D" uid="uid://cffadi21pacuu" path="res://Customers/CircleMask.png" id="4_rmftt"]
 [ext_resource type="Script" path="res://Customers/magnifying_glass.gd" id="4_wumt6"]
 [ext_resource type="Texture2D" uid="uid://ghqr12tghyir" path="res://Customers/temp_symbol.png" id="5_sufu3"]
 [ext_resource type="Texture2D" uid="uid://bupjkxxugwai5" path="res://Customers/temp_particles.png" id="7_pw0q1"]
-[ext_resource type="PackedScene" uid="uid://dxnasp3ckgooe" path="res://UI/textbox.tscn" id="8_tqw30"]
+[ext_resource type="PackedScene" uid="uid://c8ln02ahufb58" path="res://UI/textbox.tscn" id="8_tqw30"]
+
+[sub_resource type="Curve" id="Curve_co55x"]
+_data = [Vector2(0, 0), 0.0, 11.5873, 0, 0, Vector2(0.219178, 1), 0.0, 0.0, 0, 0, Vector2(0.671233, 0.78022), -1.15517, -1.15517, 0, 0, Vector2(1, 0), -3.20879, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_bu42e"]
+curve = SubResource("Curve_co55x")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ta50x"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(170, 360, 1)
+gravity = Vector3(0, 98, 0)
+scale_min = 5.3
+scale_max = 5.3
+scale_curve = SubResource("CurveTexture_bu42e")
+color = Color(0.556863, 1, 1, 1)
+
+[sub_resource type="Animation" id="Animation_0pr2t"]
+resource_name = "Enter"
+length = 3.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Customer:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(2400, 700), Vector2(2307.42, 675), Vector2(2112.54, 700), Vector2(1865.11, 675), Vector2(1581.57, 700), Vector2(1299.93, 675), Vector2(1063.44, 700), Vector2(950, 675)]
+}
+
+[sub_resource type="Animation" id="Animation_6grq2"]
+resource_name = "Idle"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Customer:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(950, 675), Vector2(950, 685), Vector2(950, 675)]
+}
+
+[sub_resource type="Animation" id="Animation_vv6ih"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Customer:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(950, 800)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_srggg"]
+_data = {
+"Enter": SubResource("Animation_0pr2t"),
+"Idle": SubResource("Animation_6grq2"),
+"RESET": SubResource("Animation_vv6ih")
+}
 
 [node name="Customer" type="Node2D"]
 script = ExtResource("1_c24f8")
@@ -25,10 +97,18 @@ grow_horizontal = 1
 grow_vertical = 1
 
 [node name="Customer" type="Sprite2D" parent="."]
+clip_children = 2
 z_index = 1
 position = Vector2(950, 800)
 scale = Vector2(2.03709, 2.03709)
-texture = ExtResource("2_758aq")
+texture = ExtResource("3_11p8t")
+
+[node name="Sweat" type="GPUParticles2D" parent="Customer"]
+visible = false
+position = Vector2(4.90896, -76.5798)
+amount = 80
+process_material = SubResource("ParticleProcessMaterial_ta50x")
+lifetime = 2.3
 
 [node name="MagnifyingGlass" type="Sprite2D" parent="."]
 z_index = 3
@@ -62,5 +142,11 @@ unique_name_in_owner = true
 position = Vector2(-2598.36, -1709.02)
 texture = ExtResource("7_pw0q1")
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_srggg")
+}
+
 [connection signal="mouse_entered" from="MagnifyingGlass/Area2D" to="MagnifyingGlass" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="MagnifyingGlass/Area2D" to="MagnifyingGlass" method="_on_mouse_exited"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

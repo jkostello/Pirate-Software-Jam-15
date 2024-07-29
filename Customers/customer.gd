@@ -42,8 +42,22 @@ func _ready():
 	print("Cure: ", cure)
 	intro()
 	
+	match body_symptom:
+		'Sweaty':
+			$Customer/Sweat.visible = true
+		'Bouncy':
+			$AnimationPlayer.speed_scale = 2.0
+	
+	$AnimationPlayer.play("Enter")
+
+
 func intro():
 	if intro_symptom:
 		Autoload.display_symptom.emit(intro_symptom)
 	else:
 		$Textbox.add_text('Hi, I was told you can help me?')
+
+
+func _on_animation_player_animation_finished(anim_name):
+	if anim_name == "Enter":
+		$AnimationPlayer.play("Idle")

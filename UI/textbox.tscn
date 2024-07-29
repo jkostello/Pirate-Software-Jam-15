@@ -1,4 +1,4 @@
-[gd_scene load_steps=2 format=3 uid="uid://dxnasp3ckgooe"]
+[gd_scene load_steps=2 format=3 uid="uid://c8ln02ahufb58"]
 
 [ext_resource type="Script" path="res://UI/textbox.gd" id="1_svkar"]
 
@@ -48,4 +48,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_font_sizes/normal_font_size = 32
-text = "Placeholder text! The quick brown fox jumped over the lazy dog. This textbox holds 3 lines of text."
+text = "Placeholder text! 
+The quick brown fox jumped over the lazy dog. 
+This textbox holds 3 lines of text."
