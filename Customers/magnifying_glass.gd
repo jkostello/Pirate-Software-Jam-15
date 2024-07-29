@@ -41,7 +41,9 @@ func drop():
 	%Particle.global_position = particle_position
 
 func _on_mouse_entered():
+	print('hovered')
 	hovered = true
 
 func _on_mouse_exited():
+	print('not hovered')
 	hovered = false
