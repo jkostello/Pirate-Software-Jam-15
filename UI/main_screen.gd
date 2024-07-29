@@ -1,5 +1,7 @@
 extends Node
 
+var viewing_shop := true
+
 func _ready():
 	generate_customer()
 
@@ -13,3 +15,14 @@ func generate_customer():
 	var customer = customer_scene.instantiate()
 	add_child(customer)
 	customer.add_to_group('customers')
+
+
+func _on_switch_pressed():
+	if $AnimationPlayer.is_playing():
+		return
+	
+	if viewing_shop:
+		$AnimationPlayer.play("ToRitual")
+	else:
+		$AnimationPlayer.play("ToShop")
+	viewing_shop = not viewing_shop
