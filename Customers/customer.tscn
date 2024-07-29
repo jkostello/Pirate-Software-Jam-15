@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxuh21ps5372b"]
+[gd_scene load_steps=8 format=3 uid="uid://cxuh21ps5372b"]
 
 [ext_resource type="Script" path="res://Customers/customer.gd" id="1_c24f8"]
 [ext_resource type="Texture2D" uid="uid://cuml1f0riucg2" path="res://Customers/temp_sinner.jpg" id="2_758aq"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cffadi21pacuu" path="res://Customers/CircleMask.png" id="4_rmftt"]
 [ext_resource type="Script" path="res://Customers/magnifying_glass.gd" id="4_wumt6"]
 [ext_resource type="Texture2D" uid="uid://ghqr12tghyir" path="res://Customers/temp_symbol.png" id="5_sufu3"]
+[ext_resource type="Texture2D" uid="uid://bupjkxxugwai5" path="res://Customers/temp_particles.png" id="7_pw0q1"]
 
 [node name="Customer" type="Node2D"]
 script = ExtResource("1_c24f8")
@@ -47,6 +48,11 @@ unique_name_in_owner = true
 position = Vector2(-1994.83, -2067.24)
 scale = Vector2(0.322339, 0.42482)
 texture = ExtResource("5_sufu3")
+
+[node name="Particle" type="Sprite2D" parent="MagnifyingGlass/Mask"]
+unique_name_in_owner = true
+position = Vector2(-1253.45, -1146.55)
+texture = ExtResource("7_pw0q1")
 
 [connection signal="mouse_entered" from="MagnifyingGlass/Area2D" to="MagnifyingGlass" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="MagnifyingGlass/Area2D" to="MagnifyingGlass" method="_on_mouse_exited"]
