@@ -300,7 +300,12 @@ offset_bottom = 1021.0
 focus_mode = 0
 text = "Switch"
 
+[node name="CustomerTimer" type="Timer" parent="."]
+wait_time = 15.0
+autostart = true
+
 [connection signal="pressed" from="Shop/TempGenerator" to="." method="_on_temp_generator_pressed"]
 [connection signal="pressed" from="CanvasLayer/Switch" to="." method="_on_switch_pressed"]
+[connection signal="timeout" from="CustomerTimer" to="." method="_on_customer_timer_timeout"]
 
 [editable path="Ritual"]
