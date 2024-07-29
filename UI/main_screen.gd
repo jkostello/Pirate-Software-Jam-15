@@ -1,6 +1,8 @@
 extends Node
 
 var viewing_shop := true
+var book_open := false
+
 
 func _ready():
 	generate_customer()
@@ -32,3 +34,12 @@ func _on_temp_generator_pressed():
 
 func _on_customer_timer_timeout():
 	generate_customer()
+
+
+func _on_bookbutton_pressed():
+	if not %Book/AnimationPlayer.is_playing():
+		book_open = not book_open
+		%BookOpen.visible = book_open
+		%BookClosed.visible = not book_open
+		%Book._on_button_pressed()
+		

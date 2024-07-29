@@ -1,11 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://cdfvgikc2fmx3"]
+[gd_scene load_steps=14 format=3 uid="uid://cdfvgikc2fmx3"]
 
 [ext_resource type="Script" path="res://UI/main_screen.gd" id="1_mggcd"]
 [ext_resource type="Texture2D" uid="uid://g023b3w5v68" path="res://UI/main_bkgd.png" id="2_8h5ua"]
 [ext_resource type="Texture2D" uid="uid://ndwstghoaq0w" path="res://UI/ritual_desk.png" id="3_bea5q"]
-[ext_resource type="PackedScene" uid="uid://c7qu73noo5jn7" path="res://UI/question_box.tscn" id="4_gypuy"]
+[ext_resource type="PackedScene" path="res://UI/question_box.tscn" id="4_gypuy"]
+[ext_resource type="Texture2D" uid="uid://dn3tqb4i407n0" path="res://Book/IMG_0884.png" id="5_4gpuh"]
+[ext_resource type="Texture2D" uid="uid://cbxo6hcbncvgl" path="res://Book/IMG_0885.png" id="5_lrcvf"]
 [ext_resource type="PackedScene" uid="uid://b4aiw4jts5hgq" path="res://UI/ritual.tscn" id="5_q862v"]
 [ext_resource type="PackedScene" uid="uid://dtcs2rs1ixl7a" path="res://UI/Menus/main_menu.tscn" id="5_xxfp2"]
+[ext_resource type="PackedScene" uid="uid://cxkcysmocimog" path="res://Book/book.tscn" id="7_3ldgs"]
 
 [sub_resource type="Animation" id="Animation_djsy7"]
 length = 0.001
@@ -260,6 +263,28 @@ z_index = 2
 position = Vector2(960, 540)
 texture = ExtResource("3_bea5q")
 
+[node name="BookClosed" type="Sprite2D" parent="Shop"]
+unique_name_in_owner = true
+z_index = 2
+texture = ExtResource("5_4gpuh")
+centered = false
+
+[node name="BookOpen" type="Sprite2D" parent="Shop"]
+unique_name_in_owner = true
+visible = false
+z_index = 2
+texture = ExtResource("5_lrcvf")
+centered = false
+
+[node name="Bookbutton" type="Button" parent="Shop"]
+offset_left = 136.0
+offset_top = 905.0
+offset_right = 466.0
+offset_bottom = 1067.0
+focus_mode = 0
+text = "book"
+flat = true
+
 [node name="QuestionBox" parent="Shop" instance=ExtResource("4_gypuy")]
 offset_left = 1198.0
 offset_top = 121.0
@@ -288,9 +313,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="MainMenu" parent="CanvasLayer" instance=ExtResource("5_xxfp2")]
-visible = false
-title_screen = false
+[node name="Book" parent="CanvasLayer" instance=ExtResource("7_3ldgs")]
+unique_name_in_owner = true
+anchors_preset = -1
+scale = Vector2(1.69, 1.69)
 
 [node name="Switch" type="Button" parent="CanvasLayer"]
 offset_left = 339.0
@@ -300,10 +326,15 @@ offset_bottom = 1021.0
 focus_mode = 0
 text = "Switch"
 
+[node name="MainMenu" parent="CanvasLayer" instance=ExtResource("5_xxfp2")]
+visible = false
+title_screen = false
+
 [node name="CustomerTimer" type="Timer" parent="."]
 wait_time = 15.0
 autostart = true
 
+[connection signal="pressed" from="Shop/Bookbutton" to="." method="_on_bookbutton_pressed"]
 [connection signal="pressed" from="Shop/TempGenerator" to="." method="_on_temp_generator_pressed"]
 [connection signal="pressed" from="CanvasLayer/Switch" to="." method="_on_switch_pressed"]
 [connection signal="timeout" from="CustomerTimer" to="." method="_on_customer_timer_timeout"]
