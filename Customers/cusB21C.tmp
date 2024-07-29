@@ -25,8 +25,8 @@ offset_right = 1015.0
 offset_bottom = 408.0
 
 [node name="MagnifyingGlass" type="Sprite2D" parent="."]
-z_index = 2
-position = Vector2(1600, 939)
+z_index = 1
+position = Vector2(1016, 385)
 scale = Vector2(0.130164, 0.130164)
 texture = ExtResource("3_0ioue")
 script = ExtResource("4_wumt6")
@@ -43,8 +43,7 @@ scale = Vector2(2.22796, 2.22796)
 texture = ExtResource("4_rmftt")
 
 [node name="Symbol" type="Sprite2D" parent="MagnifyingGlass/Mask"]
-unique_name_in_owner = true
-position = Vector2(-1994.83, -2067.24)
+position = Vector2(30.8221, -157.534)
 scale = Vector2(0.322339, 0.42482)
 texture = ExtResource("5_sufu3")
 

@@ -1,16 +1,18 @@
 extends Ailments
 
-@onready var intros := ['Compliments', 'Hungry', 'Dry Mouth']
-@onready var behaviors := ['Irritable', 'Paranoia', 'Narcolepsy', 'Tired']
-@onready var pains := ['Arm Pain', 'Headache', 'Leg Pain']
-@onready var senses := ['Poor Vision', 'Dulled Taste', 'Dulled Touch', 'Smoke Smell']
-@onready var body := ['Sweaty', 'Bouncy', 'Heavy Breathing']
+# Symptom categories
+const INTROS := ['Compliments', 'Hungry', 'Dry Mouth']
+const BEHAVIORS := ['Irritable', 'Paranoia', 'Narcolepsy', 'Tired']
+const PAINS := ['Arm Pain', 'Headache', 'Leg Pain']
+const SENSES := ['Poor Vision', 'Dulled Taste', 'Dulled Touch', 'Smoke Smell']
+const BODY := ['Sweaty', 'Bouncy', 'Heavy Breathing']
 
-var intro_symptom = ''
-var behavior_symptom = ''
-var pain_symptom = ''
-var sense_symptom = ''
-var body_symptom = ''
+# Customer's symptoms
+var intro_symptom := ''
+var behavior_symptom := ''
+var pain_symptom := ''
+var sense_symptom := ''
+var body_symptom := ''
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,13 +24,13 @@ func _ready():
 	
 	# Assign symptoms
 	for symptom in ailment:
-		if intros.has(symptom):
+		if INTROS.has(symptom):
 			intro_symptom = symptom
-		elif behaviors.has(symptom):
+		elif BEHAVIORS.has(symptom):
 			behavior_symptom = symptom
-		elif pains.has(symptom):
+		elif PAINS.has(symptom):
 			pain_symptom = symptom
-		elif senses.has(symptom):
+		elif SENSES.has(symptom):
 			sense_symptom = symptom
 		else:
 			body_symptom = symptom
