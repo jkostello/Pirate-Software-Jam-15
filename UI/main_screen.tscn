@@ -59,7 +59,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(1757, 979)]
+"values": [Vector2(545, 928)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -134,7 +134,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(1757, 979), Vector2(1615, 22)]
+"values": [Vector2(545, 928), Vector2(1615, 22)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -209,7 +209,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(1615, 22), Vector2(1757, 979)]
+"values": [Vector2(1615, 22), Vector2(545, 928)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -264,6 +264,14 @@ z_index = 2
 position = Vector2(960, 540)
 texture = ExtResource("3_bea5q")
 
+[node name="TempGenerator" type="Button" parent="Shop/Desk"]
+offset_left = 779.0
+offset_top = 412.0
+offset_right = 910.0
+offset_bottom = 443.0
+focus_mode = 0
+text = "Make Customer"
+
 [node name="BookClosed" type="Sprite2D" parent="Shop"]
 unique_name_in_owner = true
 z_index = 2
@@ -298,14 +306,6 @@ offset_top = 121.0
 offset_right = 1198.0
 offset_bottom = 121.0
 
-[node name="TempGenerator" type="Button" parent="Shop"]
-offset_left = 67.0
-offset_top = 361.0
-offset_right = 198.0
-offset_bottom = 392.0
-focus_mode = 0
-text = "Make Customer"
-
 [node name="Ritual" parent="." instance=ExtResource("5_q862v")]
 modulate = Color(1, 1, 1, 0)
 
@@ -326,10 +326,10 @@ anchors_preset = -1
 scale = Vector2(1.69, 1.69)
 
 [node name="Switch" type="Button" parent="CanvasLayer"]
-offset_left = 1757.0
-offset_top = 979.0
-offset_right = 1816.0
-offset_bottom = 1010.0
+offset_left = 545.0
+offset_top = 928.0
+offset_right = 1386.0
+offset_bottom = 1078.0
 focus_mode = 0
 text = "Switch"
 
@@ -341,8 +341,8 @@ title_screen = false
 wait_time = 60.0
 autostart = true
 
+[connection signal="pressed" from="Shop/Desk/TempGenerator" to="." method="_on_temp_generator_pressed"]
 [connection signal="pressed" from="Shop/Bookbutton" to="." method="_on_bookbutton_pressed"]
-[connection signal="pressed" from="Shop/TempGenerator" to="." method="_on_temp_generator_pressed"]
 [connection signal="pressed" from="CanvasLayer/Switch" to="." method="_on_switch_pressed"]
 [connection signal="timeout" from="CustomerTimer" to="." method="_on_customer_timer_timeout"]
 

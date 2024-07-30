@@ -130,7 +130,6 @@ offset_right = 1918.0
 offset_bottom = 844.0
 grow_horizontal = 1
 grow_vertical = 1
-mouse_filter = 2
 
 [node name="Customer" type="Sprite2D" parent="."]
 clip_children = 2

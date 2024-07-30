@@ -57,4 +57,4 @@ mouse_filter = 2
 theme_override_font_sizes/normal_font_size = 32
 text = "Placeholder text! 
 The quick brown fox jumped over the lazy dog. 
-This textbox holds 3 lines of text."
+This textbox holds 3 lines of text. Each dialogue line should have less than 90 characters."
