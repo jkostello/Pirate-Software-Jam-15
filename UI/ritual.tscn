@@ -1,64 +1,87 @@
-[gd_scene load_steps=4 format=3 uid="uid://b4aiw4jts5hgq"]
+[gd_scene load_steps=8 format=3 uid="uid://b4aiw4jts5hgq"]
 
 [ext_resource type="Script" path="res://UI/ritual.gd" id="1_a7a2e"]
 [ext_resource type="PackedScene" uid="uid://b5pnl2hsow6jr" path="res://Circles/base_circle.tscn" id="2_ss73g"]
 [ext_resource type="PackedScene" uid="uid://djeytu43sbild" path="res://Ingredients/base_ingredient.tscn" id="3_ceipf"]
+[ext_resource type="Texture2D" uid="uid://btmyu70grmxid" path="res://UI/IMG_0906.png" id="3_wr7g5"]
+[ext_resource type="Texture2D" uid="uid://dc46hjr4vs7rn" path="res://UI/IMG_0907.png" id="4_ktoy1"]
+[ext_resource type="Texture2D" uid="uid://rvg04uot3fxd" path="res://UI/IMG_0904.png" id="4_uiuom"]
+[ext_resource type="Texture2D" uid="uid://btf8dyacir7y1" path="res://UI/IMG_0908.png" id="5_abfnb"]
 
 [node name="Ritual" type="Node2D"]
 script = ExtResource("1_a7a2e")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("4_uiuom")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+texture = ExtResource("3_wr7g5")
+centered = false
+
+[node name="BookClosed" type="Sprite2D" parent="."]
+texture = ExtResource("4_ktoy1")
+centered = false
+
+[node name="BookOpen" type="Sprite2D" parent="."]
+texture = ExtResource("5_abfnb")
+centered = false
 
 [node name="IngredientShelf" type="Node2D" parent="."]
 position = Vector2(88, 72)
 
 [node name="BaseMaterial" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+position = Vector2(84, 156)
 is_chalk = true
 identifier = "Bigram"
 source = true
 
 [node name="BaseMaterial2" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(159, 2)
+position = Vector2(77, 318)
 is_chalk = true
 identifier = "Pentagram"
 source = true
 
 [node name="BaseMaterial3" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(307, -1)
+position = Vector2(77, 489)
 identifier = "A4"
 source = true
 
 [node name="BaseMaterial4" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(466, -1)
+position = Vector2(66, 643)
 identifier = "A1"
 source = true
 
 [node name="BaseMaterial5" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(615, -3)
+position = Vector2(279, 163)
 identifier = "A2"
 source = true
 
 [node name="BaseMaterial6" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(781, 2)
+position = Vector2(283, 332)
 is_dust = true
 identifier = "D1"
 source = true
 
 [node name="BaseMaterial7" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(957, 2)
+position = Vector2(291, 500)
 is_dust = true
 identifier = "D2"
 source = true
 
 [node name="CirclePos" type="Node2D" parent="."]
-position = Vector2(960, 540)
+position = Vector2(1069, 545)
 
 [node name="BaseCircle" parent="CirclePos" instance=ExtResource("2_ss73g")]
 
 [node name="Reset" type="Button" parent="."]
-offset_left = 276.0
-offset_top = 537.0
-offset_right = 376.0
-offset_bottom = 568.0
+offset_left = 1598.0
+offset_top = 237.0
+offset_right = 1698.0
+offset_bottom = 268.0
 focus_mode = 0
 text = "Reset Ritual"
 
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
+
+[editable path="CirclePos/BaseCircle"]

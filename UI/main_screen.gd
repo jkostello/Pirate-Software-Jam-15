@@ -51,5 +51,7 @@ func _on_bookbutton_pressed():
 		book_open = not book_open
 		%BookOpen.visible = book_open
 		%BookClosed.visible = not book_open
+		$Ritual/BookOpen.visible =  book_open
+		$Ritual/BookClosed.visible = not book_open
 		%Book._on_button_pressed()
 		

@@ -1,7 +1,7 @@
 extends Sprite2D
 
-@onready var symbol_position = %Symbol.global_position
-@onready var particle_position = %Particle.global_position
+@onready var symbol_position = %Symbol.global_position - %Customer.global_position
+@onready var particle_position = %Particle.global_position - %Customer.global_position
 @onready var magnifying_position = global_position
 
 # For magnifying glass
@@ -41,8 +41,8 @@ func _input(event):
 
 func move():
 	global_position = get_global_mouse_position()
-	%Symbol.global_position = symbol_position
-	%Particle.global_position = particle_position
+	%Symbol.global_position = symbol_position + %Customer.global_position
+	%Particle.global_position = particle_position + %Customer.global_position
 
 func pick_up():
 	following_mouse = true

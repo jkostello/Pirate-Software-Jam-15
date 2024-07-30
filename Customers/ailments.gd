@@ -11,7 +11,7 @@ var prideAilments = [
 
 var greedAilments = [
 	{ 'cure1' = ['Sweaty', 'Paranoia', 'Arm Pain'] },
-	{ 'cure2' = ['Hungry', 'Dry Mouth', 'Dulled Touch'] },
+	{ 'cure2' = ['Irritable', 'Dry Mouth', 'Dulled Touch'] },
 	{ 'cure3' = ['Dulled Taste', 'Paranoia', 'Compliments'] }
 ]
 

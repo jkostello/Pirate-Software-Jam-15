@@ -36,11 +36,12 @@ func _ready():
 			body_symptom = symptom
 	
 	
+	$Customer.frame = randi_range(0,$Customer.sprite_frames.get_frame_count('default') - 1)
 	Autoload.customer_info.emit(behavior_symptom, pain_symptom, sense_symptom)
 	print("Sin: ", sin)
 	print("Body symptom: ", body_symptom)
 	print("Cure: ", cure)
-	intro()
+	
 	
 	if body_symptom == 'Bouncy':
 		$AnimationPlayer.speed_scale = 2.1
@@ -50,6 +51,7 @@ func _ready():
 
 
 func intro():
+	$Textbox.visible = true
 	if intro_symptom:
 		Autoload.display_symptom.emit(intro_symptom)
 	else:
@@ -59,6 +61,7 @@ func intro():
 func _on_animation_player_animation_finished(anim_name):
 	if anim_name == "Enter":
 		$AnimationPlayer.play("Idle")
+		intro()
 		
 		match body_symptom:
 			'Sweaty':

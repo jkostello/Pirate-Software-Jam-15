@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cbxo6hcbncvgl" path="res://Book/IMG_0885.png" id="5_lrcvf"]
 [ext_resource type="PackedScene" uid="uid://b4aiw4jts5hgq" path="res://UI/ritual.tscn" id="5_q862v"]
 [ext_resource type="PackedScene" uid="uid://dtcs2rs1ixl7a" path="res://UI/Menus/main_menu.tscn" id="5_xxfp2"]
-[ext_resource type="Texture2D" uid="uid://vm8u2t2gcpk" path="res://IMG_0883.png" id="6_ehgyo"]
+[ext_resource type="Texture2D" uid="uid://vm8u2t2gcpk" path="res://UI/IMG_0883.png" id="6_ehgyo"]
 [ext_resource type="PackedScene" uid="uid://cxkcysmocimog" path="res://Book/book.tscn" id="7_3ldgs"]
 
 [sub_resource type="Animation" id="Animation_djsy7"]
@@ -85,6 +85,30 @@ tracks/5/keys = {
 "update": 1,
 "values": [true]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Bookbutton:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(136, 905)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Bookbutton:size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(330, 162)]
+}
 
 [sub_resource type="Animation" id="Animation_algoe"]
 resource_name = "ToRitual"
@@ -134,7 +158,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(545, 928), Vector2(1615, 22)]
+"values": [Vector2(545, 928), Vector2(672, 20)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -159,6 +183,30 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Bookbutton:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(136, 905), Vector2(1424, 409)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Bookbutton:size")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(330, 162), Vector2(472, 306)]
 }
 
 [sub_resource type="Animation" id="Animation_i7ibf"]
@@ -209,7 +257,7 @@ tracks/3/keys = {
 "times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(1615, 22), Vector2(545, 928)]
+"values": [Vector2(672, 20), Vector2(545, 928)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -234,6 +282,30 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CanvasLayer/Bookbutton:size")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(472, 306), Vector2(330, 162)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("CanvasLayer/Bookbutton:position")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(1424, 409), Vector2(136, 905)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_21c2n"]
@@ -291,15 +363,6 @@ z_index = 2
 texture = ExtResource("6_ehgyo")
 centered = false
 
-[node name="Bookbutton" type="Button" parent="Shop"]
-offset_left = 136.0
-offset_top = 905.0
-offset_right = 466.0
-offset_bottom = 1067.0
-focus_mode = 0
-text = "book"
-flat = true
-
 [node name="QuestionBox" parent="Shop" instance=ExtResource("4_gypuy")]
 offset_left = 1198.0
 offset_top = 121.0
@@ -324,6 +387,14 @@ grow_vertical = 2
 unique_name_in_owner = true
 anchors_preset = -1
 scale = Vector2(1.69, 1.69)
+
+[node name="Bookbutton" type="Button" parent="CanvasLayer"]
+offset_left = 136.0
+offset_top = 905.0
+offset_right = 466.0
+offset_bottom = 1067.0
+focus_mode = 0
+flat = true
 
 [node name="Switch" type="Button" parent="CanvasLayer"]
 offset_left = 545.0
@@ -352,8 +423,9 @@ wait_time = 60.0
 autostart = true
 
 [connection signal="pressed" from="Shop/Desk/TempGenerator" to="." method="_on_temp_generator_pressed"]
-[connection signal="pressed" from="Shop/Bookbutton" to="." method="_on_bookbutton_pressed"]
+[connection signal="pressed" from="CanvasLayer/Bookbutton" to="." method="_on_bookbutton_pressed"]
 [connection signal="pressed" from="CanvasLayer/Switch" to="." method="_on_switch_pressed"]
 [connection signal="timeout" from="CanvasLayer/VisibleTimer/CustomerTimer" to="." method="_on_customer_timer_timeout"]
 
 [editable path="Ritual"]
+[editable path="Ritual/CirclePos/BaseCircle"]
