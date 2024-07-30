@@ -43,7 +43,7 @@ func _ready():
 	intro()
 	
 	if body_symptom == 'Bouncy':
-		$AnimationPlayer.speed_scale = 2.0
+		$AnimationPlayer.speed_scale = 2.1
 	
 	
 	$AnimationPlayer.play("Enter")

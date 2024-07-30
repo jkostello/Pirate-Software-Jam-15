@@ -36,7 +36,7 @@ var lustAilments = [
 var gluttonyAilments = [
 	{ 'cure1' = ['Hungry', 'Heavy Breathing', 'Dulled Taste'] },
 	{ 'cure2' = ['Smoke Smell', 'Narcolepsy', 'Sweaty'] },
-	{ 'cure3' = ['Insomnia', 'Dry Mouth', 'Bouncy'] }
+	{ 'cure3' = ['Leg Pain', 'Dry Mouth', 'Bouncy'] }
 ]
 
 var slothAilments = [
