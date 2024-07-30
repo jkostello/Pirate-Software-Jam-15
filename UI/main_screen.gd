@@ -6,6 +6,10 @@ var book_open := false
 
 func _ready():
 	generate_customer()
+	Autoload.glass_visible.connect(glassvisible)
+
+func glassvisible(truefalse):
+	%MagnifyingGlass.visible = truefalse
 
 func generate_customer():
 	# Delete current customer
