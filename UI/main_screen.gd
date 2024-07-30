@@ -7,6 +7,12 @@ var book_open := false
 func _ready():
 	generate_customer()
 	Autoload.glass_visible.connect(glassvisible)
+	%VisibleTimer.max_value = %CustomerTimer.wait_time
+
+
+func _process(delta):
+	%VisibleTimer.value = %CustomerTimer.time_left
+
 
 func glassvisible(truefalse):
 	%MagnifyingGlass.visible = truefalse

@@ -557,8 +557,8 @@ offset_top = -0.204002
 offset_right = -1.0
 text = "For use on Wrath-afflicted people who are experiencing the following symptoms:
 
-Hungry
-Dry mouth
+Pain in arms
+Heavy breathing
 Dulled touch
 
 Ritual Process:
@@ -605,9 +605,9 @@ offset_top = -0.204002
 offset_right = -1.0
 text = "For use on Wrath-afflicted people who are experiencing the following symptoms:
 
-Dulled taste
+Poor vision
+Pain in legs
 Paranoia
-Lust
 
 Ritual Process:
 
@@ -701,9 +701,9 @@ offset_top = -0.204002
 offset_right = -1.0
 text = "For use on Envy-afflicted people who are experiencing the following symptoms:
 
-Pain in arms
-Heavy breathing
-Dulled Touch
+Dry mouth
+Irritable
+Antsy
 
 Ritual Process:
 
@@ -749,9 +749,9 @@ offset_top = -0.204002
 offset_right = -1.0
 text = "For use on Envy-afflicted people who are experiencing the following symptoms:
 
-Poor vision
-Pain in legs
-Paranoia
+Dulled taste
+Heavy breathing
+Hungry
 
 Ritual Process:
 
@@ -990,7 +990,7 @@ offset_right = -1.0
 text = "For use on Gluttony-afflicted people who are experiencing the following symptoms:
 
 Smell smoke
-Tired
+Narcolepsy
 Sweaty
 
 Ritual Process:
@@ -1037,7 +1037,7 @@ offset_top = -0.204002
 offset_right = -1.0
 text = "For use on Gluttony-afflicted people who are experiencing the following symptoms:
 
-Insomnia
+Pain in legs
 Dry mouth
 Antsy
 
@@ -1087,7 +1087,7 @@ text = "For use on Sloth-afflicted people who are experiencing the following sym
 
 Narcolepsy
 Pain in legs
-Poor vision
+Smell smoke
 
 Ritual Process:
 

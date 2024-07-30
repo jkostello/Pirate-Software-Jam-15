@@ -337,13 +337,23 @@ text = "Switch"
 visible = false
 title_screen = false
 
-[node name="CustomerTimer" type="Timer" parent="."]
+[node name="VisibleTimer" type="ProgressBar" parent="CanvasLayer"]
+unique_name_in_owner = true
+offset_left = 1651.0
+offset_top = 1030.0
+offset_right = 1898.0
+offset_bottom = 1057.0
+value = 100.0
+show_percentage = false
+
+[node name="CustomerTimer" type="Timer" parent="CanvasLayer/VisibleTimer"]
+unique_name_in_owner = true
 wait_time = 60.0
 autostart = true
 
 [connection signal="pressed" from="Shop/Desk/TempGenerator" to="." method="_on_temp_generator_pressed"]
 [connection signal="pressed" from="Shop/Bookbutton" to="." method="_on_bookbutton_pressed"]
 [connection signal="pressed" from="CanvasLayer/Switch" to="." method="_on_switch_pressed"]
-[connection signal="timeout" from="CustomerTimer" to="." method="_on_customer_timer_timeout"]
+[connection signal="timeout" from="CanvasLayer/VisibleTimer/CustomerTimer" to="." method="_on_customer_timer_timeout"]
 
 [editable path="Ritual"]
