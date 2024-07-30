@@ -39,9 +39,9 @@ const dialogues = {
 		],
 	
 	'Narcolepsy' = [
-		'...zzz... oh sorry, did you say something?', 
+		'...zzz... Sorry, did you say something?', 
 		'People say I\'m falling asleep all the time, but I don\'t remember.', 
-		'I\'ve been awfully sleepy recently.', '*yawn* Sorry, what did you say?',
+		'I\'ve been awfully sleepy recently.', 
 		],
 	
 	'Arm Pain' = [
