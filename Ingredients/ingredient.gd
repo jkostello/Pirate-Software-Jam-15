@@ -63,7 +63,7 @@ func pick_up():
 	
 	if source: # Clones ingrendient and removes source tag
 		var new_ingredient : Node2D = duplicate()
-		get_tree().current_scene.add_child(new_ingredient)
+		get_parent().get_parent().add_child(new_ingredient)
 		new_ingredient.following_mouse = true
 		new_ingredient.source = false
 	else: # Moves existing ingredient

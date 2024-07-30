@@ -155,7 +155,7 @@ tracks/3/path = NodePath("CanvasLayer/Switch:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0, 1.3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [Vector2(545, 928), Vector2(672, 20)]
@@ -254,10 +254,10 @@ tracks/3/path = NodePath("CanvasLayer/Switch:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.5),
+"times": PackedFloat32Array(0.5, 1.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [Vector2(672, 20), Vector2(545, 928)]
+"values": [Vector2(545, 928), Vector2(672, 20)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
@@ -337,6 +337,7 @@ position = Vector2(960, 540)
 texture = ExtResource("3_bea5q")
 
 [node name="TempGenerator" type="Button" parent="Shop/Desk"]
+visible = false
 offset_left = 779.0
 offset_top = 412.0
 offset_right = 910.0
@@ -421,6 +422,14 @@ show_percentage = false
 unique_name_in_owner = true
 wait_time = 60.0
 autostart = true
+
+[node name="Label" type="Label" parent="CanvasLayer/VisibleTimer"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = -21.0
+offset_right = 148.0
+offset_bottom = 2.0
+text = "Patience"
 
 [connection signal="pressed" from="Shop/Desk/TempGenerator" to="." method="_on_temp_generator_pressed"]
 [connection signal="pressed" from="CanvasLayer/Bookbutton" to="." method="_on_bookbutton_pressed"]

@@ -2,7 +2,7 @@ extends Node
 
 var viewing_shop := true
 var book_open := false
-
+var strikes := 0
 
 func _ready():
 	generate_customer()
@@ -27,6 +27,13 @@ func generate_customer():
 	var customer = customer_scene.instantiate()
 	%Shop.add_child(customer)
 	customer.add_to_group('customers')
+
+
+func failed():
+	strikes += 1
+	if strikes >= 3:
+		pass
+
 
 func _on_switch_pressed():
 	if $AnimationPlayer.is_playing():

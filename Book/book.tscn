@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cxkcysmocimog"]
+[gd_scene load_steps=7 format=3 uid="uid://cxkcysmocimog"]
 
 [ext_resource type="Script" path="res://Book/book.gd" id="1_nvlfn"]
+[ext_resource type="Theme" uid="uid://b0cbl4fc7hvuf" path="res://Book/booktheme.tres" id="2_a7gt4"]
 
 [sub_resource type="Animation" id="Animation_yx0es"]
 resource_name = "Go In"
@@ -84,7 +85,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="Replace with texture_sprite" type="ColorRect" parent="MarginContainer"]
 layout_mode = 2
-color = Color(0.377919, 0.377919, 0.377919, 1)
+color = Color(0.574308, 0.542837, 0.471095, 1)
 
 [node name="Control" type="Control" parent="MarginContainer"]
 layout_mode = 2
@@ -106,6 +107,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageDemon1"]
 layout_mode = 1
@@ -114,6 +116,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Identifying"
 horizontal_alignment = 1
@@ -128,6 +131,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "How to spot Pride:
 fdasjkl
 fadsl;jk
@@ -153,6 +157,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageDemon2"]
 layout_mode = 1
@@ -161,6 +166,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = 37.828
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Identifying"
 horizontal_alignment = 1
@@ -175,6 +181,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "How to spot Greed:
 fdsaljk
 fa;ldkj
@@ -197,6 +204,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PagePride1"]
 layout_mode = 1
@@ -205,6 +213,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -219,6 +228,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Pride-afflicted people who are experiencing the following symptoms:
 
 Irritable
@@ -245,6 +255,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PagePride2"]
 layout_mode = 1
@@ -253,6 +264,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -267,6 +279,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Pride-afflicted people who are experiencing the following symptoms:
 
 Pain in arms
@@ -293,6 +306,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PagePride3"]
 layout_mode = 1
@@ -301,6 +315,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -315,6 +330,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Pride-afflicted people who are experiencing the following symptoms:
 
 Poor vision
@@ -341,6 +357,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageGreed1"]
 layout_mode = 1
@@ -349,6 +366,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -363,6 +381,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Greed-afflicted people who are experiencing the following symptoms:
 
 Sweaty
@@ -389,6 +408,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageGreed2"]
 layout_mode = 1
@@ -397,6 +417,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -411,6 +432,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Greed-afflicted people who are experiencing the following symptoms:
 
 Irritable
@@ -437,6 +459,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageGreed3"]
 layout_mode = 1
@@ -445,6 +468,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -459,6 +483,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Greed-afflicted people who are experiencing the following symptoms:
 
 Dulled taste
@@ -485,6 +510,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageWrath1"]
 layout_mode = 1
@@ -493,6 +519,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -507,6 +534,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Wrath-afflicted people who are experiencing the following symptoms:
 
 Irritable
@@ -533,6 +561,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageWrath2"]
 layout_mode = 1
@@ -541,6 +570,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -555,6 +585,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Wrath-afflicted people who are experiencing the following symptoms:
 
 Pain in arms
@@ -581,6 +612,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageWrath3"]
 layout_mode = 1
@@ -589,6 +621,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -603,6 +636,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Wrath-afflicted people who are experiencing the following symptoms:
 
 Poor vision
@@ -629,6 +663,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageEnvy1"]
 layout_mode = 1
@@ -637,6 +672,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -651,6 +687,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Envy-afflicted people who are experiencing the following symptoms:
 
 Poor vision
@@ -677,6 +714,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageEnvy2"]
 layout_mode = 1
@@ -685,6 +723,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -699,6 +738,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Envy-afflicted people who are experiencing the following symptoms:
 
 Dry mouth
@@ -725,6 +765,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageEnvy3"]
 layout_mode = 1
@@ -733,6 +774,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -747,6 +789,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Envy-afflicted people who are experiencing the following symptoms:
 
 Dulled taste
@@ -773,6 +816,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageLust1"]
 layout_mode = 1
@@ -781,6 +825,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -795,6 +840,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Lust-afflicted people who are experiencing the following symptoms:
 
 Sweaty
@@ -821,6 +867,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageLust2"]
 layout_mode = 1
@@ -829,6 +876,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -843,6 +891,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Lust-afflicted people who are experiencing the following symptoms:
 
 Heavy breathing
@@ -869,6 +918,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageLust3"]
 layout_mode = 1
@@ -877,6 +927,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -891,6 +942,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Lust-afflicted people who are experiencing the following symptoms:
 
 Irritable
@@ -917,6 +969,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageGluttony1"]
 layout_mode = 1
@@ -925,6 +978,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -939,6 +993,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Gluttony-afflicted people who are experiencing the following symptoms:
 
 Hungry
@@ -965,6 +1020,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageGluttony2"]
 layout_mode = 1
@@ -973,6 +1029,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -987,6 +1044,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Gluttony-afflicted people who are experiencing the following symptoms:
 
 Smell smoke
@@ -1013,6 +1071,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageGluttony3"]
 layout_mode = 1
@@ -1021,6 +1080,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -1035,6 +1095,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Gluttony-afflicted people who are experiencing the following symptoms:
 
 Pain in legs
@@ -1061,6 +1122,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageSloth1"]
 layout_mode = 1
@@ -1069,6 +1131,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -1083,6 +1146,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Sloth-afflicted people who are experiencing the following symptoms:
 
 Narcolepsy
@@ -1109,6 +1173,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageSloth2"]
 layout_mode = 1
@@ -1117,6 +1182,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -1131,6 +1197,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Sloth-afflicted people who are experiencing the following symptoms:
 
 Poor vision
@@ -1157,6 +1224,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_a7gt4")
 
 [node name="Label" type="Label" parent="MarginContainer/Control/Pages/PageSloth3"]
 layout_mode = 1
@@ -1165,6 +1233,7 @@ anchor_right = 1.0
 anchor_bottom = 0.098
 offset_bottom = -0.196003
 grow_horizontal = 2
+theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
 text = "Cosmic Cube"
 horizontal_alignment = 1
@@ -1179,6 +1248,7 @@ anchor_bottom = 1.0
 offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
+theme = ExtResource("2_a7gt4")
 text = "For use on Sloth-afflicted people who are experiencing the following symptoms:
 
 Narcolepsy
@@ -1359,6 +1429,7 @@ offset_left = 20.0
 offset_top = 472.0
 offset_right = 69.0
 offset_bottom = 502.0
+theme = ExtResource("2_a7gt4")
 text = "1"
 
 [node name="Button" type="Button" parent="."]

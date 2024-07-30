@@ -11,11 +11,13 @@
 [node name="Ritual" type="Node2D"]
 script = ExtResource("1_a7a2e")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Desk" type="Sprite2D" parent="."]
+z_index = -2
 texture = ExtResource("4_uiuom")
 centered = false
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="Paper" type="Sprite2D" parent="."]
+z_index = -1
 texture = ExtResource("3_wr7g5")
 centered = false
 
@@ -70,7 +72,8 @@ identifier = "D2"
 source = true
 
 [node name="CirclePos" type="Node2D" parent="."]
-position = Vector2(1069, 545)
+z_index = 6
+position = Vector2(1059, 550)
 
 [node name="BaseCircle" parent="CirclePos" instance=ExtResource("2_ss73g")]
 
