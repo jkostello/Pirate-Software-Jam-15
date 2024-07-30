@@ -74,7 +74,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(2400, 700), Vector2(2307.42, 675), Vector2(2112.54, 700), Vector2(1865.11, 675), Vector2(1581.57, 700), Vector2(1299.93, 675), Vector2(1063.44, 700), Vector2(950, 675)]
+"values": [Vector2(2400, 800), Vector2(2319.68, 775), Vector2(2147.76, 800), Vector2(1905.96, 775), Vector2(1620.89, 800), Vector2(1327.08, 775), Vector2(1073.86, 800), Vector2(950, 775)]
 }
 
 [sub_resource type="Animation" id="Animation_6grq2"]
@@ -91,7 +91,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 1, 2),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 0,
-"values": [Vector2(950, 675), Vector2(950, 685), Vector2(950, 675)]
+"values": [Vector2(950, 775), Vector2(950, 785), Vector2(950, 775)]
 }
 
 [sub_resource type="Animation" id="Animation_vv6ih"]
