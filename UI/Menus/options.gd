@@ -15,7 +15,7 @@ func _on_resolutions_item_selected(index):
 	if index == 3:
 		DisplayServer.window_set_size(Vector2i(1920, 1080))
 
-func _on_fullscreen_button_toggled(toggled_on):
+func _on_fullscreen_button_toggled(_toggled_on):
 	fullscreen = not fullscreen
 	# Set windowed
 	if (fullscreen):

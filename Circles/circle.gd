@@ -36,9 +36,9 @@ func complete_ritual(dust_id : String):
 			new_item_id = "lust3"
 		["Triangle1", "platdust", "Claws", "Teeth", "Ash"]:
 			new_item_id = "wrath1"
-		["Pentagram3", "golddust", "Beetle", "Ash", "Snake", "Rose", "Feather"]:
+		["Pentagram3", "golddust", "Beetle", "Ash", "Snake", "Rose", "Feathers"]:
 			new_item_id = "wrath2"
-		["Hexagram", "golddust", "Claws", "Eyes", "Teeth", "Ash", "Snake", "Feather"]:
+		["Hexagram", "golddust", "Claws", "Eyes", "Teeth", "Ash", "Snake", "Feathers"]:
 			new_item_id = "wrath3"
 		["Triangle2", "platdust", "Snake", "Eyes", "Peacock"]:
 			new_item_id = "envy1"

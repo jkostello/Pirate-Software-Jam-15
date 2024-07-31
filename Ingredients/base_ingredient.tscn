@@ -421,7 +421,7 @@ texture = ExtResource("2_t77is")
 unique_name_in_owner = true
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_dhana")
-animation = &"Failure"
+animation = &"Rose"
 
 [node name="Area2D" type="Area2D" parent="."]
 unique_name_in_owner = true

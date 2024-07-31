@@ -46,7 +46,7 @@ func _ready():
 		$ClickableArea/DevVisual/Label.text = identifier
 
 
-func _process(delta):
+func _process(_delta):
 	if following_mouse:
 		global_position = get_global_mouse_position()
 	if click_pos:

@@ -237,21 +237,18 @@ offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
 theme = ExtResource("2_a7gt4")
+theme_override_font_sizes/normal_font_size = 17
 text = "How to spot Pride:
-fdasjkl
-fadsl;jk
+Covets many mirrors with which it obsesses over it's own form.
 
 How to spot Greed:
-fdsaljk
-fa;ldkj
+Possesses a horde of outstreched arms, desperately reaching to grab all in sight.
 
-How to spot Greed:
-fdsaljk
-fa;ldkj
+How to spot Wrath:
+Emblazoning it's vigor, blind to the injuries caused by it's confrontations.
 
-How to spot Greed:
-fdsaljk
-fa;ldkj"
+How to spot Envy:
+Serpentine in nature, it always is wary of all directions, and covets a powerful venom."
 
 [node name="PageDemon2" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -287,18 +284,14 @@ offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
 theme = ExtResource("2_a7gt4")
-text = "How to spot Greed:
-fdsaljk
-fa;ldkj
+text = "How to spot Lust:
+With a sultry demeanor, it tempts people in before entrapping them.
 
-How to spot Greed:
-fdsaljk
-fa;ldkj
+How to spot Gluttony:
+With it's gaping twin maws, and sagging flesh, it ambles forth to steadly devour all.
 
-How to spot Greed:
-fdsaljk
-fa;ldkj
-"
+How to spot Sloth:
+Long, spindly limbs that seem to always hang, weighed by a prisoner's shackle."
 
 [node name="PagePride1" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -320,7 +313,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Pride Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PagePride1"]
@@ -365,7 +358,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Pride Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PagePride2"]
@@ -412,7 +405,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Pride Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PagePride3"]
@@ -455,7 +448,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Greed Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageGreed1"]
@@ -500,7 +493,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Greed Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageGreed2"]
@@ -547,7 +540,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Greed Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageGreed3"]
@@ -590,7 +583,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Wrath Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageWrath1"]
@@ -635,7 +628,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Wrath Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageWrath2"]
@@ -682,7 +675,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Wrath Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageWrath3"]
@@ -727,7 +720,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Envy Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageEnvy1"]
@@ -772,7 +765,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Envy Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageEnvy2"]
@@ -819,7 +812,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Envy Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageEnvy3"]
@@ -862,7 +855,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Lust Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageLust1"]
@@ -909,7 +902,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Lust Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageLust2"]
@@ -956,7 +949,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Lust Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageLust3"]
@@ -998,7 +991,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Gluttony Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageGluttony1"]
@@ -1043,7 +1036,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Gluttony Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageGluttony2"]
@@ -1090,7 +1083,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Gluttony Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageGluttony3"]
@@ -1132,7 +1125,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Sloth Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageSloth1"]
@@ -1175,7 +1168,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Sloth Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageSloth2"]
@@ -1222,7 +1215,7 @@ offset_bottom = -0.196003
 grow_horizontal = 2
 theme = ExtResource("2_a7gt4")
 theme_override_font_sizes/font_size = 35
-text = "Cosmic Cube"
+text = "Sloth Cures"
 horizontal_alignment = 1
 
 [node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/Control/Pages/PageSloth3"]
@@ -1350,7 +1343,7 @@ offset_right = 428.0
 offset_bottom = 399.0
 focus_mode = 0
 theme = ExtResource("2_a7gt4")
-theme_override_font_sizes/font_size = 18
+theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = SubResource("StyleBoxTexture_vdu72")
 theme_override_styles/hover = SubResource("StyleBoxTexture_4jddf")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_1o511")

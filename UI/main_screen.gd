@@ -20,7 +20,7 @@ func _ready():
 	
 
 
-func _process(delta):
+func _process(_delta):
 	#%VisibleTimer.value = %CustomerTimer.time_left
 	%Hourglass.frame = 10 - int((%CustomerTimer.time_left + 0.99) / %CustomerTimer.wait_time * 100) / 10
 
@@ -40,8 +40,8 @@ func generate_customer():
 	
 	#check if all sinners have been helped for the day
 	sinnersHelped += 1
-	print(sinnersHelped)
-	print(dailyCount[day])
+	#print(sinnersHelped)
+	#print(dailyCount[day])
 	if sinnersHelped > dailyCount[day]:
 		passDay()
 		await fadeOutFinish
@@ -71,11 +71,11 @@ func passDay():
 	%BlackScreen.self_modulate.a = 0
 	%DayLabel.self_modulate.a = 0
 	day += 1
-	%CustomerTimer.wait_time = dayTimer[day]
-	print(%CustomerTimer.wait_time)
 	if day > 5:
-		fadeOut("i hope you die..")
+		fadeOut("Congratulations!\nYou managed to survive all 5 days!")
 	else:
+		%CustomerTimer.wait_time = dayTimer[day]
+		print(%CustomerTimer.wait_time)
 		fadeOut(("Day " + str(day)))
 		fadeIn()
 	
