@@ -8,7 +8,7 @@ radius = 30.0
 
 [node name="Pentagram4" instance=ExtResource("1_p73ik")]
 position = Vector2(2, -1)
-identifier = "Pentagram"
+identifier = "Pentagram4"
 
 [node name="Circle" parent="." index="0"]
 position = Vector2(-109, -3)

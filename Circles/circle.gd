@@ -11,20 +11,37 @@ var ingredients := {}
 func complete_ritual(dust_id : String):
 	var points := $IngredientPoints.get_children()
 	
-	if ingredients.has(points[0]):
-		ingredients[points[0]]
+	var ritual_array := [identifier]
+	for p in points:
+		if ingredients.has(p):
+			ritual_array.append(ingredients[p].identifier)
 	
-	match identifier:
-		"Bigram":
+	
+	var new_item_id : String
+	match ritual_array:
+		["Example", "ingredint1", "2", "3"]:
 			pass
-		"Pentagram":
+		["Triangle1"]:
+			pass
+		["Triangle2"]:
+			pass
+		["Pentagram1"]:
+			pass
+		["Pentagram2"]:
+			pass
+		["Pentagram3"]:
+			pass
+		["Pentagram4"]:
+			pass
+		["Hexagram"]:
 			pass
 		_:
-			print("identifier not recognized:  ", identifier)
+			new_item_id = 'Failure'
 	
 	clear_circle()
 	
-	var output := base_ingredient.instantiate() # Only for testing, needs to be customized
+	var output : Ingredient = base_ingredient.instantiate() # Only for testing, needs to be customized
+	output.identifier = new_item_id
 	
 	get_parent().add_child(output)
 	output.current_point = $Center

@@ -36,6 +36,8 @@ func _ready():
 	$Area2D.set_collision_mask_value(3, not is_dust and not is_chalk)
 	$Area2D.set_collision_mask_value(4, is_dust or is_chalk)
 	
+	set_sprite()
+	
 	if not OS.is_debug_build():
 		$ClickableArea/DevVisual.visible = false
 		$ClickableArea/DevVisual.queue_free()
@@ -105,6 +107,12 @@ func drop():
 				fail_placement()
 			else:
 				current_point = area
+
+
+func set_sprite():
+	match identifier:
+		"":
+			pass
 
 
 func fail_placement():
