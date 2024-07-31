@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgme7wtn3h13c"]
+
+[ext_resource type="PackedScene" uid="uid://b5pnl2hsow6jr" path="res://Circles/base_circle.tscn" id="1_2krii"]
+[ext_resource type="Texture2D" uid="uid://b3ijl3ytn4xff" path="res://Circles/pentagram1.png" id="2_1dsie"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_42lvu"]
+radius = 30.0
+
+[node name="Pentagram1" instance=ExtResource("1_2krii")]
+identifier = "Pentagram"
+
+[node name="Circle" parent="." index="0"]
+position = Vector2(-110, 0)
+texture = ExtResource("2_1dsie")
+
+[node name="IngredientPoint1" parent="IngredientPoints" index="0"]
+position = Vector2(-6, -157)
+
+[node name="IngredientPoint2" type="Area2D" parent="IngredientPoints" index="1"]
+position = Vector2(-155, -64)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint2" index="0"]
+shape = SubResource("CircleShape2D_42lvu")
+
+[node name="IngredientPoint3" type="Area2D" parent="IngredientPoints" index="2"]
+position = Vector2(-116, 121)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint3" index="0"]
+shape = SubResource("CircleShape2D_42lvu")
+
+[node name="IngredientPoint4" type="Area2D" parent="IngredientPoints" index="3"]
+position = Vector2(165, -43)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint4" index="0"]
+shape = SubResource("CircleShape2D_42lvu")
+
+[node name="IngredientPoint5" type="Area2D" parent="IngredientPoints" index="4"]
+position = Vector2(87, 140)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint5" index="0"]
+shape = SubResource("CircleShape2D_42lvu")

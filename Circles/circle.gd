@@ -27,7 +27,7 @@ func complete_ritual(dust_id : String):
 	var output := base_ingredient.instantiate() # Only for testing, needs to be customized
 	
 	get_parent().add_child(output)
-	output.current_point = $IngredientPoints/IngredientPoint1
+	output.current_point = $Center
 
 
 # Empties all components but does not reset the circle

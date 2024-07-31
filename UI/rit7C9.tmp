@@ -26,50 +26,49 @@ texture = ExtResource("4_ktoy1")
 centered = false
 
 [node name="BookOpen" type="Sprite2D" parent="."]
-visible = false
 texture = ExtResource("5_abfnb")
 centered = false
 
 [node name="IngredientShelf" type="Node2D" parent="."]
 position = Vector2(88, 72)
 
-[node name="Triangle1" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+[node name="Dust1" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
 position = Vector2(58, 135)
 is_chalk = true
 identifier = "Triangle1"
 source = true
 
-[node name="Triangle2" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+[node name="Dust2" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
 position = Vector2(145, 136)
 is_chalk = true
 identifier = "Triangle2"
 source = true
 
-[node name="Pentagram1" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+[node name="Dust3" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
 position = Vector2(230, 136)
 is_chalk = true
 identifier = "Pentagram1"
 source = true
 
-[node name="Pentagram2" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+[node name="Dust4" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
 position = Vector2(311, 136)
 is_chalk = true
 identifier = "Pentagram2"
 source = true
 
-[node name="Pentagram3" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+[node name="Dust5" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
 position = Vector2(393, 136)
 is_chalk = true
 identifier = "Pentagram3"
 source = true
 
-[node name="Pentagram4" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+[node name="Dust6" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
 position = Vector2(474, 136)
 is_chalk = true
 identifier = "Pentagram4"
 source = true
 
-[node name="Hexagram" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+[node name="Dust7" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
 position = Vector2(561, 136)
 is_chalk = true
 identifier = "Hexagram"
