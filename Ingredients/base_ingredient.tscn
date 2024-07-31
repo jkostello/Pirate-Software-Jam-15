@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://djeytu43sbild"]
+[gd_scene load_steps=37 format=3 uid="uid://djeytu43sbild"]
 
 [ext_resource type="Script" path="res://Ingredients/ingredient.gd" id="1_6toqi"]
 [ext_resource type="Texture2D" uid="uid://bvuwp5a4cr71v" path="res://icon.svg" id="2_t77is"]
@@ -24,8 +24,16 @@
 [ext_resource type="Texture2D" uid="uid://daraigvce7sp4" path="res://Ingredients/Teeth_Jar.png" id="22_y148c"]
 [ext_resource type="Texture2D" uid="uid://cklc5mbwiiasq" path="res://Ingredients/GoldDust.png" id="23_fvycj"]
 [ext_resource type="Texture2D" uid="uid://bw4kko588y3i6" path="res://Ingredients/PlatinumDust.png" id="24_rdben"]
+[ext_resource type="Texture2D" uid="uid://s8umryswdi8l" path="res://Ingredients/Envy_Cure.png" id="24_yn37k"]
+[ext_resource type="Texture2D" uid="uid://bm070e2agorwr" path="res://Ingredients/failed_cure.png" id="25_a34p5"]
 [ext_resource type="Texture2D" uid="uid://d2pvpcf1gocq5" path="res://Ingredients/SilverDust.png" id="25_jmy3b"]
+[ext_resource type="Texture2D" uid="uid://3jwwu2l44lrc" path="res://Ingredients/Gluttony_Cure.png" id="26_7x77p"]
+[ext_resource type="Texture2D" uid="uid://qodjx2ppr7vv" path="res://Ingredients/Pride_Cure.png" id="26_di27f"]
 [ext_resource type="Texture2D" uid="uid://ckbocqglbxqmk" path="res://Ingredients/Chalk.png" id="26_gu6y4"]
+[ext_resource type="Texture2D" uid="uid://bkxyjmxqfctwx" path="res://Ingredients/Greed_Cure.png" id="28_8l71h"]
+[ext_resource type="Texture2D" uid="uid://snukwr005rtn" path="res://Ingredients/Lust_Cure.png" id="29_ic6fx"]
+[ext_resource type="Texture2D" uid="uid://1p6kik1gsyae" path="res://Ingredients/Sloth_Cure.png" id="33_g0jw7"]
+[ext_resource type="Texture2D" uid="uid://chytaqf7ntn8g" path="res://Ingredients/Wrath_Cure.png" id="34_xqv50"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dhana"]
 animations = [{
@@ -71,6 +79,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"Eyes",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_a34p5")
+}],
+"loop": true,
+"name": &"Failure",
 "speed": 5.0
 }, {
 "frames": [{
@@ -197,10 +213,106 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("24_yn37k")
+}],
+"loop": true,
+"name": &"envy1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_yn37k")
+}],
+"loop": true,
+"name": &"envy2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_yn37k")
+}],
+"loop": true,
+"name": &"envy3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_7x77p")
+}],
+"loop": true,
+"name": &"gluttony1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_7x77p")
+}],
+"loop": true,
+"name": &"gluttony2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_7x77p")
+}],
+"loop": true,
+"name": &"gluttony3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("23_fvycj")
 }],
 "loop": true,
 "name": &"golddust",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_8l71h")
+}],
+"loop": true,
+"name": &"greed1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_8l71h")
+}],
+"loop": true,
+"name": &"greed2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_8l71h")
+}],
+"loop": true,
+"name": &"greed3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_ic6fx")
+}],
+"loop": true,
+"name": &"lust1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_ic6fx")
+}],
+"loop": true,
+"name": &"lust2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_ic6fx")
+}],
+"loop": true,
+"name": &"lust3",
 "speed": 5.0
 }, {
 "frames": [{
@@ -213,10 +325,82 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("26_di27f")
+}],
+"loop": true,
+"name": &"pride1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_di27f")
+}],
+"loop": true,
+"name": &"pride2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_di27f")
+}],
+"loop": true,
+"name": &"pride3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("25_jmy3b")
 }],
 "loop": true,
 "name": &"silverdust",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_g0jw7")
+}],
+"loop": true,
+"name": &"sloth1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_g0jw7")
+}],
+"loop": true,
+"name": &"sloth2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_g0jw7")
+}],
+"loop": true,
+"name": &"sloth3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_xqv50")
+}],
+"loop": true,
+"name": &"wrath1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_xqv50")
+}],
+"loop": true,
+"name": &"wrath2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_xqv50")
+}],
+"loop": true,
+"name": &"wrath3",
 "speed": 5.0
 }]
 
@@ -237,7 +421,7 @@ texture = ExtResource("2_t77is")
 unique_name_in_owner = true
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_dhana")
-animation = &"Triangle2"
+animation = &"Failure"
 
 [node name="Area2D" type="Area2D" parent="."]
 unique_name_in_owner = true
