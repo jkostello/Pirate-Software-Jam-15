@@ -1,8 +1,7 @@
-[gd_resource type="Theme" load_steps=7 format=3 uid="uid://b0cbl4fc7hvuf"]
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://b0cbl4fc7hvuf"]
 
 [ext_resource type="Texture2D" uid="uid://drhf5j67jhbx8" path="res://Book/book_tab.png" id="1_5mv1t"]
 [ext_resource type="FontFile" uid="uid://dvtdlawi8hicm" path="res://UI/Fancy Font.otf" id="2_pcumt"]
-[ext_resource type="FontFile" uid="uid://bet1h8gxor35k" path="res://UI/Standard.otf" id="3_r41f4"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ji7oj"]
 texture = ExtResource("1_5mv1t")
@@ -17,7 +16,7 @@ modulate_color = Color(0.615686, 0.615686, 0.615686, 1)
 
 [resource]
 Button/font_sizes/font_size = 20
-Button/fonts/font = ExtResource("3_r41f4")
+Button/fonts/font = null
 Button/styles/hover = SubResource("StyleBoxTexture_ji7oj")
 Button/styles/normal = SubResource("StyleBoxTexture_kamgg")
 Button/styles/pressed = SubResource("StyleBoxTexture_32evq")
@@ -25,4 +24,4 @@ Label/colors/font_color = Color(0, 0, 0, 1)
 Label/fonts/font = ExtResource("2_pcumt")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
 RichTextLabel/font_sizes/normal_font_size = 20
-RichTextLabel/fonts/normal_font = ExtResource("3_r41f4")
+RichTextLabel/fonts/normal_font = null
