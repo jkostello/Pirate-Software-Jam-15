@@ -7,6 +7,7 @@ var day := 0 #goes to 5
 var sinnersHelped := 0
 @export var dailyCount = [0, 3, 4, 5, 7, 9]
 signal fadeOutFinish
+var title_screen : PackedScene = load("res://UI/title_screen.tscn")
 
 func _ready():
 	day = 1
@@ -29,6 +30,9 @@ func generate_customer():
 	for customer in get_tree().get_nodes_in_group('customers'):
 		customer.queue_free()
 	
+	if strikes >= 3:
+		return
+	
 	#check if all sinners have been helped for the day
 	sinnersHelped += 1
 	print(sinnersHelped)
@@ -47,7 +51,8 @@ func generate_customer():
 func failed():
 	strikes += 1
 	if strikes >= 3:
-		pass
+		%CustomerTimer.stop()
+		fadeOut("Your cures suck\nYou have been ratted out")
 
 func passDay():
 	%MouseBlocker.visible = true
@@ -57,18 +62,20 @@ func passDay():
 	%DayLabel.self_modulate.a = 0
 	day += 1
 	if day > 5:
-		%DayLabel.text = "i hope you die.."
-		fadeOut()
+		fadeOut("i hope you die..")
 	else:
-		%DayLabel.text = ("Day " + str(day))
-		fadeOut()
+		fadeOut(("Day " + str(day)))
 		fadeIn()
 	
-func fadeOut():
+func fadeOut(text):
+	%DayLabel.text = text
 	while %BlackScreen.self_modulate.a < 1:
 		%BlackScreen.self_modulate.a += 0.01
 		%DayLabel.self_modulate.a += 0.01
 		await get_tree().create_timer(0.01).timeout
+	if strikes >= 3:
+		await get_tree().create_timer(3).timeout
+		get_tree().change_scene_to_packed(title_screen)
 
 func fadeIn():
 	await get_tree().create_timer(3).timeout
@@ -95,6 +102,7 @@ func _on_temp_generator_pressed():
 	generate_customer()
 
 func _on_customer_timer_timeout():
+	failed()
 	generate_customer()
 
 
