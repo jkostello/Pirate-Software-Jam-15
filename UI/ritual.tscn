@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4aiw4jts5hgq"]
+[gd_scene load_steps=16 format=3 uid="uid://b4aiw4jts5hgq"]
 
 [ext_resource type="Script" path="res://UI/ritual.gd" id="1_a7a2e"]
 [ext_resource type="PackedScene" uid="uid://b5pnl2hsow6jr" path="res://Circles/base_circle.tscn" id="2_ss73g"]
@@ -8,6 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://rvg04uot3fxd" path="res://UI/IMG_0904.png" id="4_uiuom"]
 [ext_resource type="Texture2D" uid="uid://btf8dyacir7y1" path="res://UI/IMG_0908.png" id="5_abfnb"]
 [ext_resource type="Theme" uid="uid://bfjcpm14u83hu" path="res://UI/main.tres" id="8_mvi61"]
+[ext_resource type="Texture2D" uid="uid://8bfvam2li5u8" path="res://Circles/triangle1.png" id="9_a6qpy"]
+[ext_resource type="Texture2D" uid="uid://be4325m5ksihj" path="res://Circles/triangle2.png" id="10_qie2i"]
+[ext_resource type="Texture2D" uid="uid://b3ijl3ytn4xff" path="res://Circles/pentagram1.png" id="11_vl2px"]
+[ext_resource type="Texture2D" uid="uid://db3tfrr6hh71w" path="res://Circles/pentagram2.png" id="12_ogb0r"]
+[ext_resource type="Texture2D" uid="uid://br76g47pjlcxk" path="res://Circles/pentagram3.png" id="13_j2jr0"]
+[ext_resource type="Texture2D" uid="uid://b2fe1eyb6dbsw" path="res://Circles/pentagram4.png" id="14_pjwoa"]
+[ext_resource type="Texture2D" uid="uid://ykwl8jqqw7ea" path="res://Circles/hexagram.png" id="15_g2fjm"]
 
 [node name="Ritual" type="Node2D"]
 script = ExtResource("1_a7a2e")
@@ -173,6 +180,43 @@ offset_bottom = 313.0
 focus_mode = 0
 theme = ExtResource("8_mvi61")
 text = "Reset Ritual"
+
+[node name="ChalkCircles" type="Node2D" parent="."]
+
+[node name="Triangle1" type="Sprite2D" parent="ChalkCircles"]
+position = Vector2(131, 206)
+scale = Vector2(0.176948, 0.176948)
+texture = ExtResource("9_a6qpy")
+
+[node name="Triangle2" type="Sprite2D" parent="ChalkCircles"]
+position = Vector2(212, 203)
+scale = Vector2(0.176948, 0.176948)
+texture = ExtResource("10_qie2i")
+
+[node name="Pentagram1" type="Sprite2D" parent="ChalkCircles"]
+position = Vector2(297, 209)
+scale = Vector2(0.186151, 0.186151)
+texture = ExtResource("11_vl2px")
+
+[node name="Pentagram2" type="Sprite2D" parent="ChalkCircles"]
+position = Vector2(383, 206)
+scale = Vector2(0.176948, 0.176948)
+texture = ExtResource("12_ogb0r")
+
+[node name="Pentagram3" type="Sprite2D" parent="ChalkCircles"]
+position = Vector2(463, 206)
+scale = Vector2(0.176948, 0.176948)
+texture = ExtResource("13_j2jr0")
+
+[node name="Pentagram4" type="Sprite2D" parent="ChalkCircles"]
+position = Vector2(541, 206)
+scale = Vector2(0.167471, 0.167471)
+texture = ExtResource("14_pjwoa")
+
+[node name="Hexagram" type="Sprite2D" parent="ChalkCircles"]
+position = Vector2(632, 206)
+scale = Vector2(0.17628, 0.17628)
+texture = ExtResource("15_g2fjm")
 
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
 
