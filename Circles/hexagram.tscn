@@ -7,7 +7,7 @@
 radius = 30.0
 
 [node name="Hexagram" instance=ExtResource("1_yfdn7")]
-identifier = "Pentagram"
+identifier = "Hexagram"
 
 [node name="Circle" parent="." index="0"]
 position = Vector2(-105, -6)
