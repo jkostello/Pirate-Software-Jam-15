@@ -51,12 +51,15 @@ func generate_customer():
 	var customer = customer_scene.instantiate()
 	%Shop.add_child(customer)
 	customer.add_to_group('customers')
+	
+	$Success.play()
 
 
 func failed():
 	strikes += 1
 	var failed_torch = $Shop/Lives.get_child(strikes-1)
 	failed_torch.get_child(0).set_frame(1)
+	$Failure.play()
 	if strikes >= 3:
 		%CustomerTimer.stop()
 		fadeOut("You have failed to cure too many patients\nWord of your witchcraft has been spread\nYou will now be burned at the stake")
