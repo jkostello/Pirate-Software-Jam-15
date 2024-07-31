@@ -398,10 +398,14 @@ focus_mode = 0
 flat = true
 
 [node name="Switch" type="Button" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
 offset_left = 545.0
-offset_top = 928.0
-offset_right = 1386.0
-offset_bottom = 1078.0
+offset_top = -152.0
+offset_right = 626.0
+offset_bottom = 928.0
+grow_vertical = 0
 focus_mode = 0
 text = "Switch"
 
