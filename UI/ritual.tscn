@@ -75,31 +75,30 @@ is_chalk = true
 identifier = "Hexagram"
 source = true
 
-[node name="BaseMaterial3" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(63, 443)
-identifier = "A4"
+[node name="Claws" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+position = Vector2(108, 353)
+identifier = "Claws"
 source = true
 
 [node name="BaseMaterial4" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(64, 570)
+position = Vector2(77, 524)
 identifier = "A1"
 source = true
 
-[node name="BaseMaterial5" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(63, 325)
-identifier = "A2"
+[node name="Eyes" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+position = Vector2(53, 683)
+identifier = "Eyes"
 source = true
 
-[node name="BaseMaterial6" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(181, 327)
-is_dust = true
-identifier = "D1"
+[node name="Feathers" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+position = Vector2(312, 352)
+identifier = "Feathers"
 source = true
 
-[node name="BaseMaterial7" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(186, 445)
+[node name="Gold" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+position = Vector2(292, 508)
 is_dust = true
-identifier = "D2"
+identifier = "golddust"
 source = true
 
 [node name="CirclePos" type="Node2D" parent="."]
