@@ -13,12 +13,13 @@ func _ready():
 	day = 1
 	generate_customer()
 	Autoload.glass_visible.connect(glassvisible)
-	%VisibleTimer.max_value = %CustomerTimer.wait_time
+	#%VisibleTimer.max_value = %CustomerTimer.wait_time
 	
 
 
 func _process(delta):
-	%VisibleTimer.value = %CustomerTimer.time_left
+	#%VisibleTimer.value = %CustomerTimer.time_left
+	%Hourglass.frame = 10 - int((%CustomerTimer.time_left + 0.99) / %CustomerTimer.wait_time * 100) / 10
 
 
 func glassvisible(truefalse):
