@@ -119,6 +119,7 @@ text = "How To Play"
 
 [node name="Quit" type="Button" parent="HBoxContainer/VBoxContainer2/MainButtons"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_4e6vj")
@@ -190,6 +191,7 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_xtbrw")
 text = "Fullscreen:"
 
 [node name="Label" type="Label" parent="SubMenus/MarginContainer/Options"]
+visible = false
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 45
@@ -197,6 +199,7 @@ text = "Resolution:"
 
 [node name="Resolutions" type="OptionButton" parent="SubMenus/MarginContainer/Options"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 40
 theme_override_styles/focus = SubResource("StyleBoxTexture_fjvm1")
