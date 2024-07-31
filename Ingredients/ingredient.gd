@@ -16,10 +16,19 @@ var click_pos := Vector2.ZERO # Used to check if mouse is quickly moved
 var current_point : Area2D : # Corresponds to the circle's placement hitbox that the ingredient is on
 	set(v):
 		if v == null:
-			current_point.get_parent().get_parent().ingredients.erase(current_point)
+			if current_point.get_parent() is RitualCircle:
+				current_point.get_parent().ingredients.erase(current_point)
+			else:
+				current_point.get_parent().get_parent().ingredients.erase(current_point)
 		else:
 			global_position = v.global_position
-			v.get_parent().get_parent().ingredients[v] = self
+			if v.get_parent() is RitualCircle:
+				v.get_parent().ingredients[v] = self
+			else:
+				if v.get_parent() is RitualCircle:
+					v.get_parent().ingredients[v] = self
+				else:
+					v.get_parent().get_parent().ingredients[v] = self
 		current_point = v
 
 
@@ -87,7 +96,12 @@ func drop():
 			area.get_parent().complete_ritual(identifier)
 			queue_free()
 		else:
-			if area.get_parent().get_parent().ingredients.has(area): # Checks if the spot is taken
+			var area_parent
+			if area.get_parent() is RitualCircle:
+				area_parent = area.get_parent()
+			else:
+				area_parent = area.get_parent().get_parent()
+			if area_parent.ingredients.has(area): # Checks if the spot is taken
 				fail_placement()
 			else:
 				current_point = area

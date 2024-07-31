@@ -108,6 +108,9 @@ position = Vector2(1059, 550)
 
 [node name="BaseCircle" parent="CirclePos" instance=ExtResource("2_ss73g")]
 
+[node name="visual" parent="CirclePos/BaseCircle" index="4"]
+visible = false
+
 [node name="Reset" type="Button" parent="."]
 offset_left = 1598.0
 offset_top = 237.0
