@@ -55,6 +55,8 @@ func generate_customer():
 
 func failed():
 	strikes += 1
+	var failed_torch = $Shop/Lives.get_child(strikes-1)
+	failed_torch.get_child(0).set_frame(1)
 	if strikes >= 3:
 		%CustomerTimer.stop()
 		fadeOut("Your cures suck\nYou have been ratted out")

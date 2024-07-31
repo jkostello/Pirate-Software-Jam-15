@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://UI/Menus/options.gd" id="2_bxshy"]
 [ext_resource type="Texture2D" uid="uid://cuq5mvqt8sx82" path="res://Book/book_page.png" id="3_33dh0"]
 [ext_resource type="PackedScene" uid="uid://1lyw2uuxqsrd" path="res://UI/volume_slider.tscn" id="3_wf611"]
-[ext_resource type="FontFile" uid="uid://dhnvlgerj5wbk" path="res://UI/Heartfield.otf" id="6_7xl04"]
+[ext_resource type="FontFile" uid="uid://dhnvlgerj5wbk" path="res://UI/Standard.otf" id="6_7xl04"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h3efq"]
 
@@ -263,6 +263,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 31.0
 offset_bottom = 3459.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_7xl04")
 theme_override_font_sizes/font_size = 30
@@ -286,6 +288,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 31.0
 offset_bottom = 3459.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_7xl04")
 theme_override_font_sizes/font_size = 30
