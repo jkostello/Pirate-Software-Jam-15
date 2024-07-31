@@ -131,6 +131,7 @@ func _on_bookbutton_pressed():
 func _on_cure_button_pressed():
 	var cure
 	var item
+	Autoload.use_chalk.emit("Empty")
 	for _c in %Shop.get_children():
 		if _c is Ailments:
 			print(_c.cure)
