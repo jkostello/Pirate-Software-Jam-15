@@ -1,9 +1,28 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtcs2rs1ixl7a"]
+[gd_scene load_steps=15 format=3 uid="uid://dtcs2rs1ixl7a"]
 
 [ext_resource type="Script" path="res://UI/Menus/main_menu.gd" id="1_ia7k8"]
 [ext_resource type="Theme" uid="uid://bfjcpm14u83hu" path="res://UI/main.tres" id="2_4e6vj"]
 [ext_resource type="Script" path="res://UI/Menus/options.gd" id="2_bxshy"]
+[ext_resource type="Texture2D" uid="uid://cuq5mvqt8sx82" path="res://Book/book_page.png" id="3_33dh0"]
 [ext_resource type="PackedScene" uid="uid://1lyw2uuxqsrd" path="res://UI/volume_slider.tscn" id="3_wf611"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h3efq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2icrr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pichb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xtbrw"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fjvm1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lh3qa"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x0yeg"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pk4o6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dulo6"]
 
 [node name="MainMenu" type="Control"]
 process_mode = 3
@@ -14,6 +33,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 1
+theme = ExtResource("2_4e6vj")
 script = ExtResource("1_ia7k8")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
@@ -107,7 +127,13 @@ theme_override_constants/margin_top = 75
 theme_override_constants/margin_right = 350
 theme_override_constants/margin_bottom = 75
 
+[node name="Sprite2D" type="Sprite2D" parent="SubMenus/MarginContainer"]
+position = Vector2(2451, 563)
+scale = Vector2(2.46824, 1.22866)
+texture = ExtResource("3_33dh0")
+
 [node name="Panel" type="Panel" parent="SubMenus/MarginContainer"]
+visible = false
 layout_mode = 2
 
 [node name="Options" type="VBoxContainer" parent="SubMenus/MarginContainer"]
@@ -117,23 +143,39 @@ script = ExtResource("2_bxshy")
 
 [node name="OptionsLabel" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
 text = "Options:
-
 
 "
 horizontal_alignment = 1
 
 [node name="FullscreenButton" type="CheckButton" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
+theme_override_font_sizes/font_size = 45
+theme_override_styles/normal = SubResource("StyleBoxTexture_h3efq")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2icrr")
+theme_override_styles/hover = SubResource("StyleBoxTexture_pichb")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_xtbrw")
 text = "Fullscreen:"
 
 [node name="Label" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
 text = "Resolution:"
 
 [node name="Resolutions" type="OptionButton" parent="SubMenus/MarginContainer/Options"]
 unique_name_in_owner = true
 layout_mode = 2
+theme_override_font_sizes/font_size = 40
+theme_override_styles/focus = SubResource("StyleBoxTexture_fjvm1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lh3qa")
+theme_override_styles/hover = SubResource("StyleBoxTexture_x0yeg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pk4o6")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_dulo6")
 item_count = 4
 selected = 3
 popup/item_0/text = "1024x576"
@@ -147,6 +189,10 @@ popup/item_3/id = 3
 
 [node name="MasterVolume" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
 text = "Master Volume:"
 
 [node name="MasterVolumeSlider" parent="SubMenus/MarginContainer/Options" instance=ExtResource("3_wf611")]
@@ -155,6 +201,10 @@ bus_name = "Master"
 
 [node name="SFXVolume" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
 text = "SFX Volume:"
 
 [node name="SFXVolumeSlider" parent="SubMenus/MarginContainer/Options" instance=ExtResource("3_wf611")]
@@ -163,6 +213,10 @@ bus_name = "SFX"
 
 [node name="MusicVolume" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 45
 text = "Music Volume:"
 
 [node name="MusicVolumeSlider" parent="SubMenus/MarginContainer/Options" instance=ExtResource("3_wf611")]
