@@ -1,4 +1,4 @@
-extends TabContainer
+extends VBoxContainer
 
 
 func _on_resolutions_item_selected(index):
