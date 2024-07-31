@@ -16,8 +16,7 @@ func _ready():
 	generate_customer()
 	Autoload.glass_visible.connect(glassvisible)
 	#%VisibleTimer.max_value = %CustomerTimer.wait_time
-	#$CanvasLayer/Switch.size = Vector2(56, 1080)
-	#$CanvasLayer/Switch.position = Vector2(0,0)
+	$CanvasLayer/Switch.position = Vector2(0,989)
 	
 
 
