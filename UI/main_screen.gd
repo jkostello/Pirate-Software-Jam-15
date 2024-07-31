@@ -23,6 +23,7 @@ func _ready():
 func _process(_delta):
 	#%VisibleTimer.value = %CustomerTimer.time_left
 	%Hourglass.frame = 10 - int((%CustomerTimer.time_left + 0.99) / %CustomerTimer.wait_time * 100) / 10
+	loopMusic()
 
 
 func glassvisible(truefalse):
@@ -85,7 +86,7 @@ func fadeOut(text):
 		%BlackScreen.self_modulate.a += 0.01
 		%DayLabel.self_modulate.a += 0.01
 		await get_tree().create_timer(0.01).timeout
-	if strikes >= 3:
+	if strikes >= 3 or day > 5:
 		await get_tree().create_timer(3).timeout
 		get_tree().change_scene_to_packed(title_screen)
 
@@ -98,6 +99,10 @@ func fadeIn():
 	%MouseBlocker.visible = false
 	%CustomerTimer.start()
 	fadeOutFinish.emit()
+
+func loopMusic():
+	await $Music.finished
+	$Music.play()
 
 func _on_switch_pressed():
 	if $AnimationPlayer.is_playing():
