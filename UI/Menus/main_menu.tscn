@@ -106,6 +106,14 @@ unique_name_in_owner = true
 layout_mode = 2
 script = ExtResource("2_bxshy")
 
+[node name="OptionsLabel" type="Label" parent="SubMenus/MarginContainer/Options"]
+layout_mode = 2
+text = "Options:
+
+
+"
+horizontal_alignment = 1
+
 [node name="FullscreenButton" type="CheckButton" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
 text = "Fullscreen:"

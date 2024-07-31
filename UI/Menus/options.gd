@@ -21,7 +21,7 @@ func _on_fullscreen_button_toggled(toggled_on):
 	if (fullscreen):
 		DisplayServer.window_set_mode(0, 0)
 		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, false)
-		DisplayServer.window_set_size(Vector2(1920, 1080))
+		_on_resolutions_item_selected(%Resolutions.selected)
 	# Set fullscreen
 	else:
 		DisplayServer.window_set_mode(3, 0)
