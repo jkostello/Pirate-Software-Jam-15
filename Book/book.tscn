@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxkcysmocimog"]
+[gd_scene load_steps=8 format=3 uid="uid://cxkcysmocimog"]
 
 [ext_resource type="Script" path="res://Book/book.gd" id="1_nvlfn"]
 [ext_resource type="Theme" uid="uid://b0cbl4fc7hvuf" path="res://Book/booktheme.tres" id="2_a7gt4"]
+[ext_resource type="AudioStream" uid="uid://cb0tnivrsl8wu" path="res://SFX/page_turn.mp3" id="3_7v7d5"]
 
 [sub_resource type="Animation" id="Animation_yx0es"]
 resource_name = "Go In"
@@ -1432,6 +1433,10 @@ offset_right = 113.0
 offset_bottom = 543.0
 focus_mode = 0
 flat = true
+
+[node name="PageTurn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7v7d5")
+bus = &"SFX"
 
 [connection signal="pressed" from="MarginContainer/Control/Tabs/TabDemon" to="." method="switch_to_page" binds= [0]]
 [connection signal="pressed" from="MarginContainer/Control/Tabs/TabPride" to="." method="switch_to_page" binds= [2]]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://cdfvgikc2fmx3"]
+[gd_scene load_steps=18 format=3 uid="uid://cdfvgikc2fmx3"]
 
 [ext_resource type="Script" path="res://UI/main_screen.gd" id="1_mggcd"]
 [ext_resource type="Texture2D" uid="uid://g023b3w5v68" path="res://UI/main_bkgd.png" id="2_8h5ua"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dtcs2rs1ixl7a" path="res://UI/Menus/main_menu.tscn" id="5_xxfp2"]
 [ext_resource type="Texture2D" uid="uid://vm8u2t2gcpk" path="res://UI/IMG_0883.png" id="6_ehgyo"]
 [ext_resource type="PackedScene" uid="uid://cxkcysmocimog" path="res://Book/book.tscn" id="7_3ldgs"]
+[ext_resource type="AudioStream" uid="uid://bj45b7w1udlb6" path="res://SFX/book_open.mp3" id="11_eywbl"]
+[ext_resource type="AudioStream" uid="uid://rwh6vr6rcwfy" path="res://SFX/magnifying_glass_pickup.mp3" id="12_vrywa"]
 
 [sub_resource type="Animation" id="Animation_djsy7"]
 length = 0.001
@@ -469,6 +471,14 @@ theme_override_font_sizes/font_size = 40
 text = "Day X"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BookOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_eywbl")
+bus = &"SFX"
+
+[node name="MagnifyingGlassPickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_vrywa")
+bus = &"SFX"
 
 [connection signal="pressed" from="Shop/Desk/TempGenerator" to="." method="_on_temp_generator_pressed"]
 [connection signal="pressed" from="CanvasLayer/Bookbutton" to="." method="_on_bookbutton_pressed"]

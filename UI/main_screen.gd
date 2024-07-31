@@ -22,6 +22,7 @@ func _process(delta):
 
 
 func glassvisible(truefalse):
+	$MagnifyingGlassPickup.play()
 	%MagnifyingGlass.visible = truefalse
 
 func generate_customer():
@@ -108,6 +109,7 @@ func _on_customer_timer_timeout():
 
 func _on_bookbutton_pressed():
 	if not %Book/AnimationPlayer.is_playing():
+		$BookOpen.play()
 		book_open = not book_open
 		%BookOpen.visible = book_open
 		%BookClosed.visible = not book_open

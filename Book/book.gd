@@ -4,10 +4,10 @@ var out := false
 var current_page := 0
 
 func _ready():
-	switch_to_page(0)
+	switch_to_page(0, true)
 
 
-func switch_to_page(num : int):
+func switch_to_page(num : int, is_begin : bool):
 	for c in %Pages.get_children():
 		c.visible = false
 	%Pages.get_child(num).visible = true
@@ -27,10 +27,11 @@ func switch_to_page(num : int):
 	
 	current_page = num
 	%PageNumber.text = str(num + 1)
-
+	if (!is_begin):
+		$PageTurn.play()
 
 func _on_tab_pressed(num):
-	switch_to_page(num)
+	switch_to_page(num, false)
 
 
 func _on_button_pressed():
@@ -43,11 +44,11 @@ func _on_button_pressed():
 
 
 func _on_page_left_pressed():
-	switch_to_page(current_page - 1)
+	switch_to_page(current_page - 1, false)
 
 
 func _on_page_right_pressed():
-	switch_to_page(current_page + 1)
+	switch_to_page(current_page + 1, false)
 
 
 func _on_button_mouse_entered():
