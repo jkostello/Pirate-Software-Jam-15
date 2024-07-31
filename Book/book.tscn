@@ -101,7 +101,6 @@ grow_vertical = 2
 
 [node name="PageDemon1" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -134,20 +133,24 @@ offset_top = -0.204002
 offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "How to spot Pride:
-Covets many mirrors with which it obsesses over it's own form.
+fdasjkl
+fadsl;jk
 
 How to spot Greed:
-Possesses a horde of outstreched arms, desperately reaching to grab all in sight.
+fdsaljk
+fa;ldkj
 
-How to spot Wrath:
-Emblazoning it's vigor, blind to the injuries caused by it's confrontations.
+How to spot Greed:
+fdsaljk
+fa;ldkj
 
-How to spot Envy:
-Serpentine in nature, it always is wary of all directions, and covets a powerful venom.
-"
+How to spot Greed:
+fdsaljk
+fa;ldkj"
 
 [node name="PageDemon2" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -179,14 +182,18 @@ offset_left = -0.106
 offset_top = -0.204002
 offset_right = -1.0
 theme = ExtResource("2_a7gt4")
-text = "How to spot Lust:
-Caprine in nature, with a sultry demeanor. It tempts people in before entrapping them.
+text = "How to spot Greed:
+fdsaljk
+fa;ldkj
 
-How to spot Gluttony:
-With it's gaping twin maws, and sagging flesh, it ambles forth to steadly devour all.
+How to spot Greed:
+fdsaljk
+fa;ldkj
 
-How to spot Sloth:
-Long, spindly limbs that seem to always hang, weighed by a prisoner's shackle."
+How to spot Greed:
+fdsaljk
+fa;ldkj
+"
 
 [node name="PagePride1" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
