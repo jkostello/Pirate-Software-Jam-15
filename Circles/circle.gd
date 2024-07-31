@@ -24,7 +24,7 @@ func complete_ritual(dust_id : String):
 			new_item_id = "example"
 		["Triangle1", "golddust", "Peacock", "Eyes", "Feathers"]:
 			new_item_id = "pride1"
-		["Pentagram1", "golddust", "Moss", "Teeth", "Claws", "Beetles", "Eyes"]:
+		["Pentagram1", "golddust", "Moss", "Teeth", "Claws", "Beetle", "Eyes"]:
 			new_item_id = "pride2"
 		["Hexagram", "golddust", "Peacock", "Eyes", "Feathers", "Claws", "Rose", "Teeth"]:
 			new_item_id = "pride3"
@@ -42,13 +42,13 @@ func complete_ritual(dust_id : String):
 			new_item_id = "wrath3"
 		["Triangle2", "platdust", "Snake", "Eyes", "Peacock"]:
 			new_item_id = "envy1"
-		["Pentagram4", "golddust", "Snake", "Eyes", "Eyes", "Beetles", "Moss"]:
+		["Pentagram4", "golddust", "Snake", "Eyes", "Eyes", "Beetle", "Moss"]:
 			new_item_id = "envy2"
 		["Hexagram", "golddust", "Eyes", "Snake", "Eyes", "Peacock", "Eyes", "Teeth"]:
 			new_item_id = "envy3"
 		["Triangle2", "platdust", "Beetle", "Peacock", "Rose"]:
 			new_item_id = "greed1"
-		["Pentagram2", "golddust", "Beetle", "Teeth", "Beetle", "Beetles", "Feathers"]:
+		["Pentagram2", "golddust", "Beetle", "Teeth", "Beetle", "Beetle", "Feathers"]:
 			new_item_id = "greed2"
 		["Hexagram", "golddust", "Beetle", "Beetle", "Beetle", "Beetle", "Beetle", "Beetle"]:
 			new_item_id = "greed3"
@@ -58,7 +58,7 @@ func complete_ritual(dust_id : String):
 			new_item_id = "gluttony2"
 		["Hexagram", "silverdust", "Teeth", "Teeth", "Teeth", "Claws", "Claws", "Snake"]:
 			new_item_id = "gluttony3"
-		["Triangle", "platdust", "Moss", "Moss", "Moss"]:
+		["Triangle1", "platdust", "Moss", "Moss", "Moss"]:
 			new_item_id = "sloth1"
 		["Pentagram1", "platdust", "Moss", "Moss", "Moss", "Ash", "Rose"]:
 			new_item_id = "sloth2"

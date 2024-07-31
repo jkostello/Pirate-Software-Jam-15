@@ -336,20 +336,14 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Pride-afflicted people who are experiencing the following symptoms:
 
-Irritable
-Lustful
-Heavy Breathing
+Irritable, Lustful, Heavy Breathing
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Triangle Chalk 1
+Peacock Feather SOUTH
+Eye of Newt NORTHWEST
+Raven Feather NORTHEAST
+Sprinkle with Gold Dust"
 
 [node name="PagePride2" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -387,20 +381,16 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Pride-afflicted people who are experiencing the following symptoms:
 
-Pain in arms
-Sweaty
-Dry mouth
+Pain in arms, Sweaty, Dry mouth
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Pentagram 1
+Moss NORTH
+Hunter Teeth NORTHWEST
+Cat Claw SOUTHWEST
+Beetle NORTHWEST
+Eye of Newt SOUTHWEST
+Sprinkle with Gold Dust"
 
 [node name="PagePride3" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -438,20 +428,12 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Pride-afflicted people who are experiencing the following symptoms:
 
-Poor vision
-Paranoia
-Antsy
+Poor vision, Paranoia, Antsy
 
 Ritual Process:
+Using the Hexagram Chalk and starting from the Leftmost position, place these items going clockwise: Peacock Feather, Eye of Newt, Raven Feather, Cat Claw, Rose Bud, Hunter Tooth
 
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Then Sprinkle with Gold Dust"
 
 [node name="PageGreed1" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -489,20 +471,14 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Greed-afflicted people who are experiencing the following symptoms:
 
-Sweaty
-Paranoia
-Pain in arms
+Sweaty, Paranoia, Pain in arms
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Triangle Chalk 2
+Beetle SOUTH
+Peacock Feather NORTHWEST
+Rose Bud NORTHEAST
+Sprinkle with Platinum Dust"
 
 [node name="PageGreed2" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -540,20 +516,16 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Greed-afflicted people who are experiencing the following symptoms:
 
-Irritable
-Dry mouth
-Dulled Touch
+Irritable, Dry mouth, Dulled Touch
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Pentagram Chalk 2
+Beetle NORTHWEST
+Hunter Tooth SOUTHWEST
+Beetle SOUTH
+Beetle SOUTHEAST
+Raven Feather NORTHEAST
+Sprinkle with Gold Dust"
 
 [node name="PageGreed3" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -591,20 +563,12 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Greed-afflicted people who are experiencing the following symptoms:
 
-Dulled taste
-Paranoia
-Lust
+Dulled taste, Paranoia, Lust
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Hexagram Chalk
+All points should be filled with a gilded beetle
+Sprinkle Gold Dust"
 
 [node name="PageWrath1" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -642,20 +606,14 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Wrath-afflicted people who are experiencing the following symptoms:
 
-Irritable
-Antsy
-Hungry
+Irritable, Antsy, Hungry
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Triangle Chalk 1
+Cat Claw SOUTH
+Hunter Tooth NORTHWEST
+Ash NORTHWEST
+Sprinkle with Platinum Dust"
 
 [node name="PageWrath2" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -693,20 +651,16 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Wrath-afflicted people who are experiencing the following symptoms:
 
-Pain in arms
-Heavy breathing
-Dulled touch
+Pain in arms, Heavy breathing, Dulled touch
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Pentagram 3
+Beetle CENTER
+Ash NORTHWEST
+Snake Tongue NORTHEAST
+Rose Bud SOUTHWEST
+Raven Feather SOUTHEAST
+Sprinkle with Gold Dust"
 
 [node name="PageWrath3" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -749,15 +703,9 @@ Pain in legs
 Paranoia
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using the Hexagram Chalk
+Starting from the Leftmost point going clockwise, Cat Claw, Eye of Newt, Hunter Tooth, Ash, Snake Tongue, Raven Feather
+Sprinkle with Gold Dust"
 
 [node name="PageEnvy1" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -795,20 +743,14 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Envy-afflicted people who are experiencing the following symptoms:
 
-Poor vision
-Paranoia
-Headache
+Poor vision, Paranoia, Headache
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Triangle Chalk 2
+Snake Tongue SOUTH
+Eye of Newt NORTHWEST
+Peacock Feather NORTHEAST
+Sprinkle with Platinum Dust"
 
 [node name="PageEnvy2" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -846,20 +788,16 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Envy-afflicted people who are experiencing the following symptoms:
 
-Dry mouth
-Irritable
-Antsy
+Dry mouth, Irritable, Antsy
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Pentagram 4
+Snake Tongue CENTER
+Eye of Newt WEST
+Eye of Newt NORTH
+Beetle EAST
+Moss SOUTH
+Sprinkle with Gold Dust"
 
 [node name="PageEnvy3" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -897,20 +835,12 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Envy-afflicted people who are experiencing the following symptoms:
 
-Dulled taste
-Heavy breathing
-Hungry
+Dulled taste, Heavy breathing, Hungry
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using the Hexagram Chalk
+Starting on the Leftmost space and moving clockwise: Eye of Newt, Snake Tongue, Eye of Newt, Peacock Feather, Eye of Newt, Hunter Tooth, then sprinkle with Gold Dust
+"
 
 [node name="PageLust1" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -953,15 +883,11 @@ Dry mouth
 Smell smoke
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Triangle Chalk 2
+Rose Bud SOUTH
+Cat Claw NORTHWEST
+Moss NORTHEAST
+Sprinkle with Silver Dust"
 
 [node name="PageLust2" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -999,20 +925,16 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Lust-afflicted people who are experiencing the following symptoms:
 
-Heavy breathing
-Irritable
-Dulled taste
+Heavy breathing, Irritable, Dulled taste
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Pentagram 2
+Rose Bud NORTHWEST
+Raven Feather SOUTHWEST
+Eye of Newt SOUTH
+Peacock Feather SOUTHEAST
+Ash NORTHEAST
+Sprinkle with Silver Dust"
 
 [node name="PageLust3" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -1050,20 +972,11 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Lust-afflicted people who are experiencing the following symptoms:
 
-Irritable
-Headache
-Lustful
+Irritable, Headache, Lustful
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using the Hexagram Chalk
+Starting from the Leftmost point and going clockwise: Rose Bud, Hunter Tooth, Rose Bud, Peacock Feather, Rose Bud, Ash, then sprinkle with Platinum Dust"
 
 [node name="PageGluttony1" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -1101,20 +1014,14 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Gluttony-afflicted people who are experiencing the following symptoms:
 
-Hungry
-Heavy breathing
-Dulled taste
+Hungry, Heavy breathing, Dulled taste
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Triangle Chalk 1
+Eye of Newt SOUTH
+Hunter Tooth NORTHWEST
+Cat Claw NORTHEAST
+Sprinkle with Silver Dust"
 
 [node name="PageGluttony2" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -1152,20 +1059,16 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Gluttony-afflicted people who are experiencing the following symptoms:
 
-Smell smoke
-Narcolepsy
-Sweaty
+Smell smoke, Narcolepsy, Sweaty
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Pentagram Chalk 3
+Snak Tongue CENTER
+Hunter Tooth NORTHWEST
+Cat Claw NORTHEAST
+Moss SOUTHWEST
+Beetle SOUTHEAST
+Sprinkle with Silver Dust"
 
 [node name="PageGluttony3" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -1203,20 +1106,11 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Gluttony-afflicted people who are experiencing the following symptoms:
 
-Pain in legs
-Dry mouth
-Antsy
+Pain in legs, Dry mouth, Antsy
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Hexagram Chalk
+Starting from Leftmost Point and moving clockwise: Hunter Tooth, Hunter Tooth, Hunter Tooth, Cat Claw, Cat Claw, Snake Tongue, Then Sprinkle with Silver Dust"
 
 [node name="PageSloth1" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -1254,20 +1148,12 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Sloth-afflicted people who are experiencing the following symptoms:
 
-Narcolepsy
-Pain in legs
-Smell smoke
+Narcolepsy, Pain in legs, Smell smoke
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Triangle Chalk 1
+Moss Should Cover all 3 points
+Sprinkle with Platinum Dust"
 
 [node name="PageSloth2" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -1305,20 +1191,16 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Sloth-afflicted people who are experiencing the following symptoms:
 
-Poor vision
-Headache
-Heavy Breathing
+Poor vision, Headache, Heavy Breathing
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Pentagram Chalk 1
+Moss NORTH
+Moss NORTHWEST
+Moss SOUTHWEST
+Ash NORTHEAST
+Rose Bud SOUTHEAST
+Sprinkle with Platinum Dust"
 
 [node name="PageSloth3" type="Control" parent="MarginContainer/Control/Pages"]
 unique_name_in_owner = true
@@ -1356,20 +1238,11 @@ offset_right = -1.0
 theme = ExtResource("2_a7gt4")
 text = "For use on Sloth-afflicted people who are experiencing the following symptoms:
 
-Narcolepsy
-Dulled touch
-Hungry
+Narcolepsy, Dulled touch, Hungry
 
 Ritual Process:
-
-put rock north
-s south
-west
-eath
-center
-etc
-etc
-Top with baby powder lmao"
+Using Hexagram Chalk
+Starting from the leftmost point and moving clockwise: Moss, Rose Bud, Moss, Hunter Tooth, Moss, Ash"
 
 [node name="Tabs" type="Control" parent="MarginContainer/Control"]
 unique_name_in_owner = true

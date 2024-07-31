@@ -57,7 +57,7 @@ func failed():
 	strikes += 1
 	if strikes >= 3:
 		%CustomerTimer.stop()
-		fadeOut("Your cures suck\nYou have been ratted out")
+		fadeOut("You have failed to cure too many patients\nWord of your witchcraft has been spread\nYou will now be burned at the stake")
 
 func passDay():
 	%MouseBlocker.visible = true
