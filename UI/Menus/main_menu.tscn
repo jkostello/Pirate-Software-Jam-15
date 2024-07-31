@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://dtcs2rs1ixl7a"]
+[gd_scene load_steps=16 format=3 uid="uid://dtcs2rs1ixl7a"]
 
 [ext_resource type="Script" path="res://UI/Menus/main_menu.gd" id="1_ia7k8"]
 [ext_resource type="Theme" uid="uid://bfjcpm14u83hu" path="res://UI/main.tres" id="2_4e6vj"]
 [ext_resource type="Script" path="res://UI/Menus/options.gd" id="2_bxshy"]
 [ext_resource type="Texture2D" uid="uid://cuq5mvqt8sx82" path="res://Book/book_page.png" id="3_33dh0"]
 [ext_resource type="PackedScene" uid="uid://1lyw2uuxqsrd" path="res://UI/volume_slider.tscn" id="3_wf611"]
+[ext_resource type="FontFile" uid="uid://dhnvlgerj5wbk" path="res://UI/Heartfield.otf" id="6_7xl04"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h3efq"]
 
@@ -138,6 +139,7 @@ layout_mode = 2
 
 [node name="Options" type="VBoxContainer" parent="SubMenus/MarginContainer"]
 unique_name_in_owner = true
+visible = false
 layout_mode = 2
 script = ExtResource("2_bxshy")
 
@@ -163,7 +165,6 @@ text = "Fullscreen:"
 [node name="Label" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 45
 text = "Resolution:"
 
@@ -190,8 +191,6 @@ popup/item_3/id = 3
 [node name="MasterVolume" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 45
 text = "Master Volume:"
 
@@ -202,8 +201,6 @@ bus_name = "Master"
 [node name="SFXVolume" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 45
 text = "SFX Volume:"
 
@@ -214,8 +211,6 @@ bus_name = "SFX"
 [node name="MusicVolume" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 45
 text = "Music Volume:"
 
@@ -223,10 +218,86 @@ text = "Music Volume:"
 layout_mode = 2
 bus_name = "Music"
 
-[node name="HowToPlay" type="TabContainer" parent="SubMenus/MarginContainer"]
+[node name="HowToPlay" type="VBoxContainer" parent="SubMenus/MarginContainer"]
 unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Title" type="Label" parent="SubMenus/MarginContainer/HowToPlay"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "How To Play:
+
+"
+horizontal_alignment = 1
+
+[node name="HTPTabContainer" type="TabContainer" parent="SubMenus/MarginContainer/HowToPlay"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Summary" type="Control" parent="SubMenus/MarginContainer/HowToPlay/HTPTabContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SubMenus/MarginContainer/HowToPlay/HTPTabContainer/Summary"]
+layout_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+offset_bottom = 3459.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_7xl04")
+theme_override_font_sizes/font_size = 30
+text = "You are playing as an alchemist in the medieval times. While alchemy is normally forbidden, the town has been plagued by strange afflictions! Because you're the only one that seems how to cure them, people will let you perform your alchemy, but be careful! Slip up too many times and they might feed you to the wolves! Can you perform enough rituals to cure the town in 5 days? Or will you banished for your illegal practices?
+
+The game is played primarily with a mouse. Press 'Esc' on the keyboard during the game to bring up a pause menu."
+autowrap_mode = 3
+
+[node name="Core Gameplay" type="Control" parent="SubMenus/MarginContainer/HowToPlay/HTPTabContainer"]
 visible = false
 layout_mode = 2
+
+[node name="Label" type="Label" parent="SubMenus/MarginContainer/HowToPlay/HTPTabContainer/Core Gameplay"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+offset_bottom = 3459.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_7xl04")
+theme_override_font_sizes/font_size = 30
+text = "Each day, a certain amount of customers will come to your shop to be cured. You are tasked with finding the correlated Deadly Sin, their symptoms, and then creating a cure. If you need to figure out how to identify a Sin or make a cure, consult the Alchemist Handbook on your desk.
+
+To identify a Sin, pick up the magnifying glass on your desk to reveal the hidden Sin. Consult the Alchemist Handbook for their descriptors.
+
+There are 5 kinds of symptoms, each with their own identifiers (see the 'Sin' tab for more info). Each customer will only present 3 symptoms, but each time they will be of a random type.
+
+To perform a ritual, hit the 'Switch' button to turn to your ritual performing station. Drag the correlated chalk circle to begin the ritual. Place ingredients in the correct spots, and then top with a dust to finish the ritual and create a cure. To hand the customer the cure, click the button at the bottom of the screen."
+autowrap_mode = 3
+
+[node name="Symptoms" type="Control" parent="SubMenus/MarginContainer/HowToPlay/HTPTabContainer"]
+visible = false
+layout_mode = 2
+
+[node name="Label" type="Label" parent="SubMenus/MarginContainer/HowToPlay/HTPTabContainer/Symptoms"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+offset_bottom = 3459.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_7xl04")
+theme_override_font_sizes/font_size = 30
+text = "Intro Symptom:
+These symptoms present themselves as dialogues when the customer first arrives. Normally, the customer will simply greet you. However, if they have different dialogue, they're showing some kind of symptom!
+
+Behavior, Pain, & Senses:
+These symptoms are all discerned through dialogue. Be sure to ask the customers questions to figure out if they have correlating symptoms.
+
+Body:
+Finally, these symptoms show themselves as physical manifestations on the customer. Are they sweating? Bouncing more than normal? Breathing heavily? Pay attention to the customers to identify this possible symptom."
+autowrap_mode = 3
 
 [node name="MarginContainer2" type="MarginContainer" parent="SubMenus"]
 layout_mode = 1
