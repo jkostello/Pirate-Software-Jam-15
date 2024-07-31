@@ -25,6 +25,7 @@ func _input(event):
 		if event is InputEventKey:
 			# Toggles menu with ESC
 			if event.keycode == KEY_ESCAPE and event.pressed and not event.echo:
+				$Background.visible = not $Background.visible
 				visible = not visible
 				get_tree().paused = not get_tree().paused
 				if not visible:
