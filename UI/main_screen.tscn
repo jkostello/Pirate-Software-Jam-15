@@ -1,9 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://cdfvgikc2fmx3"]
+[gd_scene load_steps=16 format=3 uid="uid://cdfvgikc2fmx3"]
 
 [ext_resource type="Script" path="res://UI/main_screen.gd" id="1_mggcd"]
 [ext_resource type="Texture2D" uid="uid://g023b3w5v68" path="res://UI/main_bkgd.png" id="2_8h5ua"]
 [ext_resource type="Texture2D" uid="uid://ndwstghoaq0w" path="res://UI/ritual_desk.png" id="3_bea5q"]
-[ext_resource type="PackedScene" path="res://UI/question_box.tscn" id="4_gypuy"]
+[ext_resource type="PackedScene" uid="uid://c7qu73noo5jn7" path="res://UI/question_box.tscn" id="4_gypuy"]
 [ext_resource type="Texture2D" uid="uid://dn3tqb4i407n0" path="res://Book/IMG_0884.png" id="5_4gpuh"]
 [ext_resource type="Texture2D" uid="uid://cbxo6hcbncvgl" path="res://Book/IMG_0885.png" id="5_lrcvf"]
 [ext_resource type="PackedScene" uid="uid://b4aiw4jts5hgq" path="res://UI/ritual.tscn" id="5_q862v"]
@@ -315,6 +315,8 @@ _data = {
 "ToShop": SubResource("Animation_i7ibf")
 }
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_2vprn"]
+
 [node name="SceneManager" type="Node2D"]
 script = ExtResource("1_mggcd")
 
@@ -376,6 +378,7 @@ modulate = Color(1, 1, 1, 0)
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="MouseBlocker" type="Control" parent="CanvasLayer"]
+unique_name_in_owner = true
 visible = false
 layout_mode = 3
 anchors_preset = 15
@@ -420,7 +423,7 @@ show_percentage = false
 
 [node name="CustomerTimer" type="Timer" parent="CanvasLayer/VisibleTimer"]
 unique_name_in_owner = true
-wait_time = 60.0
+wait_time = 5.0
 autostart = true
 
 [node name="Label" type="Label" parent="CanvasLayer/VisibleTimer"]
@@ -430,6 +433,38 @@ offset_top = -21.0
 offset_right = 148.0
 offset_bottom = 2.0
 text = "Patience"
+
+[node name="FullScreenMessage" type="Control" parent="CanvasLayer"]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="BlackScreen" type="Sprite2D" parent="CanvasLayer/FullScreenMessage"]
+unique_name_in_owner = true
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(1, 1, 1, 0)
+position = Vector2(959.75, 538.75)
+scale = Vector2(1920.5, 1078.5)
+texture = SubResource("CanvasTexture_2vprn")
+
+[node name="DayLabel" type="Label" parent="CanvasLayer/FullScreenMessage"]
+unique_name_in_owner = true
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Day X"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Shop/Desk/TempGenerator" to="." method="_on_temp_generator_pressed"]
 [connection signal="pressed" from="CanvasLayer/Bookbutton" to="." method="_on_bookbutton_pressed"]
