@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dtcs2rs1ixl7a"]
+[gd_scene load_steps=5 format=3 uid="uid://dtcs2rs1ixl7a"]
 
 [ext_resource type="Script" path="res://UI/Menus/main_menu.gd" id="1_ia7k8"]
+[ext_resource type="Theme" uid="uid://bfjcpm14u83hu" path="res://UI/main.tres" id="2_4e6vj"]
 [ext_resource type="Script" path="res://UI/Menus/options.gd" id="2_bxshy"]
 [ext_resource type="PackedScene" uid="uid://1lyw2uuxqsrd" path="res://UI/volume_slider.tscn" id="3_wf611"]
 
@@ -44,6 +45,7 @@ size_flags_vertical = 3
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_4e6vj")
 text = "Start Game"
 
 [node name="ToMainMenu" type="Button" parent="HBoxContainer/VBoxContainer2/MainButtons"]
@@ -51,24 +53,28 @@ unique_name_in_owner = true
 visible = false
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_4e6vj")
 text = "Main Menu"
 
 [node name="OptionsButton" type="Button" parent="HBoxContainer/VBoxContainer2/MainButtons"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_4e6vj")
 text = "Options"
 
 [node name="HowToButton" type="Button" parent="HBoxContainer/VBoxContainer2/MainButtons"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_4e6vj")
 text = "How To Play"
 
 [node name="Quit" type="Button" parent="HBoxContainer/VBoxContainer2/MainButtons"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme = ExtResource("2_4e6vj")
 text = "Quit"
 
 [node name="Control2" type="Control" parent="HBoxContainer/VBoxContainer2"]
@@ -100,6 +106,9 @@ theme_override_constants/margin_left = 350
 theme_override_constants/margin_top = 75
 theme_override_constants/margin_right = 350
 theme_override_constants/margin_bottom = 75
+
+[node name="Panel" type="Panel" parent="SubMenus/MarginContainer"]
+layout_mode = 2
 
 [node name="Options" type="VBoxContainer" parent="SubMenus/MarginContainer"]
 unique_name_in_owner = true
@@ -180,6 +189,8 @@ theme_override_constants/margin_bottom = 20
 [node name="BackToMenu" type="Button" parent="SubMenus/MarginContainer2"]
 unique_name_in_owner = true
 layout_mode = 2
+theme = ExtResource("2_4e6vj")
+theme_override_font_sizes/font_size = 30
 text = "Back"
 
 [node name="Blackout" type="ColorRect" parent="."]
