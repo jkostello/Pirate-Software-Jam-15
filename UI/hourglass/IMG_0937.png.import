@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd3oqiw15khrg"
-path="res://.godot/imported/IMG_0898.png-8af68e6289a0e9ce068ddbe1560d304b.ctex"
+uid="uid://bdis34wnbh6rc"
+path="res://.godot/imported/IMG_0937.png-1e0ab0426000ce55f8e82ece0352eb5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Customers/IMG_0898.png"
-dest_files=["res://.godot/imported/IMG_0898.png-8af68e6289a0e9ce068ddbe1560d304b.ctex"]
+source_file="res://UI/hourglass/IMG_0937.png"
+dest_files=["res://.godot/imported/IMG_0937.png-1e0ab0426000ce55f8e82ece0352eb5c.ctex"]
 
 [params]
 

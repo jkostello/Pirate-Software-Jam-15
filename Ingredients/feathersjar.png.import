@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biu7in33lt8rd"
-path="res://.godot/imported/IMG_0901.png-72085cc113319ba9116f25ac4b66cd65.ctex"
+uid="uid://c2myxqrdmdrqd"
+path="res://.godot/imported/feathersjar.png-946184ce00e36ab5e3c020facabbae79.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Customers/IMG_0901.png"
-dest_files=["res://.godot/imported/IMG_0901.png-72085cc113319ba9116f25ac4b66cd65.ctex"]
+source_file="res://Ingredients/feathersjar.png"
+dest_files=["res://.godot/imported/feathersjar.png-946184ce00e36ab5e3c020facabbae79.ctex"]
 
 [params]
 

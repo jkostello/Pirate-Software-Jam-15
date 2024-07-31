@@ -36,7 +36,8 @@ func _ready():
 	$Area2D.set_collision_mask_value(3, not is_dust and not is_chalk)
 	$Area2D.set_collision_mask_value(4, is_dust or is_chalk)
 	
-	set_sprite()
+	%Sprite.animation = identifier
+	%Sprite.frame = source
 	
 	if not OS.is_debug_build():
 		$ClickableArea/DevVisual.visible = false
@@ -74,9 +75,10 @@ func pick_up():
 	
 	if source: # Clones ingrendient and removes source tag
 		var new_ingredient : Node2D = duplicate()
-		get_parent().get_parent().add_child(new_ingredient)
 		new_ingredient.following_mouse = true
 		new_ingredient.source = false
+		
+		get_parent().get_parent().add_child(new_ingredient)
 	else: # Moves existing ingredient
 		following_mouse = true
 		

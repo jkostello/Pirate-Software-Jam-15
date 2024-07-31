@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs1218qv7rw6w"
-path="res://.godot/imported/IMG_0897.png-bf63dd62198dcbb9e34adaba2d951900.ctex"
+uid="uid://vs8kcxu2ilhr"
+path="res://.godot/imported/claw.png-8edf61d4a0bc0bd16052617ee20b2d91.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Customers/IMG_0897.png"
-dest_files=["res://.godot/imported/IMG_0897.png-bf63dd62198dcbb9e34adaba2d951900.ctex"]
+source_file="res://Ingredients/claw.png"
+dest_files=["res://.godot/imported/claw.png-8edf61d4a0bc0bd16052617ee20b2d91.ctex"]
 
 [params]
 

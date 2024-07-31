@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byxjgveguhmqb"
-path="res://.godot/imported/IMG_0899.png-ab2dfa802c72e7aa3ea303f21475c420.ctex"
+uid="uid://6o6sb0xo0ads"
+path="res://.godot/imported/eye.png-33801f92d53866f611de93a3b6570674.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Customers/IMG_0899.png"
-dest_files=["res://.godot/imported/IMG_0899.png-ab2dfa802c72e7aa3ea303f21475c420.ctex"]
+source_file="res://Ingredients/eye.png"
+dest_files=["res://.godot/imported/eye.png-33801f92d53866f611de93a3b6570674.ctex"]
 
 [params]
 
