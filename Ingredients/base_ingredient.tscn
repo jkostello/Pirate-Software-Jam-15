@@ -1,16 +1,52 @@
-[gd_scene load_steps=11 format=3 uid="uid://djeytu43sbild"]
+[gd_scene load_steps=25 format=3 uid="uid://djeytu43sbild"]
 
 [ext_resource type="Script" path="res://Ingredients/ingredient.gd" id="1_6toqi"]
 [ext_resource type="Texture2D" uid="uid://bvuwp5a4cr71v" path="res://icon.svg" id="2_t77is"]
 [ext_resource type="Texture2D" uid="uid://bmnnptar510f5" path="res://Ingredients/clawsjar.png" id="3_7onnj"]
 [ext_resource type="Texture2D" uid="uid://vs8kcxu2ilhr" path="res://Ingredients/claw.png" id="3_t8p24"]
+[ext_resource type="Texture2D" uid="uid://bhkhib18j7jby" path="res://Ingredients/Ash.png" id="3_tvcfq"]
+[ext_resource type="Texture2D" uid="uid://cxfyxm6npu7tg" path="res://Ingredients/Ash_Jar.png" id="4_ulpkc"]
+[ext_resource type="Texture2D" uid="uid://rrgacyejgyf1" path="res://Ingredients/Beetle.png" id="5_7ohrx"]
 [ext_resource type="Texture2D" uid="uid://6o6sb0xo0ads" path="res://Ingredients/eye.png" id="5_30olj"]
+[ext_resource type="Texture2D" uid="uid://bj0d48pxlpl62" path="res://Ingredients/Beetle_Jar.png" id="6_8xmc0"]
 [ext_resource type="Texture2D" uid="uid://bighkuilprkwj" path="res://Ingredients/eyesjar.png" id="6_di8dw"]
 [ext_resource type="Texture2D" uid="uid://cd68f0ody6i5y" path="res://Ingredients/feather.png" id="7_am2sp"]
 [ext_resource type="Texture2D" uid="uid://c2myxqrdmdrqd" path="res://Ingredients/feathersjar.png" id="8_q4t7x"]
+[ext_resource type="Texture2D" uid="uid://b8eitmiju125j" path="res://Ingredients/Moss.png" id="13_outlm"]
+[ext_resource type="Texture2D" uid="uid://cqcc7wcnyaa1k" path="res://Ingredients/Moss_Jar.png" id="14_ht0o2"]
+[ext_resource type="Texture2D" uid="uid://u8dq6pkn8av0" path="res://Ingredients/Peacock.png" id="15_mwko5"]
+[ext_resource type="Texture2D" uid="uid://cg8ktbidf8bw1" path="res://Ingredients/Peacock_Jar.png" id="16_0kavf"]
+[ext_resource type="Texture2D" uid="uid://dxy3h6qurladq" path="res://Ingredients/Rose.png" id="17_rmb5e"]
+[ext_resource type="Texture2D" uid="uid://dsfl56s06jlj6" path="res://Ingredients/Rose_Jar.png" id="18_ppxj5"]
+[ext_resource type="Texture2D" uid="uid://55kquecpar8m" path="res://Ingredients/Snake.png" id="19_gdlrd"]
+[ext_resource type="Texture2D" uid="uid://c0yhwbme57rg7" path="res://Ingredients/Tongue_Jar.png" id="20_sb0vq"]
+[ext_resource type="Texture2D" uid="uid://ceiesnqkd67i0" path="res://Ingredients/Teeth.png" id="21_exrlr"]
+[ext_resource type="Texture2D" uid="uid://daraigvce7sp4" path="res://Ingredients/Teeth_Jar.png" id="22_y148c"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dhana"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_tvcfq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ulpkc")
+}],
+"loop": true,
+"name": &"Ash",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_7ohrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_8xmc0")
+}],
+"loop": true,
+"name": &"Beetle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_t8p24")
@@ -43,6 +79,61 @@ animations = [{
 "loop": true,
 "name": &"Feathers",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_outlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ht0o2")
+}],
+"loop": true,
+"name": &"Moss",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_mwko5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_0kavf")
+}],
+"loop": true,
+"name": &"Peacock",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_rmb5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ppxj5")
+}],
+"loop": true,
+"name": &"Rose",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_gdlrd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_sb0vq")
+}],
+"loop": true,
+"name": &"Snake",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_exrlr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_y148c")
+}],
+"loop": true,
+"name": &"Teeth",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hpbo5"]
@@ -62,7 +153,7 @@ texture = ExtResource("2_t77is")
 unique_name_in_owner = true
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_dhana")
-animation = &"Claws"
+animation = &"Ash"
 
 [node name="Area2D" type="Area2D" parent="."]
 unique_name_in_owner = true
