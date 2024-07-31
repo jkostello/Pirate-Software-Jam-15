@@ -24,7 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://b0dgougu21emr" path="res://UI/hourglass/IMG_0939.png" id="17_w8rnn"]
 [ext_resource type="Texture2D" uid="uid://dlsmgv1qsl3m8" path="res://UI/hourglass/IMG_0940.png" id="18_jigcv"]
 [ext_resource type="Theme" uid="uid://bfjcpm14u83hu" path="res://UI/main.tres" id="21_fosmp"]
-[ext_resource type="FontFile" uid="uid://bet1h8gxor35k" path="res://UI/Standard.otf" id="22_dcxae"]
+[ext_resource type="FontFile" uid="uid://dhnvlgerj5wbk" path="res://UI/Standard.otf" id="22_dcxae"]
 
 [sub_resource type="Animation" id="Animation_djsy7"]
 length = 0.001
@@ -466,9 +466,9 @@ flat = true
 anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
-offset_top = 989.0
+offset_top = 1529.0
 offset_right = 241.0
-offset_bottom = 1080.0
+offset_bottom = 1620.0
 grow_vertical = 2
 focus_mode = 0
 theme = ExtResource("21_fosmp")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://UI/question_box.gd" id="1_ec3w0"]
 [ext_resource type="Theme" uid="uid://bfjcpm14u83hu" path="res://UI/main.tres" id="2_6v7tu"]
-[ext_resource type="FontFile" uid="uid://bet1h8gxor35k" path="res://UI/Standard.otf" id="3_qf73c"]
+[ext_resource type="FontFile" uid="uid://dhnvlgerj5wbk" path="res://UI/Standard.otf" id="3_qf73c"]
 
 [node name="QuestionBox" type="Control"]
 layout_mode = 3

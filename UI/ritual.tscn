@@ -81,9 +81,9 @@ position = Vector2(108, 353)
 identifier = "Claws"
 source = true
 
-[node name="BaseMaterial4" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+[node name="Ash" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
 position = Vector2(77, 524)
-identifier = "A1"
+identifier = "Ash"
 source = true
 
 [node name="Eyes" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
