@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://cxuh21ps5372b"]
+[gd_scene load_steps=35 format=3 uid="uid://cxuh21ps5372b"]
 
 [ext_resource type="Script" path="res://Customers/customer.gd" id="1_c24f8"]
 [ext_resource type="Texture2D" uid="uid://ccnu2at4v32r1" path="res://Customers/magnifying_glass.png" id="3_0ioue"]
@@ -8,12 +8,17 @@
 [ext_resource type="Texture2D" uid="uid://cffadi21pacuu" path="res://Customers/CircleMask.png" id="4_rmftt"]
 [ext_resource type="Script" path="res://Customers/magnifying_glass.gd" id="4_wumt6"]
 [ext_resource type="Texture2D" uid="uid://byxjgveguhmqb" path="res://Customers/IMG_0899.png" id="5_gei3y"]
-[ext_resource type="Texture2D" uid="uid://ghqr12tghyir" path="res://Customers/temp_symbol.png" id="5_sufu3"]
 [ext_resource type="Texture2D" uid="uid://biu7in33lt8rd" path="res://Customers/IMG_0901.png" id="6_buof8"]
 [ext_resource type="Texture2D" uid="uid://b3thof0owek3r" path="res://Customers/IMG_0902.png" id="7_bxhp0"]
-[ext_resource type="Texture2D" uid="uid://bupjkxxugwai5" path="res://Customers/temp_particles.png" id="7_pw0q1"]
 [ext_resource type="Texture2D" uid="uid://fih3rd4182ud" path="res://Customers/IMG_0903.png" id="8_ohwen"]
 [ext_resource type="PackedScene" uid="uid://c8ln02ahufb58" path="res://UI/textbox.tscn" id="8_tqw30"]
+[ext_resource type="Texture2D" uid="uid://b2syojim7utjd" path="res://Customers/creatures/Envy.png" id="13_65dng"]
+[ext_resource type="Texture2D" uid="uid://dl3nksili2naf" path="res://Customers/creatures/Gluttony.png" id="14_153hx"]
+[ext_resource type="Texture2D" uid="uid://jj4k3yh57o4e" path="res://Customers/creatures/Greed.png" id="15_by0jy"]
+[ext_resource type="Texture2D" uid="uid://b2ruv24gfww1o" path="res://Customers/creatures/Lust.png" id="16_8o6r0"]
+[ext_resource type="Texture2D" uid="uid://c8pv7ruo1ehoj" path="res://Customers/creatures/Pride.png" id="17_mvboc"]
+[ext_resource type="Texture2D" uid="uid://dxw6uiqqcdsoj" path="res://Customers/creatures/Sloth.png" id="18_as6fj"]
+[ext_resource type="Texture2D" uid="uid://c6w6hta0n1gwj" path="res://Customers/creatures/Wrath.png" id="19_dlk58"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1su1w"]
 animations = [{
@@ -92,6 +97,35 @@ scale_min = 25.1
 scale_max = 48.3
 scale_curve = SubResource("CurveTexture_3qqm7")
 color = Color(1, 1, 1, 0.345098)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rwd6k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_mvboc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_by0jy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_dlk58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_65dng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_8o6r0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_153hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_as6fj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="Animation" id="Animation_0pr2t"]
 resource_name = "Enter"
@@ -197,27 +231,23 @@ lifetime = 2.3
 unique_name_in_owner = true
 z_index = 3
 position = Vector2(1518, 949)
-scale = Vector2(0.367891, 0.367891)
+scale = Vector2(0.65, 0.65)
 texture = ExtResource("3_0ioue")
 region_rect = Rect2(200, 121.4, 100, 200)
 script = ExtResource("4_wumt6")
 
 [node name="Mask" type="Sprite2D" parent="MagnifyingGlass"]
 clip_children = 1
+z_index = -3
 position = Vector2(86.9827, 114.164)
 scale = Vector2(0.66324, 0.66324)
 texture = ExtResource("4_rmftt")
 
-[node name="Symbol" type="Sprite2D" parent="MagnifyingGlass/Mask"]
+[node name="Creature" type="AnimatedSprite2D" parent="MagnifyingGlass/Mask"]
 unique_name_in_owner = true
-position = Vector2(3381.15, -2573.77)
-scale = Vector2(0.322339, 0.42482)
-texture = ExtResource("5_sufu3")
-
-[node name="Particle" type="Sprite2D" parent="MagnifyingGlass/Mask"]
-unique_name_in_owner = true
-position = Vector2(3422.13, -1381.15)
-texture = ExtResource("7_pw0q1")
+position = Vector2(1826.61, -1000.23)
+scale = Vector2(2.20405, 2.20405)
+sprite_frames = SubResource("SpriteFrames_rwd6k")
 
 [node name="ClickTimer" type="Timer" parent="MagnifyingGlass"]
 unique_name_in_owner = true

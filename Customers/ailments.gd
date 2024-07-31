@@ -49,19 +49,19 @@ func get_random_sin():
 	var sin = randi() % 7
 	match sin:
 		0:
-			return 'Pride'
+			return ['Pride', 0]
 		1:
-			return 'Greed'
+			return ['Greed', 1]
 		2:
-			return 'Wrath'
+			return ['Wrath', 2]
 		3:
-			return 'Envy'
+			return ['Envy', 3]
 		4:
-			return 'Lust'
+			return ['Lust', 4]
 		5:
-			return 'Gluttony'
+			return ['Gluttony', 5]
 		6:
-			return 'Sloth'
+			return ['Sloth', 6]
 
 func get_random_ailment(sin):
 	var ailment : Dictionary
