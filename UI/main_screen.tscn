@@ -465,12 +465,25 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 545.0
-offset_top = 928.0
-offset_right = 626.0
-offset_bottom = 2008.0
+offset_top = -152.0
+offset_right = 604.0
+offset_bottom = -121.0
 grow_vertical = 0
 focus_mode = 0
 text = "Switch"
+
+[node name="CureButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -91.5
+offset_top = -31.0
+offset_right = 91.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Give Cure to Customer"
 
 [node name="MainMenu" parent="CanvasLayer" instance=ExtResource("5_xxfp2")]
 visible = false
@@ -544,6 +557,7 @@ bus = &"SFX"
 [connection signal="pressed" from="Shop/Desk/TempGenerator" to="." method="_on_temp_generator_pressed"]
 [connection signal="pressed" from="CanvasLayer/Bookbutton" to="." method="_on_bookbutton_pressed"]
 [connection signal="pressed" from="CanvasLayer/Switch" to="." method="_on_switch_pressed"]
+[connection signal="pressed" from="CanvasLayer/CureButton" to="." method="_on_cure_button_pressed"]
 [connection signal="timeout" from="CanvasLayer/VisibleTimer/CustomerTimer" to="." method="_on_customer_timer_timeout"]
 
 [editable path="Ritual"]

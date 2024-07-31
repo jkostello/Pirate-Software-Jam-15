@@ -13,6 +13,7 @@ var behavior_symptom := ''
 var pain_symptom := ''
 var sense_symptom := ''
 var body_symptom := ''
+var cure
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,7 +22,7 @@ func _ready():
 	sin = sin[0]
 	var randomAilment = get_random_ailment(sin)
 	
-	var cure = randomAilment.keys()[0]
+	cure = randomAilment.keys()[0]
 	var ailment = randomAilment.values()[0]
 	
 	
