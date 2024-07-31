@@ -1,4 +1,5 @@
-[gd_scene load_steps=28 format=3 uid="uid://cdfvgikc2fmx3"]
+[gd_scene load_steps=46 format=3 uid="uid://cdfvgikc2fmx3"]
+
 
 [ext_resource type="Script" path="res://UI/main_screen.gd" id="1_mggcd"]
 [ext_resource type="Texture2D" uid="uid://g023b3w5v68" path="res://UI/main_bkgd.png" id="2_8h5ua"]
@@ -10,6 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://dtcs2rs1ixl7a" path="res://UI/Menus/main_menu.tscn" id="5_xxfp2"]
 [ext_resource type="Texture2D" uid="uid://vm8u2t2gcpk" path="res://UI/IMG_0883.png" id="6_ehgyo"]
 [ext_resource type="PackedScene" uid="uid://cxkcysmocimog" path="res://Book/book.tscn" id="7_3ldgs"]
+
+[ext_resource type="AudioStream" uid="uid://bj45b7w1udlb6" path="res://SFX/book_open.mp3" id="11_eywbl"]
+[ext_resource type="AudioStream" uid="uid://rwh6vr6rcwfy" path="res://SFX/magnifying_glass_pickup.mp3" id="12_vrywa"]
+
 [ext_resource type="Texture2D" uid="uid://c22qcnbjadjql" path="res://UI/hourglass/IMG_0930.png" id="8_y411e"]
 [ext_resource type="Texture2D" uid="uid://bxbmvk204x4ym" path="res://UI/hourglass/IMG_0931.png" id="9_jg8nh"]
 [ext_resource type="Texture2D" uid="uid://de753acq0vpbc" path="res://UI/hourglass/IMG_0932.png" id="10_8c11v"]
@@ -463,9 +468,9 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 545.0
-offset_top = -152.0
+offset_top = 928.0
 offset_right = 626.0
-offset_bottom = 928.0
+offset_bottom = 2008.0
 grow_vertical = 0
 focus_mode = 0
 text = "Switch"
@@ -528,6 +533,16 @@ theme_override_font_sizes/font_size = 40
 text = "Day X"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BookOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_eywbl")
+volume_db = -4.407
+bus = &"SFX"
+
+[node name="MagnifyingGlassPickup" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_vrywa")
+volume_db = 2.644
+bus = &"SFX"
 
 [connection signal="pressed" from="Shop/Desk/TempGenerator" to="." method="_on_temp_generator_pressed"]
 [connection signal="pressed" from="CanvasLayer/Bookbutton" to="." method="_on_bookbutton_pressed"]

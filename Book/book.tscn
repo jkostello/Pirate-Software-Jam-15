@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://cxkcysmocimog"]
+[gd_scene load_steps=9 format=3 uid="uid://cxkcysmocimog"]
 
 [ext_resource type="Script" path="res://Book/book.gd" id="1_nvlfn"]
+[ext_resource type="Texture2D" uid="uid://cuq5mvqt8sx82" path="res://Book/book_page.png" id="2_0vesc"]
 [ext_resource type="Theme" uid="uid://b0cbl4fc7hvuf" path="res://Book/booktheme.tres" id="2_a7gt4"]
+[ext_resource type="AudioStream" uid="uid://cb0tnivrsl8wu" path="res://SFX/page_turn.mp3" id="3_7v7d5"]
 
 [sub_resource type="Animation" id="Animation_yx0es"]
 resource_name = "Go In"
@@ -83,9 +85,15 @@ theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer"]
+position = Vector2(616, 292)
+scale = Vector2(0.697338, 0.697338)
+texture = ExtResource("2_0vesc")
+
 [node name="Replace with texture_sprite" type="ColorRect" parent="MarginContainer"]
+visible = false
 layout_mode = 2
-color = Color(0.574308, 0.542837, 0.471095, 1)
+color = Color(0.572549, 0.541176, 0.470588, 1)
 
 [node name="Control" type="Control" parent="MarginContainer"]
 layout_mode = 2
@@ -1439,6 +1447,11 @@ offset_right = 113.0
 offset_bottom = 543.0
 focus_mode = 0
 flat = true
+
+[node name="PageTurn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_7v7d5")
+volume_db = -3.525
+bus = &"SFX"
 
 [connection signal="pressed" from="MarginContainer/Control/Tabs/TabDemon" to="." method="switch_to_page" binds= [0]]
 [connection signal="pressed" from="MarginContainer/Control/Tabs/TabPride" to="." method="switch_to_page" binds= [2]]
