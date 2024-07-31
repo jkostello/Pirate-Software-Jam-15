@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://djeytu43sbild"]
+[gd_scene load_steps=29 format=3 uid="uid://djeytu43sbild"]
 
 [ext_resource type="Script" path="res://Ingredients/ingredient.gd" id="1_6toqi"]
 [ext_resource type="Texture2D" uid="uid://bvuwp5a4cr71v" path="res://icon.svg" id="2_t77is"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://cklc5mbwiiasq" path="res://Ingredients/GoldDust.png" id="23_fvycj"]
 [ext_resource type="Texture2D" uid="uid://bw4kko588y3i6" path="res://Ingredients/PlatinumDust.png" id="24_rdben"]
 [ext_resource type="Texture2D" uid="uid://d2pvpcf1gocq5" path="res://Ingredients/SilverDust.png" id="25_jmy3b"]
+[ext_resource type="Texture2D" uid="uid://ckbocqglbxqmk" path="res://Ingredients/Chalk.png" id="26_gu6y4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dhana"]
 animations = [{
@@ -85,6 +86,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("26_gu6y4")
+}],
+"loop": true,
+"name": &"Hexagram",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("13_outlm")
 }, {
 "duration": 1.0,
@@ -103,6 +112,38 @@ animations = [{
 }],
 "loop": true,
 "name": &"Peacock",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_gu6y4")
+}],
+"loop": true,
+"name": &"Pentagram1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_gu6y4")
+}],
+"loop": true,
+"name": &"Pentagram2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_gu6y4")
+}],
+"loop": true,
+"name": &"Pentagram3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_gu6y4")
+}],
+"loop": true,
+"name": &"Pentagram4",
 "speed": 5.0
 }, {
 "frames": [{
@@ -136,6 +177,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"Teeth",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_gu6y4")
+}],
+"loop": true,
+"name": &"Triangle1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_gu6y4")
+}],
+"loop": true,
+"name": &"Triangle2",
 "speed": 5.0
 }, {
 "frames": [{
@@ -180,7 +237,7 @@ texture = ExtResource("2_t77is")
 unique_name_in_owner = true
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_dhana")
-animation = &"platdust"
+animation = &"Triangle2"
 
 [node name="Area2D" type="Area2D" parent="."]
 unique_name_in_owner = true
@@ -200,6 +257,7 @@ offset_bottom = 58.0
 metadata/_edit_group_ = true
 
 [node name="DevVisual" type="ColorRect" parent="ClickableArea"]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
