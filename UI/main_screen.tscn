@@ -524,7 +524,7 @@ show_percentage = false
 
 [node name="CustomerTimer" type="Timer" parent="CanvasLayer/VisibleTimer"]
 unique_name_in_owner = true
-wait_time = 10.0
+wait_time = 80.0
 autostart = true
 
 [node name="Label" type="Label" parent="CanvasLayer/VisibleTimer"]

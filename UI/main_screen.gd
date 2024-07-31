@@ -6,6 +6,7 @@ var strikes := 0
 var day := 0 #goes to 5
 var sinnersHelped := 0
 @export var dailyCount = [0, 3, 4, 5, 7, 9]
+@export var dayTimer = [0, 80, 70, 60, 55, 50]
 signal fadeOutFinish
 
 var title_screen : PackedScene = load("res://UI/title_screen.tscn")
@@ -66,6 +67,8 @@ func passDay():
 	%BlackScreen.self_modulate.a = 0
 	%DayLabel.self_modulate.a = 0
 	day += 1
+	%CustomerTimer.wait_time = dayTimer[day]
+	print(%CustomerTimer.wait_time)
 	if day > 5:
 		fadeOut("i hope you die..")
 	else:
