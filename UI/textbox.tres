@@ -1,7 +1,6 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://eghx2ya3jeyw"]
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://eghx2ya3jeyw"]
 
 [ext_resource type="Texture2D" uid="uid://c6ifvw3rmaaff" path="res://UI/textbox.png" id="1_i3akh"]
-[ext_resource type="FontFile" uid="uid://bet1h8gxor35k" path="res://UI/Standard.otf" id="2_0phue"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o833e"]
 texture = ExtResource("1_i3akh")
@@ -9,4 +8,4 @@ texture = ExtResource("1_i3akh")
 [resource]
 Panel/styles/panel = SubResource("StyleBoxTexture_o833e")
 RichTextLabel/font_sizes/normal_font_size = 32
-RichTextLabel/fonts/normal_font = ExtResource("2_0phue")
+RichTextLabel/fonts/normal_font = null
