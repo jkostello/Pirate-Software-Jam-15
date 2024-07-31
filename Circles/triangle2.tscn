@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://bc7rqov1sr7k8"]
+
+[ext_resource type="PackedScene" uid="uid://b5pnl2hsow6jr" path="res://Circles/base_circle.tscn" id="1_xqn3a"]
+[ext_resource type="Texture2D" uid="uid://be4325m5ksihj" path="res://Circles/triangle2.png" id="2_n5u4t"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_42lvu"]
+radius = 30.0
+
+[node name="Triangle2" instance=ExtResource("1_xqn3a")]
+identifier = "Bigram"
+
+[node name="Circle" parent="." index="0"]
+position = Vector2(-108, -3)
+texture = ExtResource("2_n5u4t")
+
+[node name="IngredientPoint1" parent="IngredientPoints" index="0"]
+position = Vector2(5, 199)
+
+[node name="IngredientPoint2" type="Area2D" parent="IngredientPoints" index="1"]
+position = Vector2(-189, -88)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint2" index="0"]
+shape = SubResource("CircleShape2D_42lvu")
+
+[node name="IngredientPoint3" type="Area2D" parent="IngredientPoints" index="2"]
+position = Vector2(181, -98)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IngredientPoints/IngredientPoint3" index="0"]
+shape = SubResource("CircleShape2D_42lvu")
