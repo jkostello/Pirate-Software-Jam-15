@@ -11,7 +11,7 @@ var ingredients := {}
 func complete_ritual(dust_id : String):
 	var points := $IngredientPoints.get_children()
 	
-	var ritual_array := [identifier]
+	var ritual_array := [identifier, dust_id]
 	for p in points:
 		if ingredients.has(p):
 			ritual_array.append(ingredients[p].identifier)
@@ -19,10 +19,11 @@ func complete_ritual(dust_id : String):
 	
 	var new_item_id : String
 	match ritual_array:
+		# Format: ["circle", "dust", "ingredient1", "ingredient2"...]
 		["Example", "ingredint1", "2", "3"]:
-			pass
-		["Triangle1"]:
-			pass
+			new_item_id = "example"
+		["Triangle1", "golddust", "Claws", "Eyes", "Feathers"]:
+			new_item_id = "test"
 		["Triangle2"]:
 			pass
 		["Pentagram1"]:
@@ -37,6 +38,7 @@ func complete_ritual(dust_id : String):
 			pass
 		_:
 			new_item_id = 'Failure'
+			print(ritual_array)
 	
 	clear_circle()
 	
