@@ -26,3 +26,4 @@ func _on_fullscreen_button_toggled(_toggled_on):
 	else:
 		DisplayServer.window_set_mode(3, 0)
 		DisplayServer.window_set_flag(DisplayServer.WINDOW_FLAG_BORDERLESS, true)
+

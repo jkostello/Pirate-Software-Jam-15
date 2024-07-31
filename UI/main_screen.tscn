@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://cdfvgikc2fmx3"]
+[gd_scene load_steps=36 format=3 uid="uid://cdfvgikc2fmx3"]
 
 [ext_resource type="Script" path="res://UI/main_screen.gd" id="1_mggcd"]
 [ext_resource type="Texture2D" uid="uid://g023b3w5v68" path="res://UI/main_bkgd.png" id="2_8h5ua"]
@@ -28,6 +28,7 @@
 [ext_resource type="FontFile" uid="uid://dhnvlgerj5wbk" path="res://UI/Standard.otf" id="22_dcxae"]
 [ext_resource type="AudioStream" uid="uid://bm77yvdp0lys8" path="res://SFX/failure.mp3" id="27_jyowt"]
 [ext_resource type="AudioStream" uid="uid://cvaj8defuxe55" path="res://SFX/success.mp3" id="28_sf2yi"]
+[ext_resource type="AudioStream" uid="uid://dx2ct1nrdffv7" path="res://SFX/sample_music.mp3" id="29_hvyx5"]
 
 [sub_resource type="Animation" id="Animation_djsy7"]
 length = 0.001
@@ -378,7 +379,7 @@ animations = [{
 
 [node name="SceneManager" type="Node2D"]
 script = ExtResource("1_mggcd")
-dayTimer = [0, 120, 110, 100, 95, 90]
+dayTimer = [0, 100, 95, 90, 85, 80]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -582,6 +583,12 @@ bus = &"SFX"
 [node name="Success" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("28_sf2yi")
 bus = &"SFX"
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("29_hvyx5")
+volume_db = -18.0
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Shop/Desk/TempGenerator" to="." method="_on_temp_generator_pressed"]
 [connection signal="pressed" from="CanvasLayer/Bookbutton" to="." method="_on_bookbutton_pressed"]
