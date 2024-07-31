@@ -106,6 +106,10 @@ unique_name_in_owner = true
 layout_mode = 2
 script = ExtResource("2_bxshy")
 
+[node name="FullscreenButton" type="CheckButton" parent="SubMenus/MarginContainer/Options"]
+layout_mode = 2
+text = "Fullscreen:"
+
 [node name="Label" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
 text = "Resolution:"
@@ -124,30 +128,27 @@ popup/item_2/id = 2
 popup/item_3/text = "1920x1080"
 popup/item_3/id = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="SubMenus/MarginContainer/Options"]
-layout_mode = 2
-
-[node name="MasterVolume" type="Label" parent="SubMenus/MarginContainer/Options/VBoxContainer"]
+[node name="MasterVolume" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
 text = "Master Volume:"
 
-[node name="MasterVolumeSlider" parent="SubMenus/MarginContainer/Options/VBoxContainer" instance=ExtResource("3_wf611")]
+[node name="MasterVolumeSlider" parent="SubMenus/MarginContainer/Options" instance=ExtResource("3_wf611")]
 layout_mode = 2
 bus_name = "Master"
 
-[node name="SFXVolume" type="Label" parent="SubMenus/MarginContainer/Options/VBoxContainer"]
+[node name="SFXVolume" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
 text = "SFX Volume:"
 
-[node name="SFXVolumeSlider" parent="SubMenus/MarginContainer/Options/VBoxContainer" instance=ExtResource("3_wf611")]
+[node name="SFXVolumeSlider" parent="SubMenus/MarginContainer/Options" instance=ExtResource("3_wf611")]
 layout_mode = 2
 bus_name = "SFX"
 
-[node name="MusicVolume" type="Label" parent="SubMenus/MarginContainer/Options/VBoxContainer"]
+[node name="MusicVolume" type="Label" parent="SubMenus/MarginContainer/Options"]
 layout_mode = 2
 text = "Music Volume:"
 
-[node name="MusicVolumeSlider" parent="SubMenus/MarginContainer/Options/VBoxContainer" instance=ExtResource("3_wf611")]
+[node name="MusicVolumeSlider" parent="SubMenus/MarginContainer/Options" instance=ExtResource("3_wf611")]
 layout_mode = 2
 bus_name = "Music"
 
@@ -188,5 +189,6 @@ color = Color(0, 0, 0, 1)
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/MainButtons/OptionsButton" to="." method="_on_options_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/MainButtons/HowToButton" to="." method="_on_how_to_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/MainButtons/Quit" to="." method="_on_quit_pressed"]
+[connection signal="toggled" from="SubMenus/MarginContainer/Options/FullscreenButton" to="SubMenus/MarginContainer/Options" method="_on_fullscreen_button_toggled"]
 [connection signal="item_selected" from="SubMenus/MarginContainer/Options/Resolutions" to="SubMenus/MarginContainer/Options" method="_on_resolutions_item_selected"]
 [connection signal="pressed" from="SubMenus/MarginContainer2/BackToMenu" to="." method="_on_back_to_menu_pressed"]
