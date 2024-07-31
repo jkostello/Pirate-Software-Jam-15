@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://c8ln02ahufb58"]
+[gd_scene load_steps=3 format=3 uid="uid://c8ln02ahufb58"]
 
 [ext_resource type="Script" path="res://UI/textbox.gd" id="1_svkar"]
+[ext_resource type="Theme" uid="uid://eghx2ya3jeyw" path="res://UI/textbox.tres" id="2_ahv1x"]
 
 [node name="Textbox" type="Control"]
 layout_mode = 3
@@ -26,35 +27,42 @@ mouse_filter = 2
 theme_override_constants/margin_left = 256
 theme_override_constants/margin_right = 256
 
-[node name="Panel" type="Panel" parent="TextboxContainer"]
+[node name="Textbox" type="Panel" parent="TextboxContainer"]
 layout_mode = 2
 mouse_filter = 2
+theme = ExtResource("2_ahv1x")
 
 [node name="MarginContainer" type="MarginContainer" parent="TextboxContainer"]
 layout_mode = 2
 mouse_filter = 2
-theme_override_constants/margin_left = 16
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
-theme_override_constants/margin_bottom = 16
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 9
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 9
 
 [node name="Panel" type="Panel" parent="TextboxContainer/MarginContainer"]
 layout_mode = 2
 mouse_filter = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="TextboxContainer/MarginContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="TextboxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_bottom = 5
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TextboxContainer/MarginContainer/MarginContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 mouse_filter = 2
 horizontal_scroll_mode = 0
 
-[node name="Body" type="RichTextLabel" parent="TextboxContainer/MarginContainer/ScrollContainer"]
+[node name="Body" type="RichTextLabel" parent="TextboxContainer/MarginContainer/MarginContainer/ScrollContainer"]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 mouse_filter = 2
-theme_override_font_sizes/normal_font_size = 32
+theme = ExtResource("2_ahv1x")
 text = "Placeholder text! 
 The quick brown fox jumped over the lazy dog. 
 This textbox holds 3 lines of text. Each dialogue line should have less than 90 characters."

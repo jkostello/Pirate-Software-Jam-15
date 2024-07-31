@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cxkcysmocimog"]
+[gd_scene load_steps=35 format=3 uid="uid://cxkcysmocimog"]
 
 [ext_resource type="Script" path="res://Book/book.gd" id="1_nvlfn"]
 [ext_resource type="Texture2D" uid="uid://cuq5mvqt8sx82" path="res://Book/book_page.png" id="2_0vesc"]
 [ext_resource type="Theme" uid="uid://b0cbl4fc7hvuf" path="res://Book/booktheme.tres" id="2_a7gt4"]
 [ext_resource type="AudioStream" uid="uid://cb0tnivrsl8wu" path="res://SFX/page_turn.mp3" id="3_7v7d5"]
+[ext_resource type="Texture2D" uid="uid://drhf5j67jhbx8" path="res://Book/book_tab.png" id="4_uxqpm"]
+[ext_resource type="Texture2D" uid="uid://e180d420snq2" path="res://Book/book_tab_flipped.png" id="4_xhdb1"]
 
 [sub_resource type="Animation" id="Animation_yx0es"]
 resource_name = "Go In"
@@ -58,6 +60,101 @@ _data = {
 "Go Out": SubResource("Animation_w7grt"),
 "RESET": SubResource("Animation_16fch")
 }
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dpbly"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.533333, 0.254902, 0.760784, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8umne"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.717647, 0.501961, 0.92549, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vm2pe"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.341176, 0.133333, 0.498039, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n6axf"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.709804, 0.603922, 0.0666667, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2iqf7"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.882353, 0.752941, 0.101961, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wg3ki"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.439216, 0.372549, 0.0313726, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4p5ue"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.615686, 0.227451, 0.211765, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rgm0f"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.780392, 0.317647, 0.298039, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bmulu"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.427451, 0.145098, 0.133333, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lesj3"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.0313726, 0.407843, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uef03"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.0588235, 0.560784, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m7x85"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.0117647, 0.258824, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_le772"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.972549, 0.196078, 0.623529, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nf0ss"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.992157, 0.6, 0.768627, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0cbp1"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.52549, 0.0156863, 0.317647, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vdu72"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.87451, 0.517647, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4jddf"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(1, 0.666667, 0.321569, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1o511"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.54902, 0.317647, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gr37b"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.364706, 0.584314, 0.678431, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w6dff"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.513726, 0.729412, 0.823529, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ews34"]
+texture = ExtResource("4_uxqpm")
+modulate_color = Color(0.176471, 0.317647, 0.376471, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_tymqv"]
+texture = ExtResource("4_xhdb1")
+modulate_color = Color(0.803922, 0.803922, 0.803922, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dj14j"]
+texture = ExtResource("4_xhdb1")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4p8bb"]
+texture = ExtResource("4_xhdb1")
+modulate_color = Color(0.615686, 0.615686, 0.615686, 1)
 
 [node name="Book" type="Control"]
 layout_mode = 3
@@ -1285,82 +1382,120 @@ grow_vertical = 2
 
 [node name="TabDemon" type="Button" parent="MarginContainer/Control/Tabs"]
 unique_name_in_owner = true
+z_index = -1
 layout_mode = 2
-offset_left = 351.0
+offset_left = 356.0
 offset_top = 7.0
-offset_right = 423.0
+offset_right = 428.0
 offset_bottom = 63.0
 focus_mode = 0
+theme = ExtResource("2_a7gt4")
 text = "Identify"
 
 [node name="TabPride" type="Button" parent="MarginContainer/Control/Tabs"]
 unique_name_in_owner = true
+z_index = -1
 layout_mode = 2
-offset_left = 351.0
+offset_left = 356.0
 offset_top = 63.0
-offset_right = 423.0
+offset_right = 428.0
 offset_bottom = 119.0
 focus_mode = 0
+theme = ExtResource("2_a7gt4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dpbly")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8umne")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_vm2pe")
 text = "Pride"
 
 [node name="TabGreed" type="Button" parent="MarginContainer/Control/Tabs"]
 unique_name_in_owner = true
+z_index = -1
 layout_mode = 2
-offset_left = 351.0
+offset_left = 356.0
 offset_top = 119.0
-offset_right = 423.0
+offset_right = 428.0
 offset_bottom = 175.0
 focus_mode = 0
+theme = ExtResource("2_a7gt4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_n6axf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2iqf7")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_wg3ki")
 text = "Greed"
 
 [node name="TabWrath" type="Button" parent="MarginContainer/Control/Tabs"]
 unique_name_in_owner = true
+z_index = -1
 layout_mode = 2
-offset_left = 351.0
+offset_left = 356.0
 offset_top = 175.0
-offset_right = 423.0
+offset_right = 428.0
 offset_bottom = 231.0
 focus_mode = 0
+theme = ExtResource("2_a7gt4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_4p5ue")
+theme_override_styles/hover = SubResource("StyleBoxTexture_rgm0f")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bmulu")
 text = "Wrath"
 
 [node name="TabEnvy" type="Button" parent="MarginContainer/Control/Tabs"]
 unique_name_in_owner = true
+z_index = -1
 layout_mode = 2
-offset_left = 351.0
+offset_left = 356.0
 offset_top = 231.0
-offset_right = 423.0
+offset_right = 428.0
 offset_bottom = 287.0
 focus_mode = 0
+theme = ExtResource("2_a7gt4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_lesj3")
+theme_override_styles/hover = SubResource("StyleBoxTexture_uef03")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_m7x85")
 text = "Envy"
 
 [node name="TabLust" type="Button" parent="MarginContainer/Control/Tabs"]
 unique_name_in_owner = true
+z_index = -1
 layout_mode = 2
-offset_left = 351.0
+offset_left = 356.0
 offset_top = 287.0
-offset_right = 423.0
+offset_right = 428.0
 offset_bottom = 343.0
 focus_mode = 0
+theme = ExtResource("2_a7gt4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_le772")
+theme_override_styles/hover = SubResource("StyleBoxTexture_nf0ss")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0cbp1")
 text = "Lust"
 
 [node name="TabGluttony" type="Button" parent="MarginContainer/Control/Tabs"]
 unique_name_in_owner = true
+z_index = -1
 layout_mode = 2
-offset_left = 351.0
+offset_left = 356.0
 offset_top = 343.0
-offset_right = 423.0
+offset_right = 428.0
 offset_bottom = 399.0
 focus_mode = 0
+theme = ExtResource("2_a7gt4")
+theme_override_font_sizes/font_size = 18
+theme_override_styles/normal = SubResource("StyleBoxTexture_vdu72")
+theme_override_styles/hover = SubResource("StyleBoxTexture_4jddf")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1o511")
 text = "Gluttony"
 
 [node name="TabSloth" type="Button" parent="MarginContainer/Control/Tabs"]
 unique_name_in_owner = true
+z_index = -1
 layout_mode = 2
-offset_left = 351.0
+offset_left = 356.0
 offset_top = 399.0
-offset_right = 423.0
+offset_right = 428.0
 offset_bottom = 455.0
 focus_mode = 0
+theme = ExtResource("2_a7gt4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_gr37b")
+theme_override_styles/hover = SubResource("StyleBoxTexture_w6dff")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ews34")
 text = "Sloth"
 
 [node name="PageLeft" type="Button" parent="MarginContainer/Control"]
@@ -1370,6 +1505,10 @@ offset_left = 200.0
 offset_top = 464.0
 offset_right = 274.0
 offset_bottom = 502.0
+theme = ExtResource("2_a7gt4")
+theme_override_styles/normal = SubResource("StyleBoxTexture_tymqv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dj14j")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4p8bb")
 
 [node name="Temp Arrow" type="ColorRect" parent="MarginContainer/Control/PageLeft"]
 layout_mode = 0
@@ -1403,6 +1542,7 @@ offset_left = 277.0
 offset_top = 464.0
 offset_right = 351.0
 offset_bottom = 502.0
+theme = ExtResource("2_a7gt4")
 
 [node name="Temp Arrow" type="ColorRect" parent="MarginContainer/Control/PageRight"]
 layout_mode = 0
@@ -1453,14 +1593,14 @@ stream = ExtResource("3_7v7d5")
 volume_db = -3.525
 bus = &"SFX"
 
-[connection signal="pressed" from="MarginContainer/Control/Tabs/TabDemon" to="." method="switch_to_page" binds= [0]]
-[connection signal="pressed" from="MarginContainer/Control/Tabs/TabPride" to="." method="switch_to_page" binds= [2]]
-[connection signal="pressed" from="MarginContainer/Control/Tabs/TabGreed" to="." method="switch_to_page" binds= [5]]
-[connection signal="pressed" from="MarginContainer/Control/Tabs/TabWrath" to="." method="switch_to_page" binds= [8]]
-[connection signal="pressed" from="MarginContainer/Control/Tabs/TabEnvy" to="." method="switch_to_page" binds= [11]]
-[connection signal="pressed" from="MarginContainer/Control/Tabs/TabLust" to="." method="switch_to_page" binds= [14]]
-[connection signal="pressed" from="MarginContainer/Control/Tabs/TabGluttony" to="." method="switch_to_page" binds= [17]]
-[connection signal="pressed" from="MarginContainer/Control/Tabs/TabSloth" to="." method="switch_to_page" binds= [20]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabDemon" to="." method="_on_tab_pressed" binds= [0]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabPride" to="." method="_on_tab_pressed" binds= [2]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabGreed" to="." method="_on_tab_pressed" binds= [5]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabWrath" to="." method="_on_tab_pressed" binds= [8]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabEnvy" to="." method="_on_tab_pressed" binds= [11]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabLust" to="." method="_on_tab_pressed" binds= [14]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabGluttony" to="." method="_on_tab_pressed" binds= [17]]
+[connection signal="pressed" from="MarginContainer/Control/Tabs/TabSloth" to="." method="_on_tab_pressed" binds= [20]]
 [connection signal="pressed" from="MarginContainer/Control/PageLeft" to="." method="_on_page_left_pressed"]
 [connection signal="pressed" from="MarginContainer/Control/PageRight" to="." method="_on_page_right_pressed"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]

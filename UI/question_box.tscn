@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c7qu73noo5jn7"]
+[gd_scene load_steps=4 format=3 uid="uid://c7qu73noo5jn7"]
 
 [ext_resource type="Script" path="res://UI/question_box.gd" id="1_ec3w0"]
+[ext_resource type="Theme" uid="uid://bfjcpm14u83hu" path="res://UI/main.tres" id="2_6v7tu"]
+[ext_resource type="FontFile" uid="uid://bet1h8gxor35k" path="res://UI/Standard.otf" id="3_qf73c"]
 
 [node name="QuestionBox" type="Control"]
 layout_mode = 3
@@ -20,14 +22,23 @@ offset_bottom = 40.0
 
 [node name="BehaviorQuestion" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_6v7tu")
+theme_override_fonts/font = ExtResource("3_qf73c")
+theme_override_font_sizes/font_size = 30
 text = "Ask about changes in their behavior."
 
 [node name="PainQuestion" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_6v7tu")
+theme_override_fonts/font = ExtResource("3_qf73c")
+theme_override_font_sizes/font_size = 30
 text = "Ask if they are experiencing any pain."
 
 [node name="SensesQuestion" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_6v7tu")
+theme_override_fonts/font = ExtResource("3_qf73c")
+theme_override_font_sizes/font_size = 30
 text = "Ask if their senses are any different."
 
 [connection signal="pressed" from="VBoxContainer/BehaviorQuestion" to="." method="_on_behavior_question_pressed"]
