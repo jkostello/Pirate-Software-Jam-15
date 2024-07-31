@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://djeytu43sbild"]
+[gd_scene load_steps=28 format=3 uid="uid://djeytu43sbild"]
 
 [ext_resource type="Script" path="res://Ingredients/ingredient.gd" id="1_6toqi"]
 [ext_resource type="Texture2D" uid="uid://bvuwp5a4cr71v" path="res://icon.svg" id="2_t77is"]
@@ -22,6 +22,9 @@
 [ext_resource type="Texture2D" uid="uid://c0yhwbme57rg7" path="res://Ingredients/Tongue_Jar.png" id="20_sb0vq"]
 [ext_resource type="Texture2D" uid="uid://ceiesnqkd67i0" path="res://Ingredients/Teeth.png" id="21_exrlr"]
 [ext_resource type="Texture2D" uid="uid://daraigvce7sp4" path="res://Ingredients/Teeth_Jar.png" id="22_y148c"]
+[ext_resource type="Texture2D" uid="uid://cklc5mbwiiasq" path="res://Ingredients/GoldDust.png" id="23_fvycj"]
+[ext_resource type="Texture2D" uid="uid://bw4kko588y3i6" path="res://Ingredients/PlatinumDust.png" id="24_rdben"]
+[ext_resource type="Texture2D" uid="uid://d2pvpcf1gocq5" path="res://Ingredients/SilverDust.png" id="25_jmy3b"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_dhana"]
 animations = [{
@@ -134,6 +137,30 @@ animations = [{
 "loop": true,
 "name": &"Teeth",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_fvycj")
+}],
+"loop": true,
+"name": &"golddust",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_rdben")
+}],
+"loop": true,
+"name": &"platdust",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_jmy3b")
+}],
+"loop": true,
+"name": &"silverdust",
+"speed": 5.0
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hpbo5"]
@@ -153,7 +180,7 @@ texture = ExtResource("2_t77is")
 unique_name_in_owner = true
 scale = Vector2(0.25, 0.25)
 sprite_frames = SubResource("SpriteFrames_dhana")
-animation = &"Ash"
+animation = &"platdust"
 
 [node name="Area2D" type="Area2D" parent="."]
 unique_name_in_owner = true

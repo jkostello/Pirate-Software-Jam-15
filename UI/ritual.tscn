@@ -77,29 +77,83 @@ identifier = "Hexagram"
 source = true
 
 [node name="Claws" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(108, 353)
+z_index = 12
+position = Vector2(63, 330)
 identifier = "Claws"
 source = true
 
 [node name="Ash" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(77, 524)
+z_index = 14
+position = Vector2(46, 516)
 identifier = "Ash"
 source = true
 
 [node name="Eyes" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(53, 683)
+z_index = 13
+position = Vector2(201, 422)
 identifier = "Eyes"
 source = true
 
 [node name="Feathers" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(312, 352)
+z_index = 11
+position = Vector2(204, 264)
 identifier = "Feathers"
 source = true
 
 [node name="Gold" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
-position = Vector2(292, 508)
+z_index = 12
+position = Vector2(500, 322)
 is_dust = true
 identifier = "golddust"
+source = true
+
+[node name="Beetle" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+z_index = 14
+position = Vector2(341, 508)
+identifier = "Beetle"
+source = true
+
+[node name="Peacock" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+z_index = 12
+position = Vector2(341, 358)
+identifier = "Peacock"
+source = true
+
+[node name="Snake" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+z_index = 15
+position = Vector2(199, 590)
+identifier = "Snake"
+source = true
+
+[node name="Rose" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+z_index = 16
+position = Vector2(44, 689)
+identifier = "Rose"
+source = true
+
+[node name="Teeth" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+position = Vector2(192, 746)
+identifier = "Teeth"
+source = true
+
+[node name="Moss" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+z_index = 16
+position = Vector2(348, 702)
+identifier = "Moss"
+source = true
+
+[node name="Silver" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+z_index = 14
+position = Vector2(498, 487)
+is_dust = true
+identifier = "silverdust"
+source = true
+
+[node name="platdust" parent="IngredientShelf" instance=ExtResource("3_ceipf")]
+z_index = 16
+position = Vector2(494, 652)
+is_dust = true
+identifier = "platdust"
 source = true
 
 [node name="CirclePos" type="Node2D" parent="."]
