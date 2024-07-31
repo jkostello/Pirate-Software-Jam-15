@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4aiw4jts5hgq"]
+[gd_scene load_steps=9 format=3 uid="uid://b4aiw4jts5hgq"]
 
 [ext_resource type="Script" path="res://UI/ritual.gd" id="1_a7a2e"]
 [ext_resource type="PackedScene" uid="uid://b5pnl2hsow6jr" path="res://Circles/base_circle.tscn" id="2_ss73g"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dc46hjr4vs7rn" path="res://UI/IMG_0907.png" id="4_ktoy1"]
 [ext_resource type="Texture2D" uid="uid://rvg04uot3fxd" path="res://UI/IMG_0904.png" id="4_uiuom"]
 [ext_resource type="Texture2D" uid="uid://btf8dyacir7y1" path="res://UI/IMG_0908.png" id="5_abfnb"]
+[ext_resource type="Theme" uid="uid://bfjcpm14u83hu" path="res://UI/main.tres" id="8_mvi61"]
 
 [node name="Ritual" type="Node2D"]
 script = ExtResource("1_a7a2e")
@@ -111,11 +112,12 @@ position = Vector2(1059, 550)
 visible = false
 
 [node name="Reset" type="Button" parent="."]
-offset_left = 1598.0
-offset_top = 237.0
-offset_right = 1698.0
-offset_bottom = 268.0
+offset_left = 1511.0
+offset_top = 238.0
+offset_right = 1764.0
+offset_bottom = 313.0
 focus_mode = 0
+theme = ExtResource("8_mvi61")
 text = "Reset Ritual"
 
 [connection signal="pressed" from="Reset" to="." method="_on_reset_pressed"]
