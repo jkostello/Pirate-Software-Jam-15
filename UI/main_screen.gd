@@ -7,6 +7,7 @@ var day := 0 #goes to 5
 var sinnersHelped := 0
 @export var dailyCount = [0, 3, 4, 5, 7, 9]
 signal fadeOutFinish
+
 var title_screen : PackedScene = load("res://UI/title_screen.tscn")
 
 func _ready():
@@ -114,4 +115,22 @@ func _on_bookbutton_pressed():
 		$Ritual/BookOpen.visible =  book_open
 		$Ritual/BookClosed.visible = not book_open
 		%Book._on_button_pressed()
-		
+
+func _on_cure_button_pressed():
+	var cure
+	var item
+	for _c in %Shop.get_children():
+		if _c is Ailments:
+			print(_c.cure)
+			cure = _c.cure
+	for _i in $Ritual/CirclePos.get_children():
+		if _i is Ingredient:
+			print(_i.identifier)
+			item = _i.identifier
+	if cure == item:
+		%CustomerTimer.start()
+		generate_customer()
+	else:
+		failed()
+		generate_customer()
+		%CustomerTimer.start()

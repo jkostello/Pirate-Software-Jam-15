@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://UI/main_screen.gd" id="1_mggcd"]
 [ext_resource type="Texture2D" uid="uid://g023b3w5v68" path="res://UI/main_bkgd.png" id="2_8h5ua"]
 [ext_resource type="Texture2D" uid="uid://ndwstghoaq0w" path="res://UI/ritual_desk.png" id="3_bea5q"]
-[ext_resource type="PackedScene" path="res://UI/question_box.tscn" id="4_gypuy"]
+[ext_resource type="PackedScene" uid="uid://c7qu73noo5jn7" path="res://UI/question_box.tscn" id="4_gypuy"]
 [ext_resource type="Texture2D" uid="uid://dn3tqb4i407n0" path="res://Book/IMG_0884.png" id="5_4gpuh"]
 [ext_resource type="Texture2D" uid="uid://cbxo6hcbncvgl" path="res://Book/IMG_0885.png" id="5_lrcvf"]
 [ext_resource type="PackedScene" uid="uid://b4aiw4jts5hgq" path="res://UI/ritual.tscn" id="5_q862v"]
@@ -405,12 +405,25 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 545.0
-offset_top = 928.0
-offset_right = 626.0
-offset_bottom = 2008.0
+offset_top = -152.0
+offset_right = 604.0
+offset_bottom = -121.0
 grow_vertical = 0
 focus_mode = 0
 text = "Switch"
+
+[node name="CureButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -91.5
+offset_top = -31.0
+offset_right = 91.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Give Cure to Customer"
 
 [node name="MainMenu" parent="CanvasLayer" instance=ExtResource("5_xxfp2")]
 visible = false
@@ -473,6 +486,7 @@ vertical_alignment = 1
 [connection signal="pressed" from="Shop/Desk/TempGenerator" to="." method="_on_temp_generator_pressed"]
 [connection signal="pressed" from="CanvasLayer/Bookbutton" to="." method="_on_bookbutton_pressed"]
 [connection signal="pressed" from="CanvasLayer/Switch" to="." method="_on_switch_pressed"]
+[connection signal="pressed" from="CanvasLayer/CureButton" to="." method="_on_cure_button_pressed"]
 [connection signal="timeout" from="CanvasLayer/VisibleTimer/CustomerTimer" to="." method="_on_customer_timer_timeout"]
 
 [editable path="Ritual"]

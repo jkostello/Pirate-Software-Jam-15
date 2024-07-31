@@ -20,7 +20,7 @@ func complete_ritual(dust_id : String):
 	var new_item_id : String
 	match ritual_array:
 		# Format: ["circle", "dust", "ingredient1", "ingredient2"...]
-		["Example", "ingredint1", "2", "3"]:
+		["Example", "ingredient1", "2", "3"]:
 			new_item_id = "example"
 		["Triangle1", "golddust", "Claws", "Eyes", "Feathers"]:
 			new_item_id = "test"
