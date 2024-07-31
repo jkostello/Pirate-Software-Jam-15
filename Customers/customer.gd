@@ -17,10 +17,13 @@ var body_symptom := ''
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var sin = get_random_sin()
+	%Creature.frame = sin[1]
+	sin = sin[0]
 	var randomAilment = get_random_ailment(sin)
 	
 	var cure = randomAilment.keys()[0]
 	var ailment = randomAilment.values()[0]
+	
 	
 	# Assign symptoms
 	for symptom in ailment:
