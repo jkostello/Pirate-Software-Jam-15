@@ -247,7 +247,9 @@ offset_bottom = 3459.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("6_7xl04")
 theme_override_font_sizes/font_size = 30
-text = "You are playing as an alchemist in the medieval times. While alchemy is normally forbidden, the town has been plagued by strange afflictions! Because you're the only one that seems how to cure them, people will let you perform your alchemy, but be careful! Slip up too many times and they might feed you to the wolves! Can you perform enough rituals to cure the town in 5 days? Or will you banished for your illegal practices?"
+text = "You are playing as an alchemist in the medieval times. While alchemy is normally forbidden, the town has been plagued by strange afflictions! Because you're the only one that seems how to cure them, people will let you perform your alchemy, but be careful! Slip up too many times and they might feed you to the wolves! Can you perform enough rituals to cure the town in 5 days? Or will you banished for your illegal practices?
+
+The game is played primarily with a mouse. Press 'Esc' on the keyboard during the game to bring up a pause menu."
 autowrap_mode = 3
 
 [node name="Core Gameplay" type="Control" parent="SubMenus/MarginContainer/HowToPlay/HTPTabContainer"]
